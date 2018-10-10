@@ -1,29 +1,59 @@
-//
-//  main.swift
-//  Text-Based-Adventure
-//
-//  Created by Donkemezuo Raymond Tariladou on 10/10/18.
-//  Copyright © 2018 Donkemezuo Raymond Tariladou. All rights reserved.
-//
 
 import Foundation
 
-print("Enter your option:")
-// string? - optional
-if let response = readLine(){
-    switch response {
-    case "swim":
-        print("don't forget your googles")
-    case "bike":
-        print("pack an extra spare tube and hydration")
-    case "run":
-        print("nice day for a run in Central Park")
-            default:
-        print("Enter option again???????")
-        let option2 = readLine()! // force unwraps - dangerous
-        if option2 == "rest" {
-            print("happy recovery")
-        }
-    }
-}
+var summerBudget = 200...1200
+print("Adventures for the Summer! Choose your adventure: \"Learn Biking\" or \"SkyDiving\"")
 
+if let response = readLine() {
+ 
+    switch response {
+        
+    case "Learn Biking":
+        
+        print("Get biking gears and rent a bike. i.e helment, biking shoes etc and please put your level of Biking experience")
+        
+        let levelOfBikingExperience = readLine()! //Force unwrap optional
+        
+        var levelOfBikingExperienceInt = Int(levelOfBikingExperience)! //Force unwrap optional
+        
+        if levelOfBikingExperienceInt <= 3 {
+            
+            print("Please carefully weear protective materials and seek some guidance")
+           
+        } else if (4...6).contains(levelOfBikingExperienceInt) { //checks if in range
+            
+            print("You don't really need guidance and can just wear protective wears and begin your adventure")
+        }
+    case "SkyDiving":
+        
+        print("You really made an interesting Choice. Please enter a prefered location \"New York\" \"Chicago\" \"Atlanta\"")
+        
+        let choice = readLine()!
+        
+        if choice == "New York"{
+        print("Check out the best skydiving companies in /(choice)")
+        } else if choice == "Chicago"{
+            print("please follow https://chicago.cbslocal.com/top-lists/best-skydiving-near-chicago/ to check out the best skydiving companies in Chicago")
+
+            } else if choice == "Atlanta" {
+                print("You can access skydiving locations in Atlanta by following this link https://www.yelp.com/search?cflt=skydiving&find_loc=Atlanta%2C+GA")
+            }
+        else {
+            print("We have more options for you")
+    
+}
+    case "I really don't know which to choose":
+        print("How do you mean?. You mean you love both options? Do you need us to help you decide?")
+        let response = readLine()!
+        
+        if response == "Yes"{
+            print("okay... so how much is your budget for this adventure?")
+        } else if response == "No" {
+        print("okay then. You can always come back when you have it figured out. Have a great day! 👋🏽")
+        }
+        
+        
+    default:
+        print("Sorry I didn't get your response. Please return to main menu")
+}
+}
