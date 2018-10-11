@@ -15,8 +15,39 @@ var slayBandits: Bool = false
 var questOffer: Bool = false
 var questEncounter: Bool = false
 var gameEnd: Bool = false
-
+var warriorHealth = 300
+var banditHealth = 200
+var warriorDamage = 0...100
+var banditDamage = 0...20
+var difficulty: Bool = true
 // MENU REPEAT ////////////////////////////////////////////////
+repeat {
+    print("Select difficulty\n1) Easy\n2) Medium\n3) Hard\n4) Info")
+    if let response = readLine(){
+        switch response.lowercased(){
+        case "easy", "1":
+            print("Takin' it easy are yah? Not that hard to begin with...")
+            warriorHealth = 400
+            banditHealth = 200
+            difficulty = false
+        case "medium", "2":
+            print("Ah, the way I originally planned")
+            warriorHealth = 300
+            banditHealth = 300
+            difficulty = false
+        case "hard", "3":
+            print("Oh you might have to see this menu again deeper down the road... Good luck!")
+            warriorHealth = 200
+            banditHealth = 400
+            banditDamage = 10...30
+            difficulty = false
+        case "info", "4":
+            print("This is where the Health is adjusted between you and the enemy. Since I have no idea how to use functions yet, you will have to start completely over when you lose.")
+        default:
+            print("Go on, choose your difficulty!")
+        }
+    }
+} while difficulty
 print("Welcome adventurer! What class would you like to be? \n1) Warrior 2) Exit")
 
 repeat {
@@ -114,10 +145,6 @@ if questEncounter == true {
 }
 
 // SLAY BANDITS ////////////////////////////////////////////////
-var warriorHealth = 300
-var banditHealth = 200
-var warriorDamage = 0...100
-var banditDamage = 0...20
 var questReward: Bool = false
 //let warriorHit = Int.random(in: warriorDamage)
 //let banditHit = Int.random(in: banditDamage)
@@ -193,6 +220,12 @@ if gameEnd == true {
          @@@@/    @@@@#  @@@@     @@@@/ .@@@@           (@@@@     @@@@
          @@@@/    @@@@#   @@@@@ @@@@@   .@@@@           (@@@@     @@@@
           @@@@@@@@@@@        @@@@@      .@@@@@@@@@@@@@* (@@@@     @@@@
+
+
+
+        Thanks for playing!!!
+
+
 """
     print(gameEndMessage)
     sleep(2)
