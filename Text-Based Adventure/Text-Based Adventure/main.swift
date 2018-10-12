@@ -125,6 +125,7 @@ if let lookAtSatchel = readLine()?.lowercased() {
             if currentCoin == 10 {
                 print("It was a trap! You were too greedy and the bear trap activates. It chops your hand off and you bleed to death whilst contracting dysentery")
                 trapActivated = true
+                break
             }
         }
         if !trapActivated {
@@ -154,4 +155,5 @@ if let helpStranger = readLine()?.lowercased() {
 if contractedDysentery {
     print("Don't help random sick strangers!")
 }
+
 
