@@ -138,11 +138,11 @@ $T!!!!!!!!!8$$$$$$$$$$$$:~~~~~~~~~~~~~~~~~~~~~~~~~:@!~E!!!!!!?$$$$c
 //
 //}
 
-var file = (Name: "Robin Miller", Age: 24, Bio: "The test subject is considered highly dangerous and should be kept in containment at all costs. Has been exhibiting psychopathic tendencies. Pulse is arrythmic. MRI and polysomnography reveal severe physical trauma to the frontal lobe and abnormally quick heart rate during REM.")
+var file = (Name: "Robin Miller", Age: 24, Bio: "The test subject is considered highly dangerous and should be kept in containment at all costs. Has been exhibiting psychopathic and schizophrenic tendencies. Pulse is arrythmic. MRI and polysomnography reveal severe physical trauma to the frontal lobe and abnormally quick heart rate during REM.")
 
 var hasKey: Bool = false
 var sawFile: Bool = false
-var Sanity: Int = 5
+var Sanity: Int = 3
 var hasKilled = false
 
 var offerChoiceLoop = true
@@ -152,6 +152,8 @@ var stressChoiceLoop = true
 var keyChoiceLoop = true
 var strangerChoiceLoop = true
 var fightChoiceLoop = true
+var elevatorChoiceLoop = true
+var skeletonChoiceLoop = true
 
 
 while beginningChoiceLoop {
@@ -176,9 +178,27 @@ case "open door":
             case "left":
         directionChoiceLoop = false
         Sanity -= 1
-        print("Deciding to head left towards the scream, you leave the room behind you. A strange breeze flies past your face as you walk past the rows of doors. You are aware of how foolish you might be by following the screaming, but your curiosity have to know.")
+        print("Deciding to head left towards the scream, you leave the room behind you. A strange breeze flies past your face as you walk past the rows of doors. You are aware of how foolish you might be by following the screaming, but your curiosity demands satisfaction.")
+        print("Along your way you notice an open door and decide to peek inside.")
+        print("It appears to be a small office complete with a small desk and some filing cabinets. Uninterested, you are about to leave the room when you suddenly see something in the corner that makes your heart skip a beat.")
         print(demon1)
-            case "right":
+            print("It takes every ounce of restraint in your body to resist screaming when you realize what you are looking at. There's a half-rotting skeleton sitting in one of the corners of the office. It has something around its neck on a cord... It looks like a key?")
+            print("What do you do?")
+            print("Grab Key         Leave")
+        while skeletonChoiceLoop {
+            let skeletonChoice = readLine()?.lowercased()
+            switch skeletonChoice {
+            case "grab key":
+                skeletonChoiceLoop = false
+                print("You chose to grab the key.")
+            case "leave":
+                skeletonChoiceLoop = false
+                print("You did not take the key.")
+            default:
+                print("You have to make a choice.")
+                print("Grab Key           Leave")
+        }
+        }
         directionChoiceLoop = false
         print("You decide to head right, away from the scream. Beads of cold sweat run down your face as you imagine all the possible reasons for why a person would scream like that. Were they being attacked by the same thing that was walking right outside your door just mere moments ago? Were you next?")
         print("Your thoughts are interrupted by the sight before you. You were so engulfed in your thoughts that you did not even realize you had left the hallway and arrived in a gigantic lobby. The soft carpet brushes against your bare feet; a welcome change from the cold tile from mere moments ago. A half-broken chandelier hangs above a series of mahogany desks and lint-infested couches, and the fact that you can't see where the chandelier begins because of how high the ceilings are is slightly terrifying.")
@@ -214,14 +234,14 @@ case "hide in closet":
                 print("Take it?")
                 print("Yes      No")
                 while keyChoiceLoop {
-        let keyChoice = readLine()?.lowercased()
+                    let keyChoice = readLine()?.lowercased()
             if keyChoice == "yes" {
                 keyChoiceLoop = false
                 hasKey = true
-                print("You decide to pick up the key.")
+                print("You decide to pick up the key and head back out into the hallway.")
             } else if keyChoice == "no" {
                 keyChoiceLoop = false
-                print("You do not pick up the key.")
+                print("You do not pick up the key and head back out into the hallway.")
             } else {
                 print("Make up your mind.")
                 print("Yes      No")
@@ -303,90 +323,51 @@ print("The stranger cannot understand. Try again.")
     print("One of Them?     Point to Blood      Go Away")
 }
 }
+print("The stranger takes out a capsule from their pocket and offers it to you. You stare at it. It has pills inside of it.")
+print("'You can take just one. They'll make you feel better. I found them in a supply room. They help you control your fear a little bit.")
+print("Enter the number you take.")
 while offerChoiceLoop {
-print("The stranger turns away from you and looks around the area as if formulating a plan.")
-let offerChoice = readLine()!
-let offerChoiceAsInt = Int(offerChoice)!
+    let offerChoice = readLine()!
+    let offerChoiceAsInt = Int(offerChoice)!
     switch offerChoiceAsInt {
     case 1:
         offerChoiceLoop = false
-        print("ok")
+        print("You grab a pill and swallow it.")
     default:
-            print("The stranger smirks at you. 'I said take one.'")
+        Sanity -= 1
+        print("The stranger smirks at you. 'I said take one.'")
+    }
 }
-
-}
-
-print("uhire")
-//leads to elevator. if player has key then can use elevator. first floor is way out. basement loses sanity.
-
-//0 sanity or less causes insane ending.
-//having robin's file when they tell you their name causes you to either escape or die.
-
-
-
-
-
-
-
-//if let response = readLine()?.lowercased() {
-//    if Sanity < 10 {
-//        print("You went insane.")
-//    } else {
-//        print("You haven't gone insane.")
-//}
-//}
-//
-//print("enter your workout: (swim), (bike), (run)")
-//if let response = readLine() { //this unwraps an optional
-//    switch response {
-//    case "swim":
-//        print("don't forget your goggles")
-//    case "bike":
-//        print("pack an extra tube and hydration")
-//    case "run":
-//        print("nice day for a run in central park")
-//    default:
-//        print("no 🍺 for you")
-//    }
-//
-//}
-//google unwrapping an optional - the bang function ()!
-
-//print("Your adventure begins! Choose your direction \"Up\" or \"Down\"") //Use \ to escape characters
-//
-//let UpOrDown = readLine()!
-//var weapon = "sword" //Set variables here and you can change and use their values later
-//var eggExploded = false
-//switch UpOrDown {
-//case "Up":
-//    print("You see a basket of eggs.  How many do you take?")
-//    let eggNum = readLine()!
-//    let eggNumAsInt = Int(eggNum)!
-//    for currentEgg in 1...eggNumAsInt {
-//        print("You carefully remove egg number \(currentEgg)")
-//        if currentEgg == 4 {
-//            print("It was a trap!  The egg explodes")
-//            eggExploded = true
-//        }
-//    }
-//    if !eggExploded {
-//        print("Congrats!  You made it out with \(eggNumAsInt) eggs!")
-//    }
-//    //More decisions ahead! Use conditionals and switch statements here
-//
-//case "Down":
-//    print("Down you go!")
-////Instructions for the "Down" option ahead!
-//default:
-//    print("You stand your ground. Choose a weapon")
-//    weapon = readLine()!
-//    //Fighting conditionals ahead!
-//}
-//
-//if weapon != "" {
-//    print("You survived your first ordeal and evan have a \(weapon) to take home")
-//}
-//if eggExploded {
-//    print("Bad luck!  Don't take so many eggs")
-//}
+print("Satisfied, the stranger turns away from you and looks around the area as if formulating a mental plan. 'I've been looking for a way out of the building, and it's proving more difficult than I thought.' They shake their head. 'There aren't any windows in this place, and I haven't found any stairwells either.' They frown at you. 'I know for sure the elevator is a way out, but it requires a key to work, and I haven't found any key.")
+while hasKey {
+     while elevatorChoiceLoop {
+            print("You suddenly remember the key that you found earlier. Do you show it to the stranger?")
+            print("Yes      No")
+        let elevatorChoice = readLine()?.lowercased()
+            switch elevatorChoice {
+            case "yes":
+                elevatorChoiceLoop = false
+            print("The stranger notices the key dangling from your hand. You tell them that you found it on the floor.")
+            print("'Whoa.' They stare at the key before grabbing it from your hand and flashing you a grin. 'Well, cmon, let's try it out. This might be our ticket out of this place.'")
+            print("Eventually you reach a giant pair of steel elevator doors after walking down another long hallway. 'Aaaaaand...' They insert the key into the keyhole next to the elevator and sure enough, it's a perfect fit. The elevator doors open. The stranger turns to you and smiles before quickly putting the key back in their pocket.")
+            print("'Finally, an end to this misery.'")
+                if Sanity <= 1 {
+                    print("There was a news story that blew up about an insane person at the asylum in town. They had no recollection of being a patient there and insisted on escaping. Witnesses describe seeing the patient talking to someone about ending their misery before jumping out of a window and plummeting to their death.")
+                    print("THE END. TRY AGAIN?")
+                    break
+                } else {
+                    print("You manage to escape the asylum. You win!")
+                    break
+                }
+            case "no":
+                print("You shrug.")
+                print("'Oh well. I guess we can keep looking for something.'")
+                print("Time passes by and you and the stranger are unable to find an exit. Hours turn into days and days turn into weeks.  Eventually the stranger fails to show up at all.")
+                print("You are unable to escape and eventually go insane and die.")
+                elevatorChoiceLoop = false
+            default:
+                print("Make a decision.")
+                print("Yes      No")
+            }
+            }
+    }
