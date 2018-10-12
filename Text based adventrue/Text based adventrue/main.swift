@@ -17,7 +17,7 @@ if let response = readLine() {
 
     switch response.capitalized {
     case "North America":
-        print("Where do you want to go? New York, Miami, Chicago)")
+        print("Where do you want to go? New York, Miami, Chicago")
         let response1 = readLine()
         switch response1?.capitalized {
         case "New York":
@@ -51,26 +51,48 @@ if let response = readLine() {
             switch ageResponse {
                 case 0...18:
                         print("Its not your time yet, check out Miami's other events")
-                        for _ in 1...1 {
-                            print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-                            print( "☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️" , separator: "")
-                            print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+                        for _ in 1...2 {
+                            print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+                            print( "☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️☹️" , separator: "")
+                            print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
                             }
                 case 19...20:
                         print("⌚️⌚️⌚️⌚️⌚️⌚️⌚️ You are not old enough to turn up yet, but you can enter the club, get the wristband ⌚️⌚️⌚️⌚️⌚️")
                 case 21...100:
                         print("🔊🔊🔊🔊🔊🔊🔊 Press the turn up button twice 🔊🔊🔊🔊🔊🔊🔊🔊🔊")
                         for _ in 0...10 {
-                            print("🥃" , terminator: "")
+                            print("🥃")
                 }
                 default:
                     print("you are not human")
             }
             }
         case "Chicago":
-            
-            print("Lets go to the windy city 💨")
-            
+             print("Lets go to the windy city 💨")
+             print("We have many ways to get around our beautiful city, which mode of transport would better meet your needs?")
+            let myTransportation = ["🚘","🚍","🚲","🚈","🚕"]
+            let myPreferences = ["car","bus","bike","train","Rideshare"]
+            let myCompanies = ["Enterprise","Hertz","Uber","Lyft","Chicago Transit Authority"]
+             print("Modes of transportation avalible are: Car Rental , Bus, Bike, Train, Rideshare")
+          
+             if let transportationResponse = readLine() {
+                switch transportationResponse.capitalized {
+                case "Car":
+                    print(" You have chosen \(myPreferences[0]) \(myTransportation[0]). You can book your rental for either \(myCompanies[0]) or \(myCompanies[1])")
+                case "Bus":
+                    print("You have chosen the \(myPreferences[1]) \(myTransportation[1]). Our bus services run 7 days a week. They are owned and operated by \(myCompanies[4]) ")
+                case "Bike":
+                    print("You have chosen \(myPreferences[2]) \(myTransportation[2]). We have newly implemented citi bikes which you can rent.")
+                case "Train":
+                print("You have chosen \(myTransportation[3]) \(myPreferences[3]) as your form of transportation, this service is also avaible through the \(myCompanies[4])")
+                case "Rideshare":
+                    print("You have chosen \(myTransportation[4]) \(myPreferences[4]), the companies that offer this services are \(myCompanies[2]) and \(myCompanies[3])")
+                default:
+                    print("transportation not avalible")
+                }
+                print("Thank you for chosing Chicago for your vacation, have a blast")
+                
+            }
         default:
             print("no option")    
         }
@@ -94,7 +116,7 @@ if let response = readLine() {
             print("What would you like to eat, some of the dishes we have avalible are: Chicken Curry , Cook up and Fried Rice")
            let responseDishes = readLine()
             
-            print("The side orders we have avalible are: Roti ,Rice ,Local Drink and Dahal")
+            print("The side orders we have avalible are: Roti ,Rice ,Local Drink and Dahl Puri")
             let responseSide = readLine()
             
             switch responseDishes?.capitalized {
@@ -116,30 +138,34 @@ if let response = readLine() {
                     print("----------------------------------------------------------------")
                     print("You have chosen \(dishes[0]) and \(side[3]) if you would like to purchase this meal the price is \(price[2] + price[0]) ")
                     print("----------------------------------------------------------------")
-                        default :
+                    case "Na":
+                    print("you have chosen only \(dishes[0]) and the price is \(price[2])")
+                default :
                     print("----------------------------------------------------------------")
                     print("Your choice of side is not avalible at the moment")
                     print("----------------------------------------------------------------")
-                    
+                
                 }
             case dishes[1]:
                 switch responseSide?.capitalized {
                 case side[0]:
                     print("----------------------------------------------------------------")
-                    print("You have chosen \(dishes[1]) and \(side[0]) if you would like to purchase this meal the price is \(price[5] + price[2]) ")
+                    print("You have chosen \(dishes[1]) and \(side[0]) if you would like to purchase this meal the price is \(price[3] + price[2]) ")
                     print("----------------------------------------------------------------")
                 case side[1]:
                     print("----------------------------------------------------------------")
-                    print("You have chosen \(dishes[1]) and \(side[1]) if you would like to purchase this meal the price is \(price[4] + price[3]) ")
+                    print("You have chosen \(dishes[1]) and \(side[1]) if you would like to purchase this meal the price is \(price[3] + price[3]) ")
                     print("----------------------------------------------------------------")
                 case side[2]:
                     print("----------------------------------------------------------------")
-                    print("You have chosen \(dishes[1]) and \(side[2]) if you would like to purchase this meal the price is \(price[2] + price[0]) ")
+                    print("You have chosen \(dishes[1]) and \(side[2]) if you would like to purchase this meal the price is \(price[3] + price[0]) ")
                     print("----------------------------------------------------------------")
                 case side[3]:
                     print("----------------------------------------------------------------")
-                    print("You have chosen \(dishes[1]) and \(side[3]) if you would like to purchase this meal the price is \(price[4] + price[3]) ")
+                    print("You have chosen \(dishes[1]) and \(side[3]) if you would like to purchase this meal the price is \(price[3] + price[3]) ")
                     print("----------------------------------------------------------------")
+                case "na":
+                   print("you have chosen only \(dishes[1]) and the price is \(price[3])")
                 default:
                     print("----------------------------------------------------------------")
                         print("Your choice of side is not avalible at the moment")
@@ -149,7 +175,7 @@ if let response = readLine() {
                 switch responseSide?.capitalized {
                 case side[0]:
                     print("----------------------------------------------------------------")
-                    print("You have chosen \(dishes[2]) and \(side[0]) if you would like to purchase this meal the price is \(price[4] + price[2]) ")
+                    print("You have chosen \(dishes[2]) and \(side[0]) if you would like to purchase this meal the price is \(price[2] + price[2]) ")
                     print("----------------------------------------------------------------")
                 case side[1]:
                     print("----------------------------------------------------------------")
@@ -163,6 +189,9 @@ if let response = readLine() {
                     print("----------------------------------------------------------------")
                     print("You have chosen \(dishes[2]) and \(side[3]) if you would like to purchase this meal the price is \(price[2] + price[0]) ")
                     print("----------------------------------------------------------------")
+                case "Na":
+                    print("you have chosen only \(dishes[0]) and the price is \(price[2])")
+                
                 default:
                     print("----------------------------------------------------------------")
                     print("Your choice of side is not avalible at the moment")
@@ -272,7 +301,7 @@ if let response = readLine() {
             let responseNija = readLine()
             if responseNija?.capitalized == "Gurara" {
                 print("Lets go")
-                print("Welcome to the Gurara Falls. You can either Observe the falls or go for swim. What would you like to do?"   ,separator: "")
+                print("Welcome to the Gurara Falls. You can either 'observe' or go for 'swim'. What would you like to do?"   ,separator: "")
     let responseFalls = readLine()
                 switch responseFalls?.capitalized {
                 case "Swim":
@@ -285,8 +314,8 @@ if let response = readLine() {
                     }
                     
                 case "Observe":
-                    print("You chose to be safe and observe the falls, what would you like to do?: 'Observe' swimmers OR go 'Bird watching'")
-                    let choice = "observe"
+                    print("You chose to be safe and observe the falls, what would you like to do?: 'Observe' the people swimming in the falls OR go 'Bird watching'")
+                    let choice = "Observe"
                     let choice1 = "Bird watching"
                     let responseWatch = readLine()
                     if responseWatch?.capitalized == choice{
@@ -314,7 +343,7 @@ if let response = readLine() {
             
             else if responseNija?.capitalized == "Jungle" {
                 print("watch out for wild animals🦒")
-                print("You have arrived!!, this is our jungle, we are about to cross a very dangerous path")
+                print("You have arrived!, we are about to cross a very dangerous path")
                 print("Proceed cautiouisly!! you can either 'Skip' across the bridge OR 'walk cautiously'")
                 let choice = readLine()
             
@@ -379,7 +408,7 @@ if let response = readLine() {
             case 3:
                 print("""
                                 🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲
-                                Vist the cancun national park
+                                    Vist the cancun national park
                                 🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲
                     """)
 
