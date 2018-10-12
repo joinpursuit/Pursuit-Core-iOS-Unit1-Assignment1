@@ -52,14 +52,14 @@ print("Your adventure begins! Choose your direction \"Up\" or \"Down\"") //Use \
 let UpOrDown = readLine()!
 var weapon = "" //Set variables here and you can change and use their values later
 var eggExploded = false
-switch UpOrDown {
-case "Up":
+switch UpOrDown { 
+case "Up": 
     print("You see a basket of eggs.  How many do you take?")
     let eggNum = readLine()!
     let eggNumAsInt = Int(eggNum)!
     for currentEgg in 1...eggNumAsInt {
         print("You carefully remove egg number \(currentEgg)")
-        if currentEgg == 4 {
+        if currentEgg == 4 { 
             print("It was a trap!  The egg explodes")
                 eggExploded = true
         }
@@ -97,8 +97,8 @@ if eggExploded {
 | Tuples | 4.0 pts Exceeds Expectations | 3.0 pts Meets Expectations | 2.0 pts Partially Meets Expectations | 1.0 pts Does Not Meet Expectations | 4.0 pts |
 | Environment (Compiles and runs) | 4.0 pts Exceeds Expectations | 3.0 pts Meets Expectations | 2.0 pts Partially Meets Expectations | 1.0 pts Does Not Meet Expectations | 4.0 pts |
 | App Follows Specifications | 4.0 pts Exceeds Expectations | 3.0 pts Meets Expectations | 2.0 pts Partially Meets Expectations | 1.0 pts Does Not Meet Expectations | 4.0 pts |
-| General Coding Logic | 4.0 pts Exceeds Expectations | 3.0 pts Meets Expectations | 2.0 pts Partially Meets Expectations | 1.0 pts Does Not Meet Expectations | 4.0 pts |
+| General Coding Logic | 4.0 pts Exceeds Expectations | 3.0 pts Meets Expectations | 2.0 pts Partially Meets | Expectations | 1.0 pts Does Not Meet Expectations | 4.0 pts |
 | For in Loops | 4.0 pts Exceeds Expectations | 3.0 pts Meets Expectations | 2.0 pts Partially Meets Expectations | 1.0 pts Does Not Meet Expectations | 4.0 pts |
-| While Loops | 4.0 pts Exceeds Expectations | 3.0 pts Meets Expectations | 2.0 pts Partially Meets Expectations | 1.0 pts Does Not Meet Expectations | 4.0 pts|
+| While Loops | 4.0 pts Exceeds Expectations | 3.0 pts Meets Expectations | 2.0 pts Partially Meets Expectations | 1.0 pts Does Not Meet Expectations | 4.0 pts |
 
 Total Points 40.0
