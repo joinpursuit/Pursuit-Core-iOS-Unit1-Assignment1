@@ -93,21 +93,22 @@ while restartGame {     //this let the player to restart the game
         while reEnterResponse {
             reEnterResponse = false
             print("Should I wake Sally up? (wake her up) or (let her sleep)\n")
-        }
-        
-        if let input3 = readLine()?.lowercased() {
-            switch input3 {
-            case "wake her up":
-                print("\(playerName): \"Sally...Sally Wake UP!! You are going to miss your stop.\"\n")
-                print("Sally: \"Oh...thank you so much. I didn\'t sleep for 3 days working on the Capstone Project. Today, we are going to present. You're' a life-saver😊.")
-            case "let her sleep":
-                print("Seeing those deep black circles around her eyes, you didn't wake her up and left her in the train. She needs to rest. It wouldn't hurt if she misses a day or two.\n")
-                print("As the train leaves, you recall that today is day where Sally's cohort presents their Capstone Projects. Oh...Shh...😲")
-            default:
-                print("Huh? I am not sure if I understand your response.")
-                reEnterResponse = true
+            if let input3 = readLine()?.lowercased() {
+                switch input3 {
+                case "wake her up":
+                    print("\(playerName): \"Sally...Sally Wake UP!! You are going to miss your stop.\"\n")
+                    print("Sally: \"Oh...thank you so much. I didn\'t sleep for 3 days working on the Capstone Project. Today, we are going to present. You're' a life-saver😊.")
+                case "let her sleep":
+                    print("Seeing those deep black circles around her eyes, you didn't wake her up and left her in the train. She needs to rest. It wouldn't hurt if she misses a day or two.\n")
+                    print("As the train leaves, you recall that today is day where Sally's cohort presents their Capstone Projects. Oh...Shh...😲")
+                default:
+                    print("Huh? I am not sure if I understand your response.")
+                    reEnterResponse = true
+                }
             }
         }
+        
+
         
         //Arrived to Pursuit. Saving a person from commiting suicide.
         print("")
