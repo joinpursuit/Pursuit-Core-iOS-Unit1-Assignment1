@@ -15,33 +15,32 @@ print("HOW TO BEGIN AN ADVENTURE")
 print("")
 print("")
 print("You passed through security at JFK. The flight is delayed. If you want to go to the bar to kill time? (enter: \"bar\"): ")
-// could also be a good while opportunity
 let barOrRelax = readLine()!.lowercased()
 switch barOrRelax {
-case "bar", "yes":
-    let barDrinkMenu = ("cerveza", "vodka", "wine")
+case "bar", "yes", "y", "b":
+    let barDrinkMenu = (beer: "cerveza", vodka: "vodka", vino: "wine", priceAllDrinks: 14.99)
     print("Can I offer you a cerveza, vodka, or wine? Happy hour is about to end: ")
     let userWantsToDrink = readLine()?.lowercased()
     switch userWantsToDrink {
-    case barDrinkMenu.0, barDrinkMenu.1, barDrinkMenu.2:
-        print("You need to order at least two drinks. All drinks are $8.99. How many do you want?: ")
+    case barDrinkMenu.beer, barDrinkMenu.vodka, barDrinkMenu.vino:
+        print("You need to order at least two drinks. All drinks are $14.99. How many do you want?: ")
         let howManyDrinks = readLine()!
-        let howManyDrinksInt = Int(howManyDrinks)!//if user enters charcter it crashes
+        let howManyDrinksInt = Int(howManyDrinks) ?? 0  // nil coelescing
         var counterDrinks = 0
     if howManyDrinksInt >= 2 {
             for _ in 2...howManyDrinksInt{
                 counterDrinks += 1
-                //                repeat {
-                //                    print("skål!!!")
-                //                } while counterDrinks == 2
+                print("skål!!!")
             }
-            let check: Double = 14.99 * Double(counterDrinks)
+            let check: Double = barDrinkMenu.priceAllDrinks * Double(counterDrinks)
             print("Here is your check for drinks: $\(check). The food is on the house. ")
     } else if howManyDrinksInt < 2 {
-             print("Get out of here!!! You will never gonna make it in the land if the vikings...")
+             print("Get out of here!!! You will never gonna make it in the land if where vikings drink beer in hot swimming pools... With my bartender, cool tour guide, and magical icelandic gnome powers I condemn you to be Tom Hanks in that movie where he lives in a terminal.")
+            break
     } else {
             print("The gnomes of Island can sense you are a smart ass and killed you from afar...")
         }
+        
     print("Ready for your flight?: ")
     let isUserReadyForFlight = readLine()!
         switch isUserReadyForFlight{
@@ -60,29 +59,29 @@ case "bar", "yes":
                 if exploreOrContinue == "waterfall"{
                     print("While you were braving the cold water to reach behind the waterfall a gnome appeared behind a rock and it is smiling at you...are you afraid?: ")
                     let doYouSeeAGnome = readLine()!.lowercased()
-//                    while doYouSeeAGnome == "afraid"{
-//                        print("Good instincts until you last breath! pitty that you are now a dish")
-//                        while doYouSeeAGnome == "no" {
-//                           print("You should be. He just made you his dinner ☠️☠️☠️")
-//                        }
-//                    }
+                    doYouSeeAGnome == "yes" ? print("Good instincts until you last breath."): print("You should be. He just made you his dinner ☠️☠️☠️")
                     }else if exploreOrContinue == "hotel"{
-                    print("You made it to the hotel! What a trip just to get to the starting point of your vacation. Enjoy!") //if there is time maybe do a while loop here
+                    print("You made it to the hotel! What a trip just to get to the starting point of your vacation. They offer you the option to stay on the second or fifth floor. Do you choose \"2\" or \"5\"?: ")
+                    let oddOrEven = readLine()!
+                    let oddOrEvenInt = Int(oddOrEven)!
+                    while oddOrEvenInt % 2 != 0{
+                        print("This odd room killed you with a sharp angle!")
+                    }
                 }else {
                     print("You were doomed to begin with...")
                 }
-        default:
-            print("The gnomes that only understand true or false have killed you for having those poor motor skills...and for being a smart ass")
+                default:
+                    print("Gnomes that only understand true or false killed you for having those poor motor skills...and for being a smart ass.")
             }
-    default:
+            default:
             print("Yeah...your plane just departed...On the bright side, you can keep drinking overpriced drinks!")
         }
         
     default:
-        print("If you are here, you are here to be brave and drink, and to stick to the forking menu... With my bartender / magical icelandic gnome / cool tour guide powers, I reject you and YOU SHALL NOT PASS!!!")
-}
+        print("If you are here, you are here to be brave and drink, and to stick to the forking menu... With my bartender, cool tour guide, and magical icelandic gnome powers, I reject you and YOU SHALL NOT PASS!!!")
+    }
 default:
-    print("Yeah...your trip is done before it began 😏... You either overslept or got lost shopping unnecesary stuff at the duty free, the flight is gone")
+    print("Time was the ☠️ of you. Your trip ended before it began!")
 }
 
     
