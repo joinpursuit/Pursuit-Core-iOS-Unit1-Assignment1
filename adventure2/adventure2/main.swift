@@ -7,6 +7,7 @@
 //
 
 import Foundation
+let questions = (Q1: "IS CODING FUN?", Q2: "WHICH ONE IS YOUR FAVORITE?", Q3: "DRIVER SEAT OR PASSENGER ?", Q4: "HOW ARE YOU FEELING TODAY ?", Q5: "WHAT DO YOU PREFER ?", Q6: "WHICH ONE WOU LIKE THE MOST ?", Q7: "WHICH iOS INSTRUCTURE YOU LIKE THE MOST ?", Q8: "ARE YOU AN INTROVERT OR EXTROVERT ?", Q9: "WHICH ONE WOULD YOU PICK ?", Q10: "ARE YOU OVER OR UNDER 21 ?")
 let yes: String = "yes"
 let no: String = "no"
 let a: String = "marvel"
@@ -29,374 +30,246 @@ let over: String = "over"
 let under: String = "under"
 let num: Int = 2
 let num2: Int = num + 1
-
+let input = 1
 
 
 repeat {
+    print("PRESS 1 TO START THE QUESTIONARY")
+    let response = readLine()!
+    let valueEntered = Int(response) ?? 1
+    if valueEntered == 1 {
+        break
+    }
+} while num == 3
+
+
+
+
 print("")
-print("IS CODING FUN?")
+print(questions.Q1)
     print("")
 print("yes or no?")
 if case readLine() = yes {
     
     print("I THINK IS PRETTY FUN TOO!!")
     print("NEXT QUESTION!")
-    print("PRESS ENTER TWICE!!")
-    if case readLine() = no {
-        print("BOOOOO")
-        print("NEXT QUESTION")
-        print("PRESS ENTER")
-        
-        
     
-    if case readLine() = no {
-            
-            print("BOOOOO")
-            print("NEXT QUESTION")
-            print("PRESS ENTER")
-            if case readLine() = yes {
-                print("I THINK IS PRETTY FUN TOO!!")
-                print("NEXT QUESTION!")
-                print("PRESS ENTER TWICE!!")
-                break
-             }
-         }
-    }
-    }
-    } while num == 3
+} else {
+    print("BOOOOO")
+    print("NEXT QUESTION")
+   
+
+    } //while num == 3
 
          
 //q2
-repeat {
+//repeat {
 print("")
-print("WHICH ONE IS YOUR FAVORITE?")
+print(questions.Q2)
     print("")
 print("MARVEL OR DC?")
 if case readLine() = a {
     print("GOD BLESS STAN LEE!!")
     print("")
     print("NEXT QUESTION")
-     print("PRESS ENTER")
-    if case readLine() = b {
+    
+} else {
         print("WELCOME TO THE JUCTICE LEAGUE!!!")
         print("")
         print("NEXT QUESTION")
-        print("PRESS ENTER")
-        break
-    }
     
-
-if case readLine() = b {
-    print("WELCOME TO THE JUCTICE LEAGUE!!!")
-    print("")
-    print("NEXT QUESTION")
-    print("PRESS ENTER")
-    if case readLine() = a {
-        print("GOD BLESS STAN LEE!!")
-        print("")
-        print("NEXT QUESTION")
-        print("PRESS ENTER")
-      }
-    }
-}
-} while num == 3
+} //while num == 3
 //q3
-repeat {
+//repeat {
 print("")
-print("DRIVER SEAT OR PASSENGER ?")
+print(questions.Q3)
     print("")
 print("driver    or    passenger")
 if case readLine() = c {
     print("I GUESS YOU'RE NOT DRINKING TONIGHT ?")
     print("")
     print("NEXT QUESTION")
-     print("PRESS ENTER")
-    if case readLine() = d {
-        print("YOU IN CHARGE OF THE AUX CABLE!!!")
-        print("")
-        print("NEXT QUESTION")
-        print("PRESS ENTER")
-        break
-    }
-
-if case readLine() = d {
+    
+    
+} else {
     print("YOU IN CHARGE OF THE AUX CABLE!!!")
     print("")
-     print("NEXT QUESTION")
-     print("PRESS ENTER")
-    if case readLine() = c {
-        print("GUESS WHO'S NOT DRINKING TONIGHT ?")
-        print("")
-        print("NEXT QUESTION")
-        print("PRESS ENTER")
-        break
-     }
-    }
-    }
-} while num == 3
+    print("NEXT QUESTION")
+   
+} //while num == 3
 //q4
-repeat {
+//repeat {
 print("")
-print("HOW ARE YOU FEELING TODAY ?")
+print(questions.Q4)
     print("")
 print("happy or sad?")
 if case readLine() = h {
     print("YAY!! IF YOU'RE HAPPY, IM HAPPY")
     print("")
      print("NEXT QUESTION")
-     print("PRESS ENTER")
-    if case readLine() = s {
-        print("WHAT'S WRONG? CHEER UP!!!")
-        print("")
-        print("NEXT QUESTION")
-        print("PRESS ENTER")
-        break
-    }
-
-if case readLine() = s {
+    
+} else {
     print("WHAT'S WRONG? CHEER UP!!!")
     print("")
-     print("NEXT QUESTION")
-     print("PRESS ENTER")
-    if case readLine() = h {
-        print("YAY!! IF YOU'RE HAPPY, IM HAPPY")
-        print("")
-        print("NEXT QUESTION")
-        print("PRESS ENTER")
-        
-    }
-    }
-    }
+    print("NEXT QUESTION")
+    
+    //break
+}
 
-} while num == 3
+ //while num == 3
 
 //q5
-repeat {
+//repeat {
 print("")
-print("WHAT DO YOU PREFER ?")
+print(questions.Q5)
     print("")
 print("beach or pool")
 if case readLine() = be {
     print("LET'S GO SURFING!!!")
     print("")
      print("NEXT QUESTION")
-     print("PRESS ENTER")
-    if case readLine() = p {
-        print("LET'S HAVE A POOL PARTY!!!")
-        print("")
-        print("NEXT QUESTION")
-        print("PRESS ENTER")
-        break
-    }
-
-
-if case readLine() = p {
+    
+} else {
     print("LET'S HAVE A POOL PARTY!!!")
     print("")
-     print("NEXT QUESTION")
-     print("PRESS ENTER")
-    if case readLine() = be {
-        print("LET'S GO SURFING!!!")
-        print("")
-        print("NEXT QUESTION")
-        print("PRESS ENTER")
-       
-    }
-    }
-    }
-} while num == 3
+    print("NEXT QUESTION")
+    
+    //break
+} //while num == 3
 
 
 //q6
-repeat {
+//repeat {
 print("")
-print("WHICH ONE WOU LIKE THE MOST ?")
+print(questions.Q6)
     print("")
 print("spotify or applemusic?")
 if case readLine() = spo {
     print("I LOVE SPOTIFY!!!")
     print("")
     print("NEXT QUESTION!")
-     print("PRESS ENTER")
-    if case readLine() = apl {
-        print("NICE! I LOVE APPLEMUSIC!!")
-        print("")
-        print("NEXT QUESTION!")
-        print("PRESS ENTER")
-        break
-    }
-
-
-if case readLine() = apl {
+    
+} else {
     print("NICE! I LOVE APPLEMUSIC!!")
     print("")
     print("NEXT QUESTION!")
-     print("PRESS ENTER")
+    
     if case readLine() = spo {
         print("I LOVE SPOTIFY!!!")
         print("")
         print("NEXT QUESTION!")
-        print("PRESS ENTER")
-    }
+        
     }
 }
-} while num == 3
+ //while num == 3
 
 
 
 //q7
-repeat {
+//repeat {
 print("")
-print("WHICH iOS INSTRUCTURE YOU LIKE THE MOST ?")
+print(questions.Q7)
     print("")
 print("ALAN OR ALEX?")
 if case readLine() = all {
     print("LETS CREATE SOME ARRAYS!!")
     print("")
     print("NEXT QUESTION")
-     print("PRESS ENTER")
     
+} else {
     if case readLine() = alx {
         print("WHAT ALEX DID SAY ABOUT TUPLES??")
         print("")
         print("NEXT QUESTION")
-        print("PRESS ENTER")
-        break
-    }
-
-
-if case readLine() = alx {
-    print("WHAT ALEX DID SAY ABOUT TUPLES??")
-    print("")
-    print("NEXT QUESTION")
-    print("PRESS ENTER")
-    
-    if case readLine() = all {
-        print("LETS CREATE SOME ARRAYS!!")
-        print("")
-        print("NEXT QUESTION")
-        print("PRESS ENTER")
+        
+        
+        if case readLine() = all {
+            print("LETS CREATE SOME ARRAYS!!")
+            print("")
+            print("NEXT QUESTION")
+           
         }
     }
-  }
-} while num == 3
+}
+//} while num == 3
 
 
 //q8
-repeat {
+//repeat {
 print("")
-print("ARE YOU AN INTROVERT OR EXTROVERT ?")
+print(questions.Q8)
 print("introvert or extrovert ?")
 if case readLine() = int {
     print("SO YOU THINK MORE THAN TALK ? THAT'S COOL!")
     print("NEXT QUESTION")
      print("PRESS ENTER")
-    
+} else {
     if case readLine() = ext {
         print("SO YOU TALK MORE THAN YOU THINK? THAT'S COOL!")
         print("NEXT QUESTION")
         print("PRESS ENTER")
-        break
-    }
-
-
-if case readLine() = ext {
-    print("SO YOU TALK MORE THAN YOU THINK? THAT'S COOL!")
-    print("NEXT QUESTION")
-    print("PRESS ENTER")
-
-    if case readLine() = int {
-        print("SO YOU THINK MORE THAN TALK ? THAT'S COOL!")
-        print("NEXT QUESTION")
-        print("PRESS ENTER")
-       
-    }
+        
+        if case readLine() = int {
+            print("SO YOU THINK MORE THAN TALK ? THAT'S COOL!")
+            print("NEXT QUESTION")
+            print("PRESS ENTER")
+            
+        }
     }
 }
-} while num == 3
 
 
 //q9
-repeat {
+//repeat {
 print("")
-print("WHICH ONE WOULD YOU PICK ?")
+print(questions.Q9)
 print("PIZZA OR BURGER ?")
 if case readLine() = bur {
     print("THE BIGGER THE BURGER THE BETTER!!")
     print("FINAL QUESTION")
      print("PRESS ENTER")
-
-    if case readLine() = piz {
-        print("🍕🍕!!")
-        print("NEXT QUESTION")
-        print("PRESS ENTER")
-        break
-    }
-
-
-if case readLine() = piz {
+} else {
     print("YAY!! I LOVE PIZZAAA!!!")
     print("FINAL QUESTION")
-     print("PRESS ENTER")
-
+    print("PRESS ENTER")
+    
     if case readLine() = bur {
         print("THE BIGGER THE BURGER THE BETTER!!")
         print("FINAL QUESTION")
         print("PRESS ENTER")
-      
+        
     }
-    }
-    }
-} while num == 3
+}
+
 
 
 //q10
-repeat {
+//repeat {
 print("")
-print("ARE YOU OVER OR UNDER 21 ?")
+print(questions.Q10)
     print("over or under ?")
 if case readLine() = over {
     print("LET'S GO HAVE A DRINK!!!")
     print("OKAY!! THANKS FOR PLAYING")
      print("PRESS ENTER TO PLAY AGAIN!")
-
+} else {
+    repeat {
     if case readLine() = under {
         print("YOU SHOULD BE HOME BY 9PM!!")
         print("OKAY!! THANKS FOR PLAYING")
         print("PRESS ENTER TO PLAY AGAIN")
-        break
+        
+        if case readLine() = over {
+            print("LET'S GO HAVE A DRINK!!!")
+            print("OKAY!! THANKS FOR PLAYING")
+            print("PRESS ENTER TO PLAY AGAIN!")
+            
+        }
     }
-
-
-if case readLine() = under {
-    print("YOU SHOULD BE HOME BY 9PM!!")
-    print("OKAY!! THANKS FOR PLAYING")
-     print("PRESS ENTER TO PLAY AGAIN")
-
-    if case readLine() = over {
-        print("LET'S GO HAVE A DRINK!!!")
-        print("OKAY!! THANKS FOR PLAYING")
-        print("PRESS ENTER TO PLAY AGAIN!")
-      
-    }
-    }
-    }
+} while num == 3
 print("")
 print("OKAY!!!!")
-} while num == 3
-//
-//}
-//}
-//}
-//}
-//}
-//}
-//}
-//}
-//}
-//}
-//}
-//} while num == 3
+} //while num == 3
 
 
 
