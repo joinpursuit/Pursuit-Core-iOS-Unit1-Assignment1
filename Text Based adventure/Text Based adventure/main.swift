@@ -14,7 +14,6 @@ var damage = array.randomElement()
 var enemyDamage = arrayEnemy.randomElement()
 
 
-
 print ("Welcome to the Dungeon! The monster you've been hunting is sure to be inside. Forge ahead or turn back?")
 loop: while enemyHP > 0 && playerHP > 0{
 let forwardOrBackward = readLine()!
@@ -115,12 +114,8 @@ switch forwardOrBackward.lowercased() {
                     print("ENTER YOUR AGE")
                     let ageResponse = readLine() ?? "Unknown"
                     let age = ageResponse
-                    for ageResponse in age{
-                        player.age = age
-                        print ("ALL HAIL \(player.name.uppercased()) AGE \(player.age), OGRE SLAYER")
-                        
-                    }
-        
+                    player.age = age
+                    print ("ALL HAIL \(player.name.uppercased()) AGE \(player.age), OGRE SLAYER")
                     
                     
                 }
@@ -129,11 +124,10 @@ switch forwardOrBackward.lowercased() {
             }
             
         
-            
-        
         case "run":
-            print("You turn tail and run for your life! Who will save the village now?")
-            break loop
+            print("You turn tail and run for your life but the ogre blocks your path, You'll have to fight your way out!")
+           
+            continue innerloop1
         default:
             print ("I'm not sure what you mean")
             continue innerloop1
@@ -149,8 +143,12 @@ switch forwardOrBackward.lowercased() {
         continue innerloop0 }
     
 case "back", "leave", "turn back", "return", "retreat", "run" :
-    print("You turn tail and run for your life! Who will save the village now?")
-     break loop
+    print("Knowing you must persist you turn back")
+    for n in 1...3 {
+        print("You take \(n) deep breath/s to gather your courage ")
+    }
+    print("You carry on")
+     continue loop
 default:
     print ("I'm not sure what you mean")
     continue loop
@@ -158,6 +156,7 @@ default:
 
 
 }
+
 
 
 
