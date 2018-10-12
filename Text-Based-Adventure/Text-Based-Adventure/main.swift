@@ -82,25 +82,28 @@ import Foundation
 
 
 //print("Thanks for answering to our peril. What is your name brave crusader")//how to get input from console let response = readLine()!
-var newName = true
-var power = 3
-print( "Hello, is anyone there, can anyone see this? \"Say anything\"")
+//var newName = true
+//var power = 3
 
-if let newName = readLine(){
+
+print( "Helluu, is anyone there? \"Say anything\"")
+
+if let whosHere = readLine(){
     print("\"HELLO!!!!!\" What is your name brave crusader")
     //while newName == true {
-    if let aName = readLine(){
-        print("so happy you came, \(aName). We are at peril. we risk living under water. The problem is that sea water levels will always rise inspite of our actions but use of super powers and good choices to keep it from reaching over our heads, you may save all the lives in our planet! if you dont you will be the first to \"Live Under Water\"...sacrifices must be made")
-    
-        print("Only you cann cause only you came by. will you help? \(aName)\" type  |Yes|\" or \"|No|\"")
+    if let userName = readLine(){
+        print("so happy you came, \(userName). We risk living under water. Sea water levels will always rise inspite of our actions. Pick a super power, make right choices and keep sea water levels from reaching over our heads or better, bring them back down. reaching 100 will kill us all, 0 is like/going back in time /being alive with the dinosours")
+        
+        print("..or be the first to \"Live Under Water\". will you help? \(userName)\" type  |Yes|\" or \"|No|\"")
+    }
         let yesOrNo = readLine()
         if yesOrNo == "yes" {
-            print("your bravery grants you status superHero X ...pick a super power.")
+            print("your bravery grants you status superHero X ...pick a super power from choices below.")
             print("\"1\" Zap plastic into thin air \"2.\" Cut that polyester mass production \"3.\"vacumming CO2 emissions out of the atmosphere")
             let choice = readLine()!
-            let current = Int(choice)!
+            //let current = Int(choice)
             //for currentPower in 0...power{
-            if current == Int(choice)! {
+            
             switch choice {
                 case "1" :
                     print("You can now Zap plastic into thin air. Killer!")
@@ -113,119 +116,64 @@ if let newName = readLine(){
                     print("please you can not make significant difference with out one of these powers!")
                     }
             
-                }
-        }
+                    }
+            
                 else {
-                 print("too bad, its draft. Now you dont get to pick your super power. you have been assigned the power of slime and it collects garbage powerfully")
+                 print("Lucky it is a draft. Now you dont get to pick your super power. you have been assigned the power of slime and it collects garbage powerfully")
             }
-       // }
+        }
             
             print("let's begin !!! go through these scenarios. your good choices are boosted by your superpower and each answer could decrease the ever increasing sea levels by 10 units. It could also increase it by 5 units. good luck !\" Hit Enter To Begin\"")
-          // let _ = readLine()!
+           let hitEnter = readLine()!
         //print("1. when you go to the store you forgot your reusable tote. theres a sale for a new. you choose to buy it, your old one //needs replacing soon \"OR\" just use the free plastic bags for future garbage anyway\"A\" or \'B\"")
        
-        var choicesLoop = true
-        while choicesLoop {
+      // let choicesLoop = true
+        var response = ""
+        //var response = choices1
+       // while choicesLoop {
+            if response != nil {
+            // let chosenPower = readLine()!
+                    print ("1. when you go to the store you forgot your reusable tote. theres a sale for a new. you choose to buy it, your old one needs replacing soon \"OR\" just use the free plastic bags for future garbage anyway\"A\" or \'B\"")
+                    response = readLine()!
+                    //var chosenPower = " "
+                    switch response.lowercased() {
+                    case "a" :
+                        print("savy consumer and subtainability freak. you have subtracted 10 from the waterlevel")
+                    case "b" :
+                        print("you have to make sacrifices\"🙅🏻‍♀️. You have sacrificed the environment the sea levels and added 10 units to the current water level")
+                    default:
+                        print("invalid choice")
+                }
             
-           var choices1 = readLine()
-            //var reponse = Int(choices)
-            if choices1 != nil {
-        
-        print ("1. when you go to the store you forgot your reusable tote. theres a sale for a new. you choose to buy it, your old one needs replacing soon \"OR\" just use the free plastic bags for future garbage anyway\"A\" or \'B\"")
-            
-        let chosenPower = readLine()!
-        //var chosenPower = " "
-            switch chosenPower {
-            case "A" :
-            print("savy consumer and subtainability freak. you have subtracted 10 from the waterlevel")
-        
-            case "B" :
-            print("you have to make sacrifices\"🙅🏻‍♀️. You have sacrificed the environent the sea levels and added 10 units to the current water level")
-
-            default:
-                print("please type \"A\" or \"B\"")
-           
-            
-                print ("2. You got the groceries this week. Surprise!! A Great sale on Smart bottled water $2.99. Do you get it because it is smart\"OR\" do you just refill your glass bottle with free filtered water ?   \"A\" or \'B\"")
-                
-                let chosenPower = readLine()!
+                var response2 = ""
+            if response2 != nil {
+                print ("2. You car is a 1999 model and its the only car you'll ever need\"OR\"  The 10 min walk to public transportation is your morning workout; cars are for vacations!   \"A\" or \'B\"")
+                response2 = readLine()!
+                //let chosenPower = readLine()!
                 //var chosenPower = " "
-                switch chosenPower {
-                case "A" :
-                    print("I knew you are a star. you have subtracted 10 from the water level")
-                    
-                case "B" :
-                    print("Dude you just dont get it\"🙅🏻‍♀️. You have sacrificed the environent the sea levels and added 10 units to the current water level")
-                    
+                switch response2.lowercased() {
+                case "a" :
+                    print("Dude you just dont get it\"🙅🏻‍♀️. your actions Added 10 units to the current water level")
+                case "b" :
+                     print("muscle mass to the max, keeping emissions at a min. you have subtracted 10 from the water level")
                 default:
-                    print("please type \"A\" or \"B\"")
-                    
+                    print("available choices \"A\" or \"B\"")
                 }
-                }
+                
+                var response3 = ""
+            if response3 != nil {
+                    print ("3. You got the groceries this week. Surprise!! A Great sale on Smart bottled water $2.99. Do you get it because it is smart\"OR\" do you just refill your glass bottle with free filtered water ?   \"A\" or \'B\"")
+                    response3 = readLine()!
+                    switch response3.lowercased() {
+                    case "a" :
+                        print("I knew you are a star. you have subtracted 10 from the water level")
+                    case "b" :
+                        print("You have sacrificed the environent the sea levels and added 10 units to the current water level")
+                    default:
+                        print("available choices \"A\" or \"B\"")
+                        
+                    }
+                
             }
         }
     }
-}
-
-
-//        case "no" :
-//            print("too bad, its draft. Now you dont get to pick your super power. you have the power of slime and it collects garbaga powerfully")
-//        continue
-//        default :
-//            print("sorry indecisiveness leaves me uncertain. try again ")
-//            }
-            
-
-
-
-//}yes
-//if let newName = readLine(){ // to make all lower case?
-//    print("Oh all habitants of mitierrita are so happy you came, \(newName). We are at peril. By keeping sea water levels low, you may save all the lives in our planet!  the problem is that levels will always rise inspite of our actions. It is up to you, with the use of  super powers and your good choices to keep it from reaching over our heads. if you dont you will be the first to die but one must make sacrifices")
-//    // what if they put bs name or no name ?
-//
-//        print("Will you willingly save us brave crusader \(newName)!!")
-//
-//   // case yes or no
-//        var yesOrNo = readLine()!
-//        switch yesOrNo {
-//        case "yes" :
-//            print("your bravery grants you the status of superhero X ...pick one the super powers  granted to you,")//better way to ask for birthday
-//        var powerChoice =
-//        if powersChoice
-//    case "no" :
-//    print("for that you are a toad and are subjected to help anyway")
-//
-//    default :
-//    print("sorry indecisiveness leaves you with the rest ")
-//    }
-//
-//
-////what are the special power choices-- pick a number and it will be assigned according to number in range
-//    print(" ")
-//    print("enter only the day for identity theft protection")
-//
-////    var day = Int(dayOfBirth)
-////if day < 30 {
-////    print("the creed for those born on the \(dayOfBirth) of the month is the following:")
-////}
-//if let dayOfBirth = readLine() { // conditional unwarpping (optional binding) (using if let) is safer as the if let block will not run if the value is nil instead the else will execute
-//    print("the creed for those born on the \(dayOfBirth) of the month is the following:")
-//
-//    //if dayOfBirth < 31
-//} else {
-//    print("response is nil")
-//}
-//
-//
-//
-
-
-//// ----- SECOND QUESTION = PICKS A SUPER POWER
-//
-////if day = readLine!(){// to make all lower case?
-//if var day = Int(dateOfBirth){
-//    if day < 10 {
-//    print("the creed kfor those born on the \(String(describing: dateOfBirth)) of the month is the following:")
-//}
-////you have saved the planet but you just let all people 3 feet and under have died!
-
