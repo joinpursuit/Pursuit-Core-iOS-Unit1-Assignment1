@@ -84,7 +84,7 @@ if lunchOrDinner == "lunch" {
                 print("How many kids are 5 years old? Enter 0 if none.")
                 let numOf5 = readLine()!
                 let numOf5Double: Double = Double(numOf5)!
-                subtotalKids = numOf5Double * 3.5
+                subtotalKids = numOf5Double * 4.0
                 print("")
                 
             print("Are there any more kids in your group? (yes) or (no)")
@@ -93,7 +93,7 @@ if lunchOrDinner == "lunch" {
                 print("How many kids are 6 years old? Enter 0 if none.")
                 let numOf6 = readLine()!
                 let numOf6Double: Double = Double(numOf6)!
-                subtotalKids = numOf6Double * 4.0
+                subtotalKids = numOf6Double * 4.5
                 print("")
             
             print("Are there any more kids in your group? (yes) or (no)")
@@ -102,7 +102,7 @@ if lunchOrDinner == "lunch" {
                 print("How many kids are 7 years old? Enter 0 if none.")
                 let numOf7 = readLine()!
                 let numOf7Double: Double = Double(numOf7)!
-                subtotalKids = numOf7Double * 4.5
+                subtotalKids = numOf7Double * 5.0
                 print("")
             
             print("Are there any more kids in your group? (yes) or (no)")
@@ -111,7 +111,7 @@ if lunchOrDinner == "lunch" {
                 print("How many kids are 8 years old? Enter 0 if none.")
                 let numOf8 = readLine()!
                 let numOf8Double: Double = Double(numOf8)!
-                subtotalKids = numOf8Double * 5.0
+                subtotalKids = numOf8Double * 5.5
                 print("")
             
             print("Are there any more kids in your group? (yes) or (no)")
@@ -120,7 +120,7 @@ if lunchOrDinner == "lunch" {
                 print("How many kids are 9 years old? Enter 0 if none.")
                 let numOf9 = readLine()!
                 let numOf9Double: Double = Double(numOf9)!
-                subtotalKids = numOf9Double * 5.5
+                subtotalKids = numOf9Double * 6.0
                 print("")
 
             print("Are there any more kids in your group? (yes) or (no)")
@@ -129,7 +129,7 @@ if lunchOrDinner == "lunch" {
                 print("How many kids are 10 years old? Enter 0 if none.")
                 let numOf10 = readLine()!
                 let numOf10Double: Double = Double(numOf10)!
-                subtotalKids = numOf10Double * 6.0
+                subtotalKids = numOf10Double * 6.5
                 print("")
  
             print("Are there any more kids in your group? (yes) or (no)")
@@ -138,7 +138,7 @@ if lunchOrDinner == "lunch" {
                 print("How many kids are 11 years old? Enter 0 if none.")
                 let numOf11 = readLine()!
                 let numOf11Double: Double = Double(numOf11)!
-                subtotalKids = numOf11Double * 6.5
+                subtotalKids = numOf11Double * 7.0
                 print("")
     
             print("Are there any more kids in your group? (yes) or (no)")
@@ -147,7 +147,7 @@ if lunchOrDinner == "lunch" {
                 print("How many kids are 12 years old? Enter 0 if none.")
                 let numOf12 = readLine()!
                 let numOf12Double: Double = Double(numOf12)!
-                subtotalKids = numOf12Double * 7.0
+                subtotalKids = numOf12Double * 8.0
                 print("")
             }
             }
@@ -199,7 +199,7 @@ if lunchOrDinner == "lunch" {
                 print("How many kids are 4 years old? Enter 0 if none.")
                 let numOf4 = readLine()!
                 let numOf4Double: Double = Double(numOf4)!
-                subtotalKids = numOf4Double * 3.5
+                subtotalKids = numOf4Double * 4.0
                 print("")
                 
             print("Are there any more kids in your group? (yes) or (no)")
@@ -208,7 +208,7 @@ if lunchOrDinner == "lunch" {
                 print("How many kids are 5 years old? Enter 0 if none.")
                 let numOf5 = readLine()!
                 let numOf5Double: Double = Double(numOf5)!
-                subtotalKids = numOf5Double * 4.0
+                subtotalKids = numOf5Double * 4.5
                 print("")
                         
             print("Are there any more kids in your group? (yes) or (no)")
@@ -217,7 +217,7 @@ if lunchOrDinner == "lunch" {
                 print("How many kids are 6 years old? Enter 0 if none.")
                 let numOf6 = readLine()!
                 let numOf6Double: Double = Double(numOf6)!
-                subtotalKids = numOf6Double * 4.5
+                subtotalKids = numOf6Double * 5
                 print("")
                 
             print("Are there any more kids in your group? (yes) or (no)")
@@ -226,7 +226,7 @@ if lunchOrDinner == "lunch" {
                 print("How many kids are 7 years old? Enter 0 if none.")
                 let numOf7 = readLine()!
                 let numOf7Double: Double = Double(numOf7)!
-                subtotalKids = numOf7Double * 5.0
+                subtotalKids = numOf7Double * 5.5
                 print("")
                                 
             print("Are there any more kids in your group? (yes) or (no)")
@@ -235,7 +235,7 @@ if lunchOrDinner == "lunch" {
                 print("How many kids are 8 years old? Enter 0 if none.")
                 let numOf8 = readLine()!
                 let numOf8Double: Double = Double(numOf8)!
-                subtotalKids = numOf8Double * 5.5
+                subtotalKids = numOf8Double * 6.0
                 print("")
                                     
             print("Are there any more kids in your group? (yes) or (no)")
@@ -244,7 +244,7 @@ if lunchOrDinner == "lunch" {
                 print("How many kids are 9 years old? Enter 0 if none.")
                 let numOf9 = readLine()!
                 let numOf9Double: Double = Double(numOf9)!
-                subtotalKids = numOf9Double * 6.0
+                subtotalKids = numOf9Double * 6.5
                 print("")
                                         
             print("Are there any more kids in your group? (yes) or (no)")
@@ -253,7 +253,7 @@ if lunchOrDinner == "lunch" {
                 print("How many kids are 10 years old? Enter 0 if none.")
                 let numOf10 = readLine()!
                 let numOf10Double: Double = Double(numOf10)!
-                subtotalKids = numOf10Double * 6.5
+                subtotalKids = numOf10Double * 7.5
                 print("")
                                             
             print("Are there any more kids in your group? (yes) or (no)")
@@ -262,7 +262,7 @@ if lunchOrDinner == "lunch" {
                 print("How many kids are 11 years old? Enter 0 if none.")
                 let numOf11 = readLine()!
                 let numOf11Double: Double = Double(numOf11)!
-                subtotalKids = numOf11Double * 7.0
+                subtotalKids = numOf11Double * 8.5
                 print("")
                                                 
             print("Are there any more kids in your group? (yes) or (no)")
@@ -271,7 +271,7 @@ if lunchOrDinner == "lunch" {
                 print("How many kids are 12 years old? Enter 0 if none.")
                 let numOf12 = readLine()!
                 let numOf12Double: Double = Double(numOf12)!
-                subtotalKids = numOf12Double * 7.5
+                subtotalKids = numOf12Double * 9.5
                 print("")
             }
             }
