@@ -9,79 +9,83 @@
 import Foundation
 //
 
-print("Welcome to the gross samndwich course! Don't worry, you won't have to eat em! Lets get your order started! What is your name?")
-
 var userName = readLine()!
-var counter = 0
-
 var yesOrNO = "yes"
-
-//var grossBreadChoice = ""
-//var grossSpreadChoice = ""
-//var mainProtein = ""
-//var grossToppingChoice = ""
-//var grossCondimentChoice = ""
-
+var counter = 0
 var grossPointCounter = 0
+let grossBreadChoice = readLine()
+let grossSpreadChoice = readLine()!
+let grossMainProtein = readLine()!
+let grossToppingChoice = readLine()!
+var grossDrinkChoice = readLine()!
 
+
+print("Welcome to the gross sandwich course! Don't worry, you won't have to eat em! Lets get your order started! What is your name?")
+print("--------------------------------------------------------------------------------")
 print("Hello \(userName) are you ready to get making?")
 while counter == 0 {
-    var userResponse = readLine()!
- switch userResponse {
-    case "yes":
+    let userResponse = readLine()!
+    switch userResponse {
+        case "yes":
           counter += 1
 
- default:
-    print("Too bad, you're making one")
+        default:
+            print("Too bad, you're making one")
 }
 }
+
+print("===================================================================================")
 
 print("Ok lets get you started with some bread! Do you want \"soggy\" , \"moldy\" , \"dumpster\" or \"rye\"")
 while counter == 1 {
-    var grossBreadChoice = readLine()!
-        switch grossBreadChoice{
+    let grossBreadChoice = readLine()!
+        switch grossBreadChoice {
         case "soggy":
             counter += 1
             if grossBreadChoice == "soggy"{
                 grossPointCounter += 50
                     print("Gross points are at\(grossPointCounter)")
             }
+            
         case "moldy":
             counter += 1
             if grossBreadChoice == "moldy"{
                 grossPointCounter += 80
                     print("Gross points are at \(grossPointCounter)")
             }
+            
         case "dumpster":
             counter += 1
             if grossBreadChoice == "dumpster"{
                 grossPointCounter += 85
                     print("Gross points are at \(grossPointCounter)")
             }
+            
         case "rye":
             counter += 1
             if grossBreadChoice == "rye" {
                 grossPointCounter += 100
                 if grossBreadChoice == "rye"{
-                    print("Grosspoints are at \(grossPointCounter)")
+                    print("Gross points are at \(grossPointCounter)")
                 }
-            }
-        default:
+            
+            } default:
             print("you are going on this journey whether you like it or not")
     }
 }
 
+print("================================================================================")
+
+
 print("Thats the spirit! Lets get you going with your spread options! Do you want,\"miracle whip\" , \"earwax\" , \"butter\" or \"lard\"")
 while counter == 2 {
-    var grossSpreadChoice = readLine()!
+    let grossSpreadChoice = readLine()!
     switch grossSpreadChoice {
        case "miracle whip":
-            counter += 1
                 if grossSpreadChoice == "miracle whip" {
                         grossPointCounter += 100
                             print("you really chose miracle whip? Who hurt you?")
                                 print("Your Gross points are now at \(grossPointCounter) you are out of the game full stop. Take a minute to reflect on your life")
-                    break
         }
     case "earwax":
         counter += 1
@@ -102,75 +106,162 @@ while counter == 2 {
             grossPointCounter += 20
                 print("Gross points are now at\(grossPointCounter)")
         }
+        
+        
     default:
         print("nice try, pick one")
+    
     }
    
 }
 
 
-print("Alright, lets get to the main protein! Your choices are \"spoiled meat\", \"expired tofu\" , \"a cooked hotdog that fell in the ash of the grill that was forgotten about until your next cookout at your gf's house\" or \"slimy eggplant\"")
 
-var grossMainProtein = readLine()!
+print("=====================================================================")
+
+
+
+print("Alright, lets get to the main protein! Your choices are \"spoiled meat\", \"expired tofu\" , \"a cooked hotdog that fell in the ash of the grill that was forgotten about until your next cookout at your gf's house\" or \"slimy eggplant\"")
 while counter == 3 {
+let grossMainProtein = readLine()!
 switch grossMainProtein {
-    case "spoiled meat":
-    counter += 1
-    if grossMainProtein == "spoiled meat" {
-        grossPointCounter += 10
-            print("Gross points are now at \(grossPointCounter)")
+        case "spoiled meat":
+            counter += 1
+                if grossMainProtein == "spoiled meat" {
+                    grossPointCounter += 10
+                        print("Gross points are now at \(grossPointCounter)")
+                    
     }
     
     case "expired tofu":
-    counter += 1
-    if grossMainProtein == "expired tofu"{
-        grossPointCounter += 50
-            print("Gross points are now at")
+        counter += 1
+            if grossMainProtein == "expired tofu"{
+                    grossPointCounter += 50
+                        print("Gross points are now at \(grossPointCounter)")
     }
+    
     case "a cooked hotdog that fell in the ash of the grill that was forgotten about until your next cookout at your gf's house":
-    counter += 1
-default:
+        counter += 1
+            if grossMainProtein == "a cooked hotdog that fell in the ash of the grill that was forgotten about until your next cookout at your gf's house" {
+                    grossPointCounter += 20
+                    print("Gross points are now at \(grossPointCounter)....shame, shame, shame")
+    }
+                
+                case "slimy eggplant":
+                counter += 1
+                if grossMainProtein == "slimy eggplant"{
+                        grossPointCounter += 15
+                            print("Gross points are now at \(grossPointCounter)")
+                
+    } default:
     print("nice try, pick one")
+    
 }
 }
+
+print("============================================================================")
+
+
 print("Grossed out yet? Just wait! Select your toppings \"vegemite\", \"toenails\", \"stinky cheese\" \"kibble\"")
-var grossToppingChoice = readLine()!
+
 while counter == 4 {
+let grossToppingChoice = readLine()!
 switch grossToppingChoice {
-case "vegemite":
-    counter += 1
+    case "vegemite":
+        counter += 1
+            if grossToppingChoice == "vegemite" {
+                grossPointCounter += 20
+                    print("Gross points are now at \(grossPointCounter)...smh")
+    }
     
 case "toenails":
-    counter += 1
+        counter += 1
+            if grossToppingChoice == "toenails" {
+                grossPointCounter += 40
+                    print("Gross points are now at \(grossPointCounter), just awful")
+    }
+    
 case "stinky cheese":
-    counter += 1
+        counter += 1
+            if grossToppingChoice == "stinky cheese" {
+                grossPointCounter += 12
+                    print("Gross points are now at \(grossPointCounter)")
+    }
+    
 case "kibble":
     counter += 1
+    if grossToppingChoice == "kibble" {
+            grossPointCounter += 11
+                print("Gross points are now at \(grossPointCounter)")
+    }
     
 default:
     print("nice try, pick one")
 }
 }
-print("Last but not least, CHOOSE YOUR CONDIMENT \"\" , \"\", \"\" or \"\"")
-var grossCondimentChoice = readLine()
+
+
+print("====================================================================================")
+
+
+print("Last but not least, CHOOSE YOUR DRINK \"Donald Trump's spit\" , \"Donald Trump's backwash\", \"Donald Trump's tears\" or \"mop water\"")
 while counter == 5 {
-    switch grossCondimentChoice {
-    case "":
+let grossDrinkChoice = readLine()!
+    switch grossDrinkChoice {
+    case "spit":
         counter += 1
+            if grossDrinkChoice == "Donald Trump's spit" {
+                grossPointCounter += 1500
+                print("Gross points are now at \(grossPointCounter)....this is shameful")
+
+        }
         
-    case "":
+        
+    case "Donald Trump's spit":
         counter += 1
-    case "":
+            if grossDrinkChoice == "Donald Trump's spit" {
+                grossPointCounter += 2000
+                    print("Gross points are now at \(grossPointCounter)....you are a brave soul")
+        }
+        
+    case "Donald Trump's backwash":
         counter += 1
+            if grossDrinkChoice  == "Donald Trump's backwash" {
+                grossPointCounter += 1100
+                    print("Gross points are now at \(grossPointCounter).... hang in there")
+        }
+        
+    case "mop water":
+            if grossDrinkChoice == "mop water" {
+                grossPointCounter -= 10000000000000
+                    print("Gross points are now at \(grossPointCounter)...You took the easy route here, try again")
+            continue
+        }
+        
     default:
         print("nice try, pick one")
     }
 }
 
+print("You made it to the end \(userName) you ready to dig in??")
+
+while counter == 6 {
+    var userResponse = readLine()!
+    switch userResponse {
+    case "yes":
+        print("Enjoy your \(grossBreadChoice), \(grossSpreadChoice), \(grossMainProtein), \(grossToppingChoice), \(grossDrinkChoice), sandwich!! Your total Gross points are \(grossPointCounter)!!")
+        
+    default:
+        print("I lied earlier when I said you werent eating this")
+    }
+}
+
+
+
 //print("enjoy your \() with \() ,\(), \() & \() ")
 
 //print("Excellent! Now what?")
-//while loaf == 2 {
+//while loaf == 2 {yaz
 //    var food = readLine()
 //    switch jelly {
 //    case "grab jar of jelly and turn to open":
