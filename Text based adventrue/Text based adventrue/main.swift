@@ -106,7 +106,7 @@ if let response = readLine() {
     🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾
                                         Welcome To Guyana
     🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾🇬🇾
-""")
+    """)
             print("While here we suggest you try our delicious dishes")
             
             let dishes = ["Chicken Curry", "Cook-up" ,"Fried Rice"]
@@ -260,6 +260,15 @@ if let response = readLine() {
             print("🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷")
             print("WELCOME TO BRAZIL")
             print("🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷🇧🇷")
+            print("""
+                【E】     【Y】     【S】     【I】      【B】
+                    【N】     【O】     【T】      【N】     【R】
+                        【J】     【U】     【A】               【A】
+                            【O】    【R】      【Y】                【Z】
+                                【Y】                                   【I】
+                                                                            【L】
+
+                """)
         default:
            print( "there are no avalible spots at this time")
         }
@@ -272,18 +281,21 @@ if let response = readLine() {
             for _ in 1...5 {
             print("🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯")
             print("Activities will be added momentarily")
+                print("【L】【O】【A】【D】【I】【N】【G】")
             print("🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯🇫🇯")
             }
         case "Solomon Islands":
             for _ in 1...5 {
             print("🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧")
             print("Activities will be added momentarily")
+                  print("【L】【O】【A】【D】【I】【N】【G】")
             print("🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧🇸🇧")
             }
         case "New Zealand":
             for _ in 1...5 {
             print("🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿")
             print("Activities will be added momentarily")
+            print("【L】【O】【A】【D】【I】【N】【G】")
             print("🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿🇳🇿")
             }
         default:
@@ -426,6 +438,9 @@ if let response = readLine() {
             print("Due to the massive volume there are no longer any avalible trips to Ethopia")
         default:
             print("Please consider another destination")
+            for _ in 1...5 {
+            print("【L】【O】【A】【D】【I】【N】【G】")
+            }
         }
     
     
