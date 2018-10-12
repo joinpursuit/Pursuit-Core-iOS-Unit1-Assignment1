@@ -262,7 +262,7 @@ repeat {
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     var monRotation: Bool = false
-    var prepare: Bool = false
+    var villageEncounter: Bool = false
     
     if gameContinue {
         print("Before we head out, would you like to rest or refine?")
@@ -279,7 +279,7 @@ repeat {
                         warriorHealth = 200
                     }
                     print("You now have full \(warriorHealth) Health after resting!")
-                    prepare = true
+                    villageEncounter = true
                 case "2", "refine":
                     print("Time to enhance that weapon of yours! Each refine cost \(weaponCost) coins for a bonus of \(weaponUpgrade) damage")
                     var refineLoop: Bool = true
@@ -305,40 +305,161 @@ repeat {
                             }
                         }
                     } while refineLoop
-                    prepare = true
+                    villageEncounter = true
                 case "3", "ready!":
                     print("Ready to head out again are yah? Let's get to it then!")
+                    sleep(1)
+                    print("You've entered a cave near a mountain where villagers said monsters have been coming out at night attacking innocents.")
                     monRotation = true
-                    prepare = false
+                    villageEncounter = false
                 case "4", "status":
                     print("You currently have \(warriorHealth) Health and \(coins) coins")
-                    prepare = true
+                    villageEncounter = true
                 case "5", "exit":
                     print("Ah, changed your mind have we? I was looking forward of seeing you in action. Welp Good luck!")
-                    prepare = false
+                    villageEncounter = false
                     gameEnd = true
                 default:
                     print("Not a valid response!")
-                    prepare = true
+                    villageEncounter = true
                 }
             }
             while monRotation {
-                print("You've entered a cave near a mountain where villagers said monsters have been coming out at night attacking innocents.")
+                var encounter: Bool = false
+                print("You're inside the cave...")
                 print("What do you do?\n1) Move(deeper) \n2) Flee")
                 if let response = readLine() {
                     switch response.lowercased() {
                     case "1", "move":
                         print("You venture deeper in...")
+                        let mobRandom = Int.random(in: 0...3)
+                        let randomCoins = Int.random(in: 1...100)
+                        if mobRandom == 0 {
+                            encounter = true
+                            print("You've encountered a pack of wolves")
+                            var mobHealth = 100
+                            let mobDmg = Int.random(in: 20...40)
+                            let randomReward = Int.random(in: 10...50)
+                            let warriorHit = Int.random(in: warriorTotalDamage)
+                            let mob = "Wolves"
+                            repeat {
+                            print("1) Attack\n2) Defend\n3) Flee")
+                            if let response = readLine() {
+                                switch response.lowercased() {
+                                case "attack", "1":
+                                    mobHealth = mobHealth - warriorHit
+                                    print("You swing your sword doing total of \(warriorHit) to the \(mob) as they now have \(mobHealth) health remaining.")
+                                    sleep(1)
+                                    warriorHealth = warriorHealth - mobDmg
+                                    print("The \(mob) retaliate back doing total of \(mobDmg) leaving you with \(warriorHealth) health left")
+                                case "defend", "2":
+                                    print("You hold up your sturdy shield for incoming attacks blocking total of \(mobDmg)")
+                                case "flee", "3":
+                                    print("AHHHHHH!!!!! *runs flailing away*")
+                                    encounter = false
+                                default:
+                                    print("INVALID ACTION!!")
+                                }
+                            }
+                                if mobHealth <= 0 {
+                                    print("You've defeated the \(mob)! You just found \(randomReward) coins!")
+                                    coins += randomReward
+                                    encounter = false
+                                } else if warriorHealth <= 0 {
+                                    print("Oh no, you've fainted... heading back to village")
+                                    encounter = false
+                                    villageEncounter = true
+                                }
+                        } while encounter
+                        } else if mobRandom == 1 {
+                            encounter = true
+                            print("You've encountered zombies")
+                            var mobHealth = 150
+                            let mobDmg = Int.random(in: 20...30)
+                            let randomReward = Int.random(in: 10...50)
+                            let warriorHit = Int.random(in: warriorTotalDamage)
+                            let mob = "zombies"
+                            repeat {
+                            print("1) Attack\n2) Defend\n3) Flee")
+                            if let response = readLine() {
+                                switch response.lowercased() {
+                                case "attack", "1":
+                                    mobHealth = mobHealth - warriorHit
+                                    print("You swing your sword doing total of \(warriorHit) to the \(mob) as they now have \(mobHealth) health remaining.")
+                                    sleep(1)
+                                    warriorHealth = warriorHealth - mobDmg
+                                    print("The \(mob) retaliate back doing total of \(mobDmg) leaving you with \(warriorHealth) health left")
+                                case "defend", "2":
+                                    print("You hold up your sturdy shield for incoming attacks blocking total of \(mobDmg)")
+                                case "flee", "3":
+                                    print("You run for your life!")
+                                    encounter = false
+                                default:
+                                    print("INVALID ACTION!!")
+                                }
+                            }
+                            if mobHealth <= 0 {
+                                print("You've defeated the \(mob)! You just found \(randomReward) coins!")
+                                coins += randomReward
+                                encounter = false
+                            } else if warriorHealth <= 0 {
+                                print("Oh no, you've fainted... heading back to village")
+                                encounter = false
+                                villageEncounter = true
+                            }
+                        } while encounter
+                        } else if mobRandom == 2 {
+                            encounter = true
+                            print("You've encountered a bear")
+                            var mobHealth = 200
+                            let mobDmg = Int.random(in: 20...50)
+                            let randomReward = Int.random(in: 10...50)
+                            let warriorHit = Int.random(in: warriorTotalDamage)
+                            let mob = "Giant Bear"
+                            repeat {
+                            print("1) Attack\n2) Defend\n3) Flee")
+                            if let response = readLine() {
+                                switch response.lowercased() {
+                                case "attack", "1":
+                                    mobHealth = mobHealth - warriorHit
+                                    print("You swing your sword doing total of \(warriorHit) to the \(mob) as they now have \(mobHealth) health remaining.")
+                                    sleep(1)
+                                    warriorHealth = warriorHealth - mobDmg
+                                    print("The \(mob) retaliate back doing total of \(mobDmg) leaving you with \(warriorHealth) health left")
+                                case "defend", "2":
+                                    print("You hold up your sturdy shield for incoming attacks blocking total of \(mobDmg)")
+                                case "flee", "3":
+                                    print("You run!")
+                                    encounter = false
+                                default:
+                                    print("INVALID ACTION!!")
+                                }
+                            }
+                                if mobHealth <= 0 {
+                                    print("You've defeated the \(mob)! You just found \(randomReward) coins!")
+                                    coins += randomReward
+                                    encounter = false
+                                } else if warriorHealth <= 0 {
+                                    print("Oh no, you've fainted... heading back to village")
+                                    encounter = false
+                                    villageEncounter = true
+                                }
+                            } while encounter
+                        } else if mobRandom == 3 {
+                            print("You found some coins!")
+                            coins += randomCoins
+                            print("\(randomCoins) have been added to your pouch! You now have \(coins)")
+                        }
                     case "2", "flee":
                         print("Time to head back to the village")
                         monRotation = false
-                        prepare = true
+                        villageEncounter = true
                     default:
                         print("Wat.")
                     }
                 }
             }
-        } while prepare
+        } while villageEncounter
         
     }
     //// END GAME!
