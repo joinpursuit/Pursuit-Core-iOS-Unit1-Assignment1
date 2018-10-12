@@ -27,7 +27,7 @@ print("""
 
 print("""
 ------------------------------------------------------------------------------------------
--You have fallen into the Math Dungeon.. You will not be granted access to the outside world until you complete all the Math questions! The dungeon is like a Maze, each room contains a different Math problem. Once you complete the math problem the door to the next room will Open, this pattern will continue until you open the Last door.
+😈You have fallen into the Math Dungeon.. You will not be granted access to the outside world until you complete all the Math questions! The dungeon is like a Maze, each room contains a different Math problem. Once you complete the math problem the door to the next room will Open, this pattern will continue until you open the Last door.😈
 ------------------------------------------------------------------------------------------
 Enter Your Name to Continue:
 """)
@@ -50,13 +50,13 @@ var correct = true
 
 print("""
 ------------------------------------------------------------------------------------------
--The first room will test out your math skills:
-    Do some basic bath. REMEMBER: PEMDAS:
+😈The first room will test out your math skills:
+    Do some basic Math. REMEMBER: PEMDAS:
 ------------------------------------------------------------------------------------------
     6 + 4 * 3 - 10 / 5 = ?
 """)
 repeat{
-    if let response = readLine() {
+    if let response = readLine() {//opprotunity for a response
         switch response.lowercased() {
         case "4" :
             print("Use PEMDAS")
@@ -77,10 +77,10 @@ print("")
 
 print("""
 ------------------------------------------------------------------------------------------
--the second floor will contain quick sand so time matters! lets check your deduction skills
+😈the second floor will contain quick sand so time matters! lets check your deduction skills
 Using subtraction:
 ------------------------------------------------------------------------------------------
-Suppose that a car dealer has an inventory of 15,258 Honda Accord they have to sell by the end of 2008. Suppose they don't meet their goals and sell only 12456 Honda Accord by the end of 2008. How many cars are left in the back yard?
+Suppose that a car dealer has an inventory of 15258 Honda Accord\'s they have to sell by the end of the year. Suppose they don't meet their goals and sell only 12456 Honda Accord\'s by the end of the year. How many cars are left in the back yard?
 
 """)
 
@@ -111,10 +111,10 @@ print("")
 
 print("""
 ------------------------------------------------------------------------------------------
--Welcome to the algebraic equation room wheere you must solve 2 equations correctly in order to move on.
+😈Welcome to the algebraic equation room wheere you must solve 2 equations correctly in order to move on.
 ------------------------------------------------------------------------------------------
-find X:
-3 + 6x = 21 + 15x
+Equation 1:
+Find X:  3 + 6x = 21 + 15x
 """)
 var correct2 = true
 
@@ -138,10 +138,10 @@ print("")
 //same room
 print("""
 ------------------------------------------------------------------------------------------
--One Question left and you may leave this room
+😈One Question left and you may leave the Algebraic Equation room
 ------------------------------------------------------------------------------------------
-find X:
-20x - 1 = 5x + 4
+Equation 2:
+find X:  20x - 1 = 5x + 4
 """)
 var correct6 = true
 
@@ -167,7 +167,7 @@ print("")
 //first lock
 print("""
 ------------------------------------------------------------------------------------------
--Welcome to the percentage room you must answer 3 questions to move forward, each question will un lock one ofthe 3 locks on the door. you must get all 3 correct to move forward
+😈Welcome to the percentage room you must answer 3 questions Correctly to move forward, each question will un-lock one of the 3 locks on the door. you must get all 3 correct to move forward
 ------------------------------------------------------------------------------------------
 what is 80% as a decimal? (using 0.00 format)
 
@@ -196,7 +196,7 @@ print("")
 //second lock
 print("""
 ------------------------------------------------------------------------------------------
--To leave the percentage room you must finish, You have 2 locks left: you must get all 3 correct to move forward!
+😈To leave the percentage room you must un-lock all 3 locks, You have 2 left: you must get ALL 3 correct to move forward!!
 ------------------------------------------------------------------------------------------
 what is 20% of 200?
 
@@ -228,7 +228,7 @@ print("")
 // third lock
 print("""
 ------------------------------------------------------------------------------------------
--You're almost out of the percentage room ! this is your last lock to the door of this room, can you answer the final question to open the last lock ?
+😈You're almost out of the percentage room ! this is your last lock to the door of this room, can you answer the final question to open the last lock ?
 ------------------------------------------------------------------------------------------
 If something cost $150 and its on sale for 10% off what is the final price befoere tax ?
 """)
@@ -256,7 +256,7 @@ print("")
 var correct40 = true
 print("""
 ------------------------------------------------------------------------------------------
--Welcome to the geomtric room, you must find the area of the room you\'re in to move on.
+😈Welcome to the geomtric room, you must find the area of the room you\'re in to move on.
 ------------------------------------------------------------------------------------------
 the length of this room is 20 and the width is 15. how many square feet is the room ? (just write the number)
 """)
@@ -282,11 +282,14 @@ print("")
 var correct20 = true
 print("""
 ------------------------------------------------------------------------------------------
--Welcome to the Word problem conundrum room, this is the last room of the Math Dungeon! Congratulations for making it this far.. but i will not make this easy for you!
-There are several chickens and rabbits in a cage (with no other types of animals). There are 72 heads and 200 feet inside the cage. How many chickens are there, and how many rabbits?
+😈Welcome to the Word problem conundrum room, this is the last room of the Math Dungeon! Congratulations for making it this far.. but i will not make this easy for you!
+
+There are several chickens(🐓) and rabbits(🐇) in a cage (with no other types of animals). There are 72 heads and 200 feet inside the cage. How many chickens are there, and how many rabbits?
 ------------------------------------------------------------------------------------------
-(number of rabbits , number of chicknes)
-(00,00)<-- please type your answer like this
+(Number Of 🐇, Number Of 🐓)
+00,00  <-- please type your answer like this
+
+
 """)
 repeat{
     if let response = readLine() {
@@ -298,7 +301,7 @@ repeat{
             print("")
             correct20 = false
         default :
-            print("try again, NO SPACES(00,00)")
+            print("try again, NO SPACES(🐇,🐓)")
         }
     }
 } while correct20
@@ -311,7 +314,7 @@ print("")
 var correct50 = true
 print("""
 ------------------------------------------------------------------------------------------
--YOU HAVE COMPLETED THE MATH EQUATONS: Enter Your initials & score to log your results
+😈YOU HAVE COMPLETED THE MATH EQUATIONS: Enter Your initials & score to log your results
 ------------------------------------------------------------------------------------------
 """)
 
@@ -333,10 +336,10 @@ repeat{
     if let response = readLine() {
         switch response.lowercased() {
         case "yes" :
-            print("You have earned $\(giftBox.Money)")
+            print("You have earned $\(giftBox.Money)💰💰💰💰")
              correct00 = false
         case "no" :
-            print("NO GIFT ? You may NOT change your mind.. you would have earned a \(giftBox.Toy), Fully Fueled and ready to go!")
+            print("NO GIFT ? You may NOT change your mind.. you would have earned a \(giftBox.Toy)🚀🚀🚀🚀, Fully Fueled and ready to go!")
              correct00 = false
         default :
             print("Get out of here😒")
@@ -365,7 +368,7 @@ for _ in expPoints...1000000{
 
 //END GAME
 num = expPoints
-print("CONGATULATIONS! To be released Present this number at the door: \(num)")
+print("CONGATULATIONS! To be released Present your number at the door: \(num)")
 print("""
 
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
