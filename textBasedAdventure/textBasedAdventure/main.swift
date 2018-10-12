@@ -8,7 +8,8 @@
 
 import Foundation
 
-// Introduction - enter name
+/* I originally created a text-based adventure that did not make much logical sense, so I redid this project and decided to create something more meaningful. My mom, who is my sponsor for the Pursuit program, is the manager and cashier at a buffet restaurant. When I decided to apply for Pursuit, she asked me if I can create an app to enable customers to pay at a kiosk upon entrance by themselves so that she no longer needs to cashier behind the register. I asked her for the current prices for lunch and dinner, adult and kids, and the beverages. */
+
 print("Hello there! What is your name?")
 let userName = readLine()!
 let greeting: String = "Hello "
@@ -16,21 +17,30 @@ let greeting2 = ", welcome to Buffet Palace."
 let fullGreeting = greeting + userName + greeting2
 print(fullGreeting)
 
+
 var subtotalAdults: Double = 0.0
 var subtotalKids: Double = 0.0
 var subtotalDrinks: Double = 0.0
 
 print("")
+sleep(1)
 
 print("At Buffet Palace, you order drinks, pay here, and then dine.")
-
+print("")
+sleep(1)
 print("Let's begin by answering a few questions.")
+print("")
+sleep(1)
+print("**Lunch is served from 10:30AM-3:30PM. \n**Dinner is served from 3:30-9:30PM & ALL-DAY on Sundays.")
+print("")
+sleep(2)
+print("Are you here for (lunch) or (dinner)?")
 
-print("Are you here for (lunch) or (dinner)? \n Lunch is served from 10:30AM-3:30PM. \n Dinner is served from 3:30-9:30PM and ALL-DAY on Sundays.")
 let lunchOrDinner = readLine()!
 if lunchOrDinner == "lunch" {
     print("Thanks for coming in for \(lunchOrDinner) today.")
     print("")
+    sleep(1)
     print("Are you dining by yourself? (yes) or (no)")
     let diningAlone = readLine()!
     if diningAlone == "yes" {
@@ -151,11 +161,10 @@ if lunchOrDinner == "lunch" {
             }
         }
     }
-}
-
-if lunchOrDinner == "dinner" {
+} else if lunchOrDinner == "dinner" {
     print("Thanks for coming in for \(lunchOrDinner) today. We serve a great variety of steak, sushi, and seafood.")
     print("")
+    sleep(1)
     print("Are you dining by yourself? (yes) or (no)")
     let diningAlone = readLine()!
     if diningAlone == "yes" {
@@ -276,12 +285,14 @@ if lunchOrDinner == "dinner" {
             }
 }
 }
+} else {
+    print("Invalid Answer. Please press 'command \u{2318}' + 'r' to restart.")
 }
 
 print("")
 
 var subtotalSoFar: Double = subtotalAdults + subtotalKids
-print("Your subtotal so far: \(subtotalSoFar)")
+print("Your subtotal so far: $\(subtotalSoFar)")
 
 print("")
 print("Do you want any beverage? (yes) or (no)")
@@ -294,7 +305,7 @@ if beverageYesOrNo == "yes" {
                     print("How many orders of soda?")
                     let numOfSoda = readLine()!
                     let numOfSodaAsDouble: Double = Double(numOfSoda)!
-                    subtotalDrinks = numOfSodaAsDouble * 1.88
+                    subtotalDrinks += numOfSodaAsDouble * 1.88
                         print("Do you want anymore drinks? (yes) or (no)")
                         let anymoreDrinks = readLine()!
                         if anymoreDrinks == "yes" {
@@ -306,7 +317,7 @@ if beverageYesOrNo == "yes" {
                     print("How many orders of coffee?")
                     let numOfCoffee = readLine()!
                     let numOfCoffeeAsDouble: Double = Double(numOfCoffee)!
-                    subtotalDrinks = numOfCoffeeAsDouble * 1.88
+                    subtotalDrinks += numOfCoffeeAsDouble * 1.88
                         print("Do you want anymore drinks? (yes) or (no)")
                         let anymoreDrinks = readLine()!
                         if anymoreDrinks == "yes" {
@@ -316,7 +327,7 @@ if beverageYesOrNo == "yes" {
                         }
                 
                 case "beer":
-                    print("Are you sure you want some beer?")
+                    print("Are you sure you want some beer? (yes) or (no)")
                     let beerConfirmation = readLine()!
                     if beerConfirmation == "yes" {
                         print("WAIT WAIT WAIT...How old are you?")
@@ -327,7 +338,7 @@ if beverageYesOrNo == "yes" {
                             print("How many cans of beer?")
                             let numOfBeer = readLine()!
                             let numOfBeerAsDouble: Double = Double(numOfBeer)!
-                            subtotalDrinks = numOfBeerAsDouble * 3.25
+                            subtotalDrinks += numOfBeerAsDouble * 3.25
                             print("Do you want anymore drinks? (yes) or (no)")
                             let anymoreDrinks = readLine()!
                             if anymoreDrinks == "yes" {
@@ -344,80 +355,115 @@ if beverageYesOrNo == "yes" {
                     print("How many orders of water?")
                     let numOfWater = readLine()!
                     let numOfWaterAsDouble: Double = Double(numOfWater)!
-                    subtotalDrinks = numOfWaterAsDouble * 0.0
+                    subtotalDrinks += numOfWaterAsDouble * 0.0
                 default:
                     print("Invalid Answer. Please press command ⌘ + R to restart.")
                 }
 } else if beverageYesOrNo == "no" {
     print("Ok...let a server know if you change your mind later.")
 } else {
-    print("Invalid answer. lease press command ⌘ + R to restart or let a server know how we can accommodate you.")
+    print("Invalid answer. lease press command ⌘ + R to restart or let a server know how we can accommodate you.") // Right here, I really want to stop running the rest of the code when the user gets to this. However, I don't know how to do this without over-complicating the code.
 }
 
 
+print("")
+sleep(1)
 subtotalSoFar = Double(round(100*(subtotalSoFar + subtotalDrinks))/100)
-print("Your subtotal so far: \(subtotalSoFar)")
+print("Your subtotal so far: $\(subtotalSoFar)")
 
 let taxRate: Double = 0.08517
 let tax: Double = subtotalSoFar * taxRate
 let subtotalWithTax = subtotalSoFar + tax
 let total: Double = Double(round(100*subtotalWithTax)/100)
-print("Your total including tax is: \(total)")
+print("")
+sleep(1)
+print("Your total including tax is: $\(total)")
+
+var loopRepeat: Bool = true
+var loopExit: Bool = false
 
 print("")
+sleep(1)
 print("How would you like to pay? (cash) (card)")
-let payment = readLine()!
+repeat {
+    if let payment = readLine() {
     switch payment {
         case "cash":
-            print("Please enter how much you are paying.")
+            print("Total: $\(total)")
+            print("")
+            sleep(1)
+            print("Please enter how much you are paying. (just the number without the dollar sign $).")
             let cashPayment = readLine()!
             var cashPaymentAsDouble: Double = Double(cashPayment)!
-            let change = cashPaymentAsDouble - total
+            let change: Double = Double(round(100*(cashPaymentAsDouble - total))/100)
             if cashPaymentAsDouble > total {
-                while cashPaymentAsDouble >= total {
+                while cashPaymentAsDouble > total {
                 print("Machine will dispense $1 change.")
                 cashPaymentAsDouble -= 1.0
+                sleep(1)
                 }
                 print("")
-                print("You are getting back \(change) as change.")
+                sleep(1)
+                print("You are getting back $\(change) as change.")
+                loopRepeat = false
             }
             else if cashPaymentAsDouble == total {
                 print("Thanks for paying the exact amount")
+                loopRepeat = false
             } else {
-                print("Insufficient Payment")
-                break
+                print("Insufficient Payment. Please press enter.")
                 }
         case "card":
-            print("Please swipe your card. When you are done, enter (swipe)")
             let swipeNotification = 2
             for _ in 0..<swipeNotification {
                 print("Please swipe your card.")
+                print("")
+                sleep(1)
             }
+            sleep(1)
+            print("When you are done, enter (swipe)")
                 let pressEnter = readLine()!
-                if pressEnter == "" {
+                if pressEnter == "swipe" {
                     print("Card payment accepted.")
+                    loopRepeat = false
+                }
+                else {
+                    fallthrough
         }
         default:
-            print("Invalid answer. lease press command ⌘ + R to restart or ask a human cashier for assistance.")
+            print("Invalid answer. Please choose again.")
+            print("How would you like to pay? (cash) (card)")
         }
+    }
+} while loopRepeat
 
 print("")
 print("Thank you for paying using our new virtual cashier service.")
+sleep(2)
 print("")
 print("Don't forget to tip your server after dining.")
+
 print("")
 let tip15: Double = Double(round(100*subtotalWithTax*0.15)/100)
 let tip18: Double = Double(round(100*subtotalWithTax*0.18)/100)
 let tip20: Double = Double(round(100*subtotalWithTax*0.20)/100)
-print("15% Tips: \(tip15) | 18% Tips: \(tip18) | 20% Tips: \(tip20)")
+print("15% Tips: $\(tip15) | 18% Tips: $\(tip18) | 20% Tips: $\(tip20)")
 print("")
 
-
+sleep(2)
 print("We would like to inform you about our buy 10 buffets get 1 free promotion. You just need some info to update your punch card.")
+
+print("")
+sleep(2)
 print("Please enter your phone number.")
 let phoneNumber: String = readLine()!
 print("Please enter your zip code.")
 let zipCode: String = readLine()!
 
 let customerInfoTuple = (Name: userName, PhoneNumber: phoneNumber, ZipCode: zipCode)
-print("Your information has been stored as follows: \(customerInfoTuple). \n We will store your information to update your punch card. \n Remember: Buy 10 buffets get 1 FREE. \n Have a good day. Come back soon.")
+
+let endingMessage = ["Your information has been stored as follows: \(customerInfoTuple).", "We will store your information to update your punch card.", "Remember: Buy 10 buffets get 1 FREE.", "😄😄😄 Have a good day. Come back soon! 😄😄😄"]
+for message in endingMessage {
+    print(message)
+    sleep(1)
+}
