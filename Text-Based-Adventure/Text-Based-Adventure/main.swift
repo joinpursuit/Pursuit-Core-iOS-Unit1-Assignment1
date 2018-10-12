@@ -85,7 +85,7 @@ while restartGame {     //this let the player to restart the game
         
         //Going to Pursuit
         print("\nI get dressed, eat breakfast, pack my lunch, and then walk out the door to go to Pursuit.\n")
-        print("On the train, I see a fellow from another Cohort. I believe her name is Sally. She looks even more tire than I am. \nAs soon as she sits down, her head drops and falls into deep sleep immediately😴.")
+        print("On the train, I see a fellow from another Cohort. I believe her name is Sally. She looks even more tired than I am. \nAs soon as she sits down, her head drops and falls into deep sleep immediately😴.")
         print(".......\nIt's the stop to get off. I looked at Sally. She is sleeping soundly😪. Everyone can hear her snoring.\n")
         
         
@@ -111,7 +111,7 @@ while restartGame {     //this let the player to restart the game
         
         //Arrived to Pursuit. Saving a person from commiting suicide.
         print("")
-        print("You arrived to pursuit. The entrance is crowded. You wonder what happened.")
+        print("I arrive to pursuit. The entrance is crowded. I wonder what is happening.")
         print("Ohh...Myyyyy..Lady...God! Someone is standing on the edge of the rooftop😱.\n")
         print("I am going to......:")
         print("(talk to someone)  (scream don't jump!)")
@@ -125,7 +125,7 @@ while restartGame {     //this let the player to restart the game
                 print("Stranger: He's going to commit suicide. I think he's a game addict. He said that his World of Warcraft account got hacked and now life is over for him. Poor guy, he lost himself in a game fantasy.")
             case "scream don't jump":
                 print("With all strength......I SCREAM: \"DON\'T JUMP!\"\n")
-                print("Dispite my best effort, he didn't heard me. It's tooo noisy 😥. As a matter of fact. No one heard one. They are so fixate on the guys who's about to kill himself.")
+                print("Dispite my best effort, he didn't heard me. It's tooo noisy 😥. As a matter of fact. No one heard me. They are so fixated on the guy who's about to kill himself.")
             default:
                 print("I am talking jibberish and no one undersand a thing I say. It's better to go with the flow.")
                 
@@ -195,7 +195,7 @@ while restartGame {     //this let the player to restart the game
             
             //duel
             print("")
-            print("\(playerName) → \(playerInput)    \(roofPersonInput) ← Roof Person")
+            print("\(playerName) → \(playerInput)    \(roofPersonInput) ← Roof Person\n")
             
             //conditions
             if playerInput == "✊" && roofPersonInput == "👋🏾" {
@@ -224,10 +224,10 @@ while restartGame {     //this let the player to restart the game
         }
         
         if score.player == 3 {
-            print("I win and the roof person comes down. We call 911 and the he is sent to a mental institution for treatment.")
+            print("I win the game!! The roof-person comes down. We call 911. The roof-person is sent to a mental institution for treatment.")
             beatGame = true
         } else {
-            print("I lost the game. The guy jumped down and died RIP GG!")
+            print("I lost the game. The guy jumped down landed on top of a car HARD. \n BANG!!! the car is smacked down flat and exploded. Everyone died on the scene RIP GG ☠️!")
             print(gameOver)
             break
         }
