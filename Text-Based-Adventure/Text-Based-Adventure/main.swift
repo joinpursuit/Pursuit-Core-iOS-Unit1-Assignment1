@@ -20,7 +20,7 @@ var reEnterResponse = true
 
 while restartGame {     //this let the player to restart the game
     print("Please enter you name:  \n")
-    playerName = readLine()!
+    playerName = readLine()!    //player's name will be used several times in the game
     print("\(playerName), Welcome to Text-Adventure-Game. Enjoy!")
     
     game: while inGame {   //this let me stops the game and jumps to the game over session when the player beats the game early or makes a bad choice and dies
@@ -71,9 +71,9 @@ while restartGame {     //this let the player to restart the game
                         print("I don't know what to do, so I take a hot shower and feel much better. Ahhhh....🚿")
                     }
                 case "take a shower":
-                    print("You goes to the bathroom to brush your teeth and take a shower. After a steaming hot shower, you feel refreshed 😃.")
+                    print("I go to the bathroom to brush my teeth and then take a shower. After a steaming hot shower, I feel refreshed 😃.")
                 case "take a day off":
-                    print("You go back to sleep and never wake up.")
+                    print("Not sure what happened...After I went back to sleep, I never woke up. Whoah..Whoah...whoah....😵")
                     earlyBeat = true
                     break game
                 default:
@@ -84,32 +84,33 @@ while restartGame {     //this let the player to restart the game
         }
         
         //Going to Pursuit
-        print("\nI get dressed, eat breakfast, pack my lunch, and go outside to go to Pursuit.\n")
-        print("On the train, I saw a fellow from another Cohort. I believe her name is Sally. She looks even more tired than you. \nAs soon as she sits down, her head drops and falls into deep sleep immediately😴.")
-        print(".......\nIt's the stop to get off. I looked at Sally. She is sleeping soundly😪. Everyone can hear her snores.\n")
+        print("\nI get dressed, eat breakfast, pack my lunch, and then walk out the door to go to Pursuit.\n")
+        print("On the train, I see a fellow from another Cohort. I believe her name is Sally. She looks even more tire than I am. \nAs soon as she sits down, her head drops and falls into deep sleep immediately😴.")
+        print(".......\nIt's the stop to get off. I looked at Sally. She is sleeping soundly😪. Everyone can hear her snoring.\n")
         
-        //var wakeUpGirl = false
         
         reEnterResponse = true
         while reEnterResponse {
             reEnterResponse = false
-            print("Should you wake Sally up? (wake her up) or (let her sleep)\n")
+            print("Should I wake Sally up? (wake her up) or (let her sleep)\n")
         }
+        
         if let input3 = readLine()?.lowercased() {
             switch input3 {
             case "wake her up":
-                print("You wake her up and she thank you! She didn't sleep for 3 days working on the capstone.")
-                //wakeUpGirl = true
+                print("\(playerName): \"Sally...Sally Wake UP!! You are going to miss your stop.\"\n")
+                print("Sally: \"Oh...thank you so much. I didn\'t sleep for 3 days working on the Capstone Project. Today, we are going to present. You're' a life-saver😊.")
             case "let her sleep":
                 print("Seeing those deep black circles around her eyes, you didn't wake her up and left her in the train. She needs to rest. It wouldn't hurt if she misses a day or two.\n")
-                print("As the train leaves, you just realized that today is ")
+                print("As the train leaves, you recall that today is day where Sally's cohort presents their Capstone Projects. Oh...Shh...😲")
             default:
-                print("Huh? I am not sure if I understand your response.\n")
+                print("Huh? I am not sure if I understand your response.")
                 reEnterResponse = true
             }
         }
         
         //Arrived to Pursuit. Saving a person from commiting suicide.
+        print("")
         print("You arrived to pursuit. The entrance is crowded. You wonder what happened.")
         print("Ohh...Myyyyy..Lady...God! Someone is standing on the edge of the rooftop😱.\n")
         print("I am going to......:")
@@ -124,14 +125,15 @@ while restartGame {     //this let the player to restart the game
                 print("Stranger: He's going to commit suicide. I think he's a game addict. He said that his World of Warcraft account got hacked and now life is over for him. Poor guy, he lost himself in a game fantasy.")
             case "scream don't jump":
                 print("With all strength......I SCREAM: \"DON\'T JUMP!\"\n")
-                print("It's very noisy there. For some reason. The person heard you and look straight to you and said \"Don't Jump? What's there meaning to life if my account got hack. World of Warcraft is my life.\"")
+                print("Dispite my best effort, he didn't heard me. It's tooo noisy 😥. As a matter of fact. No one heard one. They are so fixate on the guys who's about to kill himself.")
             default:
-                print("I am talking. As you observe your surroundings, you h")
+                print("I am talking jibberish and no one undersand a thing I say. It's better to go with the flow.")
                 
             }
         }
         
-        print("You heard someone shout what can we do to get you down?")
+        print("")
+        print("All of a sudden, I heard a random shout on the loudspeaker: \"What can we do to get you down?\"\n")
         print("The guy on the roof said \"Beat me in any game. If you win, I come down. If not, I JUMP! Who dares to challenge me?\"")
         
         for min in 1...5 {
@@ -141,8 +143,8 @@ while restartGame {     //this let the player to restart the game
             }
             print("\(min) minute has passed.")
         }
-        print("It's been 5 minutes and no one steep out. Things are getting tense. \n What are you going to do?")
-        print("(step out and volunteer) or (remain passive)")
+        print("It's been 5 minutes and no one step out. Things are getting tense. \n I should.....")
+        print("(step out and volunteer) or (remain passive) \n")
         
         reEnterResponse = true
         while reEnterResponse {
@@ -150,9 +152,9 @@ while restartGame {     //this let the player to restart the game
             if let input5 = readLine()?.lowercased() {
                 switch input5 {
                 case "step out and volunteer":
-                    print("You step out to the middle and SHOUT! \n\(playerName): \"I can play Rock, Paper, Scissors with you. If I win, you will listen to me and come down. Your life is precious.\"")
+                    print("You step out to the middle and SHOUT! \n\(playerName): \"I can play \"Rock, Paper, & Scissors\" with you. If I win, you will listen to me and come down. Your life is precious.\"")
                 case "remain passive":
-                    print("You stand still...hoping that someone will step out. Out of no where, someone push you HARD from behind. You stumble forward onto the middle. Everyone looked at you. \nRoof Person: So...you are the guinnie pig who is going to challenge me. \nHow about this. Play Rock, Paper, & Scissors with me. \nIf you win, I will listen to you. If I win, this is where my life ends.")
+                    print("I remain standing still...hoping that someone will step out. \nOut of no where, someone pushes me HARD from behind....Wahhh \nI stumble forward onto the middle. Everyone looks at me. \nRoof Person: So...you are the challenger. \nHow about this. Play \"Rock, Paper, & Scissors\" with me. \nIf you win, I will listen to you. If I win, this is where my life ends.")
                 default:
                     print("Invalid Response")
                     reEnterResponse = true
@@ -161,7 +163,8 @@ while restartGame {     //this let the player to restart the game
         }
         
         //rock paper scissors game   (user has to input 2-5 times)
-        var score = (roofPerson: 0, player: 0)
+        print("\n 👏 CHEERS from the crowd 🍻\n")
+        var score = (player: 0, roofPerson: 0)
         let playerChoices = ["✊", "👋", "✌️"]
         let computerChoices = ["✊🏾", "👋🏾", "✌🏾"]
         var playerInput: String
@@ -169,7 +172,7 @@ while restartGame {     //this let the player to restart the game
         
         while score.roofPerson < 3 && score.player < 3 {
             //player input
-            print("What are you going to throw? \n(rock)✊ (paper)👋 (scissors)✌️")
+            print("What are you going to throw? \n(rock)✊ (paper)👋 (scissors)✌️\n")
             playerInput = readLine()!.lowercased()
             
             switch playerInput {
@@ -192,35 +195,43 @@ while restartGame {     //this let the player to restart the game
             
             //duel
             print("")
-            print("\(playerName) → \(playerInput)    \(roofPersonInput) ← \(roofPersonInput)")
+            print("\(playerName) → \(playerInput)    \(roofPersonInput) ← Roof Person")
             
             //conditions
-            if playerInput == roofPersonInput {
-                print("It's a draw.")
-            } else if playerInput == "rock" && roofPersonInput == "scissors" {
+            if playerInput == "✊" && roofPersonInput == "👋🏾" {
+                print("You Lose!😣")
+                score.roofPerson += 1
+            } else if playerInput == "👋" && roofPersonInput == "✌🏾" {
+                print("You Lose!😣")
+                score.roofPerson += 1
+            } else if playerInput == "✌️" && roofPersonInput == "✊🏾" {
+                print("You Lose!😣")
+                score.roofPerson += 1
+            } else if playerInput == "✊" && roofPersonInput == "✌🏾" {
                 print("You Win!😃")
                 score.player += 1
-            } else if playerInput == "paper" && roofPersonInput == "rock" {
+            } else if playerInput == "👋" && roofPersonInput == "✊🏾" {
                 print("You Win!😁")
                 score.player += 1
-            } else if playerInput == "scissors" && roofPersonInput == "paper" {
+            } else if playerInput == "✌️" && roofPersonInput == "👋🏾" {
                 print("You Win!😄")
                 score.player += 1
             } else {
-                print("You Lose!😣")
-                score.roofPerson += 1
+                print("It's a draw!")
             }
             //print the score
-            print("Here's the Score: \(score)")
+            print("Here's the Score: \(score)\n")
         }
         
         if score.player == 3 {
-            print("You win the game!")
+            print("I win and the roof person comes down. We call 911 and the he is sent to a mental institution for treatment.")
             beatGame = true
         } else {
-            print("The person on roof jumps down and die.")
+            print("I lost the game. The guy jumped down and died RIP GG!")
+            print(gameOver)
+            break
         }
-          //optional terrorist attack
+        
         inGame = false
     }
     
