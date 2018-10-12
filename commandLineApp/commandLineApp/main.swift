@@ -44,10 +44,9 @@ repeat{
 } while correct10
 print(">>You're current Exp Points: \(expPoints)<<")
 print("")
-//FIRST FLOOR
-///////////////////////////////////////////////////////////MATH DUNGEON
-//prints out the question & floor youre on
+
 var correct = true
+//New room
 
 print("""
 ------------------------------------------------------------------------------------------
@@ -74,8 +73,7 @@ expPoints += randomInt
 print("")
 print(">>You've gained \(expPoints) Exp<<")
 print("")
-//SECOND FLOOR
-//prints out the question and floor youre on
+//New room
 
 print("""
 ------------------------------------------------------------------------------------------
@@ -86,7 +84,7 @@ Suppose that a car dealer has an inventory of 15,258 Honda Accord they have to s
 
 """)
 
-//door
+
 
 var correct1 = true
 
@@ -107,7 +105,10 @@ repeat{
 expPoints += randomInt
 print(">>You've gained \(expPoints) Exp<<")
 print("")
-//THIRD FLOOR
+
+
+//New room
+
 print("""
 ------------------------------------------------------------------------------------------
 -Welcome to the algebraic equation room wheere you must solve 2 equations correctly in order to move on.
@@ -134,7 +135,7 @@ repeat{
 expPoints += randomInt
 print(">>You've gained \(expPoints) Exp<<")
 print("")
-//second part of third floor
+//same room
 print("""
 ------------------------------------------------------------------------------------------
 -One Question left and you may leave this room
@@ -162,8 +163,8 @@ expPoints += randomInt
 print(">>You've gained \(expPoints) Exp<<")
 print("")
 
-//FOURTH FLOOR
-//prints out the question and floor youre on
+///new room
+//first lock
 print("""
 ------------------------------------------------------------------------------------------
 -Welcome to the percentage room you must answer 3 questions to move forward, each question will un lock one ofthe 3 locks on the door. you must get all 3 correct to move forward
@@ -171,8 +172,6 @@ print("""
 what is 80% as a decimal? (using 0.00 format)
 
 """)
-
-//door
 
 var correct3 = true
 
@@ -193,8 +192,8 @@ repeat{
 expPoints += randomInt
 print(">>You've gained \(expPoints) Exp<<")
 print("")
-//Fourth FLOOR
-//prints out the question and floor youre on
+//same room
+//second lock
 print("""
 ------------------------------------------------------------------------------------------
 -To leave the percentage room you must finish, You have 2 locks left: you must get all 3 correct to move forward!
@@ -204,7 +203,7 @@ what is 20% of 200?
 """)
 
 //door
-
+//third lock
 var correct4 = true
 
 repeat{
@@ -224,8 +223,9 @@ repeat{
 expPoints += randomInt
 print(">>You've gained \(expPoints) Exp<<")
 print("")
-//4ourth FLOOR
-//prints out the question and floor youre on
+
+// same room
+// third lock
 print("""
 ------------------------------------------------------------------------------------------
 -You're almost out of the percentage room ! this is your last lock to the door of this room, can you answer the final question to open the last lock ?
@@ -233,10 +233,7 @@ print("""
 If something cost $150 and its on sale for 10% off what is the final price befoere tax ?
 """)
 
-//door
-
 var correct5 = true
-
 repeat{
     if let response = readLine() {//opprotunity for a response
         switch response.lowercased() {
@@ -255,7 +252,7 @@ expPoints += randomInt
 print(">>You've gained \(expPoints) Exp<<")
 print("")
 
-//
+// New floor
 var correct40 = true
 print("""
 ------------------------------------------------------------------------------------------
@@ -281,7 +278,7 @@ expPoints += randomInt * 5
 print(">>BONUS EXP: You've gained an extra \(expPoints) Exp<<")
 print("")
 
-//
+//Last floor
 var correct20 = true
 print("""
 ------------------------------------------------------------------------------------------
@@ -310,13 +307,14 @@ print(">>You've gained \(expPoints) Exp<<")
 print("")
 //--------------------
 
-//
+//tuple
 var correct50 = true
 print("""
 ------------------------------------------------------------------------------------------
--YOU HAVE COMPLETED THE MATH EQUATONS: Enter Your initials & score to leave---> like this (JV324)
+-YOU HAVE COMPLETED THE MATH EQUATONS: Enter Your initials & score to log your results
 ------------------------------------------------------------------------------------------
 """)
+
 var giftBox = (Toy: "New Car" ,Money: 1000)
 repeat{
     if let response = readLine() {
@@ -335,10 +333,10 @@ repeat{
     if let response = readLine() {
         switch response.lowercased() {
         case "yes" :
-            print("You have earned a \(giftBox.Toy)")
+            print("You have earned $\(giftBox.Money)")
              correct00 = false
         case "no" :
-            print("NO GIFT ? You have earned $ \(giftBox.Money), Please Take it")
+            print("NO GIFT ? You may NOT change your mind.. you would have earned a \(giftBox.Toy), Fully Fueled and ready to go!")
              correct00 = false
         default :
             print("Get out of here😒")
