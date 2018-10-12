@@ -23,8 +23,8 @@ playerName = readLine()!
 print("Please enter your age name.")
 age = readLine()!
 
-
-var playerNamer = (playerName, age: age)
+var readyPlayer = false
+var playerNamer = (name: playerName, age: age)
 print("")
 print(" \(playerNamer), Are you ready to embark on your journey?")
 print("Are you ready?: Yes or No")
@@ -50,38 +50,37 @@ if let yesOrNo = readLine()?.lowercased() {
                 print("Start again.")
             }
     case "no":
-        print("Come back when you are ready.")
-      
+        readyPlayer = true
     default:
-        print("Play again")
+        readyPlayer = true
         }
     }
-
-if parentsGift != "" {
-    print("With your \(parentsGift) in tow you hop onto your wagon and set off into the sunset.")
+if readyPlayer == true {
+    print("Come back when you are ready.")
 } else {
-    print("")
+    print("The daylight starts to fade and you decide to camp out for the night")
+    print("In the middle of the night you hear a noise. Do you investigate? Yes or No")
 }
 
-print("The daylight starts to fade and you decide to camp out for the night")
-print("In the middle of the night you hear a noise. Do you investigate? Yes or No")
 
+var survived = false
 if let nightNoise = readLine()?.lowercased() {
     switch nightNoise {
     case "yes":
         print("A black bear jumped out of the bushes")
         print("Do you have a rifle? Yes or No")
         
-        let doYouHaveRifle = readLine()?.lowercased()
+        if let doYouHaveRifle = readLine()?.lowercased() {
         switch doYouHaveRifle {
         case "yes":
             print("You killed the bear")
             print("After killing the bear, you go back to sleep so that you have enough strength for the next day's journey.")
         case "no":
-            print("You were mauled to death.")
-            print("Play again")
+            survived = true
+            
         default:
             print("")
+        }
         }
     case "no":
         print("You sleep through the night")
@@ -89,13 +88,18 @@ if let nightNoise = readLine()?.lowercased() {
         break
     }
 }
-
+if survived == true {
+    print("You were mauled to death.")
+    print("Play again")
+} else {
 print("On the following morning, you continue down the road")
 print("You bump into a group of bandits that love to gamble")
 print("The leader comes up to you and tells you to choose a number from 1 to 6")
 print("The leader also tells you that if he can roll a higher number than the one you chose, he would like you pass. Additionally, you can try as many times as you like since he tells you that he has never lost once")
 print("")
 print("You pick: A number from 1 to 6")
+}
+
 while playerWin == false {
     if let playerNum = readLine() {
         let playerNumInt = Int(playerNum)!
@@ -125,21 +129,22 @@ if let lookAtSatchel = readLine()?.lowercased() {
             if currentCoin == 10 {
                 print("It was a trap! You were too greedy and the bear trap activates. It chops your hand off and you bleed to death whilst contracting dysentery")
                 trapActivated = true
-                break
+              
             }
         }
         if !trapActivated {
             print("Congrats! You made it out with \(goldCoinsAsInt) gold coins!")
         }
     default:
-        print("You continued down the road towards Oregon.")
+        print("")
     }
 }
 if trapActivated {
     print("Don't take too many coins!")
-}
+} else {
 print("You continued down the path and eventually stumble upon a sick stranger just outside of Oregon.")
 print("Do you want to help this stranger? Yes or No")
+}
 
 var contractedDysentery = false
 
