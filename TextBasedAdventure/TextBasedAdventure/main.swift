@@ -13,9 +13,6 @@ let truthordare = readLine()
 var weapon = ""
 switch truthordare {
 case "truth":
-    
-   
-    
 print("its a trap. Pick a number 1...5")
      let answer = readLine()!
 let answerInt = Int(answer)
@@ -57,7 +54,7 @@ for number in 0...floor6 {
     if number % 5 == 0 {
     print("watch out there is poison gas in the air, breathe at your own risk")
 } else {
-    print("a blind man is firing bullets, hopefully you can doge it")
+    print("a blind man is firing bullets, hopefully you can dodge it")
     }
 }
 print("choose a number")
@@ -95,7 +92,7 @@ var userItemInput = readLine()!
 let userItemInputAsInt = Int(userItemInput)
 switch userItemInputAsInt {
 case 0:
-    print("scoop out your eyeballs with a \(item.0)")
+    print("scoop out your eyeballs with a \(item.0)")    
 case 1:
     print("break your bones and glue yourself together like a rubix cube with \(item.1)")
 case 2:
