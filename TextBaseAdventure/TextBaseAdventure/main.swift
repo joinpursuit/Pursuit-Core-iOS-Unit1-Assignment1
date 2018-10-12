@@ -9,12 +9,13 @@
 //import Foundation
 //
 
-
+print("Hi! Do you have a name? Tell me your name.")
+let name = readLine()!
+print("How old are you?")
+let age = readLine()
 print ("welcome to ladyfly! would you like to be butterfly 🦋 or beetles 🐞?")
 var storyLevel = 0
-var berriesCounter = 4
 
-//
 while storyLevel == 0{
     let butterandbeetle = readLine()
 switch butterandbeetle {
@@ -36,50 +37,78 @@ print("try again")
 if gardenOrTrees == "garden"{
     print("lets pick bluberries!")
     storyLevel += 1
-}
+        }
 if gardenOrTrees == "trees"{
         print("lets find the hidden bluberries!")
-    storyLevel += 3
-
-    } 
-}
-while storyLevel == 2 { //garden zone
-    print("choose where you'd like to go. pond or the tree")
-    let pondOrTree = readLine ()!
-    var garden1 = 1
-    let pondInt = (0...4)
-    print("choose a number between 0 & 4")
-    let numbers = readLine()!
-
-        if pondInt % 2 == 0 {
-        print("lets make some new friends, and pick some blueberries!")
-        } else if pondInt % 2 == 1 {
-        print("lets dance!")
+    storyLevel += 1
+    print(" are you ready to climb the tree?! say go!")
+    let ready = readLine()!
+    print("lets climb!")
         }
 }
-while storyLevel == 3{ //garden zone
-let garden2 = 5
-let farm = 1...garden2
-let numbers = readLine()!
-    for numbers in farm {
-    if numbers == 3 || numbers == 5 {
-    print("collect blueberries 🔵")
-    } else {
-    print("say hi to the farm animals")
-        }
+    print("go up or down")
+    let upordown = readLine()!
+    switch upordown {
+    case "up":
+        print("You see a bumblebee, she has a blueberry. Take the blueberry")
+    case "down":
+        print("fly back up!")
+    default:
+        print("You need to go up or down")
+        print("it's picnic time!")
+        let picnic = readLine()!
     }
+    while storyLevel == 2 { //garden zone
+        print("choose where you'd like to go. pond or the farm")
+        let pondOrFarm = readLine ()!
+        switch pondOrFarm {
+        case "pond" :
+            print("let make some new friends and pick blueberries!")
+        case "farm" :
+            print("let's dance")
+        default:
+            print("")
+        }
+        storyLevel += 1
+    while storyLevel == 3 {
+    print("it's picnic time!")
+    let picnic = readLine()!
+    let food = ("bluberries", "kiwis", "pineapples", "mangos", "roti", "butterchicken", "okara", "bittermelon")
+    print("choose one of these \(food)")
+    print("choose number from 0 - 7")
+    let number = readLine()!
+//    var userFoodInput = readLine()!
+    var number1 = Int(number)
+            switch number1 {
+        case 0:
+            print("i love blueberries too!")
+        case 1:
+            print("peel the kiwi before you eat it!")
+        case 2:
+            print("you're a fine apple ;)")
+        case 3:
+            print("all south asains love mangoes!")
+        case 4:
+            print("make sure they're round otherwise no one will marry you!")
+        case 5:
+            print("all punjabis love butterchicken!")
+        case 6:
+            print("yo! I love bhindi too!")
+        case 7:
+            print("keralas are where its at!")
+        default:
+            print("sorry! thats all we have :(")
+            }
+print("you've had a good meal, it's nap time!")
+let nap = readLine()!
+let bedtime = 10
+            for numbers in 0...bedtime {
+                if numbers >= 5 {
+                    print("let's take a nap")
+                } else if numbers <= 5 {
+                    print("go have fun")
+                }
 }
+            }
+                }
 
-
-//while storyLevel == 4{//tree zone
-//print(" choose which brach you want")
-//let tree1 = 8
-//
-//let leftBranch
-//}
-//
-//while storyLevel == 5{//treezone
-//}
-//}
-//print("hi im in tree")
-}
