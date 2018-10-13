@@ -79,14 +79,19 @@ gameloop: repeat {
                                         print("")
                                     }
                                     sleep(3)
+                                    
                                     // Image wood person ^
+                                    print()
                                     print("You hear noises from all around you and you're full of fear")
                                     print("You stumble onto a creepy camp site 🌲⛺️😨🌲")
                                     sleep(1)
+                                    print()
                                     print("Camp was full of wild bears 🐻 VICIOUS 🐻")
                                     print("They ate you for 🍽 lunch 🍽")
                                     sleep(2)
+                                    print()
                                     print("☠️DEAD☠️")
+                                    print()
                                     if gameEnd == true {
                                         sleep(1)
                                         print("""
@@ -138,7 +143,7 @@ gameloop: repeat {
                                     break gameloop
                                     
                                     
-                            
+                                    
                                 ////// YES = LONG = SHELTER = cave
                                 case "shelter":
                                     print("You see a hidden cave 🗻 on the path and you decide to take shelter in it")
@@ -373,7 +378,7 @@ gameloop: repeat {
                                     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
                                   
   """)
-
+                                                                
                                                                 _ = print("""
             .@@@@@@@@@@.    *@@@@@@@@@@.   @@@@@@@@ @@@@@@@@  @@@@@@@@@@@@@@
            @@@@@           @@@@@    @@@@@  @@@@% @@@@@ @@@@@  @@@@%
@@ -406,11 +411,11 @@ gameloop: repeat {
                                                     
                                                 }
                                                 
-                                            
-                            
                                                 
                                                 
-                                                //
+                                                
+                                                
+                                            //
                                             case "umbrella":
                                                 print("As you're leaving the house a wild bear appears")
                                                 sleep(2)
@@ -489,6 +494,7 @@ gameloop: repeat {
                                         
                                         
                                         """ )}
+                                                break gameloop
                                             default:
                                                 print("That's not a choice you can do sorry pick from one of these: (Gun)🔫 , (Umbrella)🌂")
                                             }
@@ -496,7 +502,7 @@ gameloop: repeat {
                                     } while choiceThree
                                     
                                 //Leave house answer no Part 1/////////////////////////////////////////////////////////////
-                                case "Keep Going":
+                                case "keep going":
                                     print("The path leads you to a 🌊 roaring river 🌊 , you thought it was a great idea to cross it")
                                     sleep(2)
                                     print("DEAD ⚰️")
