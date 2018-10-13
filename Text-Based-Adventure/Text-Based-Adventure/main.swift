@@ -17,8 +17,22 @@ var beatGame = false
 var earlyBeat = false
 var reEnterResponse = true
 
+//warning about sensitive content
+print("WARNING! This game contains dark humor. If you are SENSITIVE to anything related to committing SUICIDE or DYING, DO NOT PLAY this game. The content of this game is meant to not make any sense. You have been warned. \n")
+print("With that said, do you still want to continue?\n    (yes)  (no)")
 
 while restartGame {     //this let the player to restart the game
+    if let response = readLine() {
+        if response == "yes" {
+            
+        } else if response == "no" {
+            print("Have a good day!")
+            break
+        } else {
+            print("Invalid Response")
+            continue
+        }
+    }
     print("Please enter you name:  \n")
     playerName = readLine()!    //player's name will be used several times in the game
     print("\(playerName), Welcome to Text-Adventure-Game. Enjoy!")
@@ -122,7 +136,7 @@ while restartGame {     //this let the player to restart the game
             print("")
             switch input4 {
             case "talk to someone":
-                print("I turn to closest person and ask: \"What is going on?\" \n")
+                print("I turn to the closest person and ask: \"What is going on?\" \n")
                 print("Stranger: He's going to commit suicide. I think he's a game addict. He said that his World of Warcraft account got hacked and now life is over for him. Poor guy, he lost himself in a game fantasy.")
             case "scream don't jump":
                 print("With all strength......I SCREAM: \"DON\'T JUMP!\"\n")
@@ -135,7 +149,7 @@ while restartGame {     //this let the player to restart the game
         
         print("")
         print("All of a sudden, I heard a random shout on the loudspeaker: \"What can we do to get you down?\"\n")
-        print("The guy on the roof said \"Beat me in any game. If you win, I come down. If not, I JUMP! Who dares to challenge me?\"")
+        print("Roof-Guy: \"World of Warcraft is my life. Since my account got hack and I lost everything, what's the point of living anymore? \nHow about this...since I am a gamer, if anyone beat me in any game, I come down. Otherwise, I JUMP!\"")
         
         for min in 1...5 {
             if min > 1 {
@@ -228,7 +242,7 @@ while restartGame {     //this let the player to restart the game
             print("I win the game!! The roof-person comes down. We call 911. The roof-person is sent to a mental institution for treatment.")
             beatGame = true
         } else {
-            print("I lost the game. The guy jumped down landed on top of a car HARD. \n BANG!!! the car is smacked down flat and exploded. Everyone died on the scene RIP GG ☠️!")
+            print("I lost the game. The guy jumped down landed on top of a car HARD. \n BANG!!! the car is smacked down flat and exploded. Everyone dies on the scene RIP GG ☠️!")
             print(gameOver)
             break
         }
@@ -268,6 +282,7 @@ while restartGame {     //this let the player to restart the game
     beatGame = false
     earlyBeat = false
     reEnterResponse = true
+    inGame = true
 }
 
 
