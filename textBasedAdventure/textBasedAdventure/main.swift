@@ -18,7 +18,7 @@ func space() {
 }
 
 func commandDoNotExist() {
-    print("the route you ented does not exist")
+    print("the route you entered does not exist")
     print("this game does not have a save function so please start over again")
     print("Good bye")
 }
@@ -89,7 +89,7 @@ func reStart() {
     let startingPoint = readLine() ?? "-1"
     if startingPoint == "cheat" {
         print("3 -> 1 -> 1 -> 3 -> 1 -> 1 -> 3 -> 1 -> 1")
-        print("YOU CHEETER!!!")
+        print("YOU CHEATER!!!")
         print()
     } else if startingPoint != "start" {
         print("See you again!")
@@ -119,15 +119,15 @@ func mazeBluePrint(result: Bool) {
         print("3")
         print("4")
         print()
-        let layorA1 = Int(readLine() ?? "-1") ?? -1
+        let layerA1 = Int(readLine() ?? "-1") ?? -1
         print() //creates a new line
         
-        if layorA1 == -1 || layorA1 > 4 {
+        if layerA1 == -1 || layerA1 > 4 {
             space()
             commandDoNotExist()
             count = 0
         }
-        switch layorA1 {
+        switch layerA1 {
         case 1:
             space()
             print("Pick one of the route below and enter it in!")
@@ -136,14 +136,14 @@ func mazeBluePrint(result: Bool) {
             print("2")
             print("3")
             print()
-            let layorB1 = Int(readLine() ?? "-1") ?? -1
+            let layerB1 = Int(readLine() ?? "-1") ?? -1
             
-            if layorB1 == -1 || layorB1 > 4 {
+            if layerB1 == -1 || layerB1 > 4 {
                 space()
                 commandDoNotExist()
                 count = 0
             }
-            switch layorB1 {
+            switch layerB1 {
             case 1:
                 space()
                 print("Pick one of the route below and enter it in!")
@@ -169,9 +169,9 @@ func mazeBluePrint(result: Bool) {
                 print("1")
                 print("2")
                 print()
-                let layorC2 = Int(readLine() ?? "-1") ?? -1
+                let layerC2 = Int(readLine() ?? "-1") ?? -1
                 
-                if layorC2 < 3 && layorC2 > 0 {
+                if layerC2 < 3 && layerC2 > 0 {
                     space()
                     reStart()
                     count = 0
@@ -188,9 +188,9 @@ func mazeBluePrint(result: Bool) {
                 print("1")
                 print("2")
                 print()
-                let layorC3 = Int(readLine() ?? "-1") ?? -1
+                let layerC3 = Int(readLine() ?? "-1") ?? -1
                 
-                if layorC3 < 3 && layorC3 > 0 {
+                if layerC3 < 3 && layerC3 > 0 {
                     space()
                     reStart()
                     count = 0
@@ -210,18 +210,18 @@ func mazeBluePrint(result: Bool) {
             print("2")
             print("3")
             print()
-            let layorB2 = Int(readLine() ?? "-1") ?? -1
+            let layerB2 = Int(readLine() ?? "-1") ?? -1
             
-            if layorB2 == -1 || layorB2 > 4 {
+            if layerB2 == -1 || layerB2 > 4 {
                 space()
                 commandDoNotExist()
                 count = 0
-            } else if layorB2 == 1 {
+            } else if layerB2 == 1 {
                 space()
                 reStart()
                 count = 0
             }
-            switch layorB2 {
+            switch layerB2 {
             case 2:
                 space()
                 print("Pick one of the route below and enter it in!")
@@ -229,9 +229,9 @@ func mazeBluePrint(result: Bool) {
                 print("1")
                 print("2")
                 print()
-                let layorC4 = Int(readLine() ?? "-1") ?? -1
+                let layerC4 = Int(readLine() ?? "-1") ?? -1
                 
-                if layorC4 < 3 && layorC4 > 0 {
+                if layerC4 < 3 && layerC4 > 0 {
                     space()
                     reStart()
                     count = 0
@@ -247,9 +247,9 @@ func mazeBluePrint(result: Bool) {
                 print("1")
                 print("2")
                 print()
-                let layorC5 = Int(readLine() ?? "-1") ?? -1
+                let layerC5 = Int(readLine() ?? "-1") ?? -1
                 
-                if layorC5 < 3 && layorC5 > 0 {
+                if layerC5 < 3 && layerC5 > 0 {
                     space()
                     reStart()
                     count = 0
@@ -269,18 +269,18 @@ func mazeBluePrint(result: Bool) {
             print("2")
             print("3")
             print()
-            let layorB3 = Int(readLine() ?? "-1") ?? -1
+            let layerB3 = Int(readLine() ?? "-1") ?? -1
             
-            if layorB3 == -1 || layorB3 > 4 {
+            if layerB3 == -1 || layerB3 > 4 {
                 space()
                 commandDoNotExist()
                 count = 0
-            } else if layorB3 == 3 {
+            } else if layerB3 == 3 {
                 space()
                 reStart()
                 count = 0
             }
-            switch layorB3 {
+            switch layerB3 {
             case 1:
                 space()
                 print("Pick one of the route below and enter it in!")
@@ -288,9 +288,9 @@ func mazeBluePrint(result: Bool) {
                 print("1")
                 print("2")
                 print()
-                let layorC6 = Int(readLine() ?? "-1") ?? -1
+                let layerC6 = Int(readLine() ?? "-1") ?? -1
                 
-                if layorC6 == 1 {
+                if layerC6 == 1 {
                     space()
                     if result == true {
                         congrats()
@@ -302,7 +302,7 @@ func mazeBluePrint(result: Bool) {
                         break
                     }
                     count = 0
-                } else if layorC6 == 2 {
+                } else if layerC6 == 2 {
                     space()
                     reStart()
                     count = 0
@@ -318,9 +318,9 @@ func mazeBluePrint(result: Bool) {
                 print("1")
                 print("2")
                 print()
-                let layorC7 = Int(readLine() ?? "-1") ?? -1
+                let layerC7 = Int(readLine() ?? "-1") ?? -1
                 
-                if layorC7 < 3 && layorC7 > 0 {
+                if layerC7 < 3 && layerC7 > 0 {
                     space()
                     reStart()
                     count = 0
@@ -340,13 +340,13 @@ func mazeBluePrint(result: Bool) {
             print("2")
             print("3")
             print()
-            let layorB4 = Int(readLine() ?? "-1") ?? -1
+            let layerB4 = Int(readLine() ?? "-1") ?? -1
             
-            if layorB4 == -1 || layorB4 > 4 {
+            if layerB4 == -1 || layerB4 > 4 {
                 space()
                 commandDoNotExist()
                 count = 0
-            } else if layorB4 == 2 {
+            } else if layerB4 == 2 {
                 if result == true {
                     space()
                     reStart()
@@ -358,7 +358,7 @@ func mazeBluePrint(result: Bool) {
                     break
                 }
             }
-            switch layorB4 {
+            switch layerB4 {
             case 1:
                 space()
                 print("Pick one of the route below and enter it in!")
@@ -366,13 +366,13 @@ func mazeBluePrint(result: Bool) {
                 print("1")
                 print("2")
                 print()
-                let layorC8 = Int(readLine() ?? "-1") ?? -1
+                let layerC8 = Int(readLine() ?? "-1") ?? -1
                 
-                if layorC8 == 1 {
+                if layerC8 == 1 {
                     space()
                     reStart()
                     count = 0
-                } else if layorC8 == 2 {
+                } else if layerC8 == 2 {
                     space()
                     reStart()
                     count = 0
@@ -388,9 +388,9 @@ func mazeBluePrint(result: Bool) {
                 print("1")
                 print("2")
                 print()
-                let layorC9 = Int(readLine() ?? "-1") ?? -1
+                let layerC9 = Int(readLine() ?? "-1") ?? -1
                 
-                if layorC9 < 3 && layorC9 > 0 {
+                if layerC9 < 3 && layerC9 > 0 {
                     space()
                     reStart()
                     count = 0
