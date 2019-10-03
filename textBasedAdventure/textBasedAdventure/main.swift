@@ -17,6 +17,71 @@ func space() {
     }
 }
 
+func doorIsLocked() {
+    print("""
+███████▓█████▓▓╬╬╬╬╬╬╬╬▓███▓╬╬╬╬╬╬╬▓╬╬▓█
+████▓▓▓▓╬╬▓█████╬╬╬╬╬╬███▓╬╬╬╬╬╬╬╬╬╬╬╬╬█
+███▓▓▓▓╬╬╬╬╬╬▓██╬╬╬╬╬╬▓▓╬╬╬╬╬╬╬╬╬╬╬╬╬╬▓█
+████▓▓▓╬╬╬╬╬╬╬▓█▓╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬▓█
+███▓█▓███████▓▓███▓╬╬╬╬╬╬▓███████▓╬╬╬╬▓█
+████████████████▓█▓╬╬╬╬╬▓▓▓▓▓▓▓▓╬╬╬╬╬╬╬█
+███▓▓▓▓▓▓▓╬╬▓▓▓▓▓█▓╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬▓█
+████▓▓▓╬╬╬╬▓▓▓▓▓▓█▓╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬▓█
+███▓█▓▓▓▓▓▓▓▓▓▓▓▓▓▓╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬▓█
+█████▓▓▓▓▓▓▓▓█▓▓▓█▓╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬▓█
+█████▓▓▓▓▓▓▓██▓▓▓█▓╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬██
+█████▓▓▓▓▓████▓▓▓█▓╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬██
+████▓█▓▓▓▓██▓▓▓▓██╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬██
+████▓▓███▓▓▓▓▓▓▓██▓╬╬╬╬╬╬╬╬╬╬╬╬█▓╬▓╬╬▓██
+█████▓███▓▓▓▓▓▓▓▓████▓▓╬╬╬╬╬╬╬█▓╬╬╬╬╬▓██
+█████▓▓█▓███▓▓▓████╬▓█▓▓╬╬╬▓▓█▓╬╬╬╬╬╬███
+██████▓██▓███████▓╬╬╬▓▓╬▓▓██▓╬╬╬╬╬╬╬▓███
+███████▓██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓╬╬╬╬╬╬╬╬╬╬╬████
+███████▓▓██▓▓▓▓▓╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬▓████
+████████▓▓▓█████▓▓╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬▓█████
+█████████▓▓▓█▓▓▓▓▓███▓╬╬╬╬╬╬╬╬╬╬╬▓██████
+██████████▓▓▓█▓▓▓╬▓██╬╬╬╬╬╬╬╬╬╬╬▓███████
+███████████▓▓█▓▓▓▓███▓╬╬╬╬╬╬╬╬╬▓████████
+██████████████▓▓▓███▓▓╬╬╬╬╬╬╬╬██████████
+███████████████▓▓▓██▓▓╬╬╬╬╬╬▓███████████
+""")
+    sleep(2)
+    print("All the door go locked and there is no way to get out from this room")
+    sleep(3)
+}
+
+func arrow() {
+    space()
+    print("""
+ ________________
+|\t_____ / |
+| |  /|,| |   | |
+| | |,x,| |   | |
+| | |,x,' |   | |
+| | |,x   ,   | |
+| | |/    |%==| |
+| |    /] ,   | |
+| |   [/ ()   | |
+| |       |   | |
+| |       |   | |
+| |       |   | |
+| |      ,'   | |
+| |   ,'      | |
+|_|,'_________|_|
+""")
+    sleep(2)
+    print("Arrow striked through your head When you opened the door...")
+    sleep(3)
+    space()
+        print("""
+            _                                       -----
+        .-'` |___________________________//////             ---------
+        `'-._|                           \\\\\\             ---------
+                                                    -----
+    """)
+    sleep(5)
+}
+
 func commandDoNotExist() {
     print("the route you ented does not exist")
     print("this game does not have a save function so please start over again")
@@ -26,6 +91,9 @@ func commandDoNotExist() {
 func congrats() {
     
     print("""
+:..｡o○☆ﾟ･:,｡:..｡o○☆ﾟ･:,｡ﾟ･:,｡★ﾟ･:,｡ﾟ･:,｡☆:..｡o○☆ﾟ･:,｡:..｡o○☆ﾟ･:,｡ﾟ･:,｡★ﾟ･:,｡ﾟ･:,｡☆
+:..｡o○☆ﾟ･:,｡:..｡o○☆ﾟ･:,｡ﾟ･:,｡★ﾟ･:,｡ﾟ･:,｡☆:..｡o○☆ﾟ･:,｡:..｡o○☆ﾟ･:,｡ﾟ･:,｡★ﾟ･:,｡ﾟ･:,｡☆
+
              ,----------------,              ,---------,
         ,-----------------------,          ,'        ,'|
       ,'                      ,'|        ,'        ,'  |
@@ -104,16 +172,20 @@ func reStart() {
     }
 }
 
-
-
 func mazeBluePrint(result: Bool) {
     if count >= 2 {
         bool = true
     }
     while count != 0 {
         space()
-        print("Pick one of the route below and enter it in!")
-        print("if you want to get a hint, enter 'hint'")
+        if count == 1 {
+            print("You are surounded by 4 doors and there's nothing else in the room")
+        } else {
+            print("You entered a room with 4 doors")
+        }
+        print("Which door do you want to go into?")
+        print("Pick one of the door below and enter it in!")
+        sleep(1)
         print()
         print("1")
         print("2")
@@ -131,7 +203,10 @@ func mazeBluePrint(result: Bool) {
         switch layerA1 {
         case 1:
             space()
-            print("Pick one of the route below and enter it in!")
+            print("You entered a room with 3 doors")
+            print("Which door do you want to go into?")
+            print("Pick one of the door below and enter it in!")
+            sleep(1)
             print()
             print("1")
             print("2")
@@ -147,7 +222,10 @@ func mazeBluePrint(result: Bool) {
             switch layerB1 {
             case 1:
                 space()
-                print("Pick one of the route below and enter it in!")
+                print("You entered a room with 2 doors")
+                print("Which door do you want to go into?")
+                print("Pick one of the door below and enter it in!")
+                sleep(1)
                 print()
                 print("1")
                 print("2")
@@ -155,6 +233,7 @@ func mazeBluePrint(result: Bool) {
                 let layerC1 = Int(readLine() ?? "-1") ?? -1
                 
                 if layerC1 < 3 && layerC1 > 0 {
+                    arrow()
                     space()
                     reStart()
                     count = 0
@@ -165,7 +244,10 @@ func mazeBluePrint(result: Bool) {
                 }
             case 2:
                 space()
-                print("Pick one of the route below and enter it in!")
+                print("You entered a room with 2 doors")
+                print("Which door do you want to go into?")
+                print("Pick one of the door below and enter it in!")
+                sleep(1)
                 print()
                 print("1")
                 print("2")
@@ -173,6 +255,7 @@ func mazeBluePrint(result: Bool) {
                 let layerC2 = Int(readLine() ?? "-1") ?? -1
                 
                 if layerC2 < 3 && layerC2 > 0 {
+                    doorIsLocked()
                     space()
                     reStart()
                     count = 0
@@ -184,7 +267,10 @@ func mazeBluePrint(result: Bool) {
                 
             case 3:
                 space()
-                print("Pick one of the route below and enter it in!")
+                print("You entered a room with 2 doors")
+                print("Which door do you want to go into?")
+                print("Pick one of the door below and enter it in!")
+                sleep(1)
                 print()
                 print("1")
                 print("2")
@@ -192,6 +278,7 @@ func mazeBluePrint(result: Bool) {
                 let layerC3 = Int(readLine() ?? "-1") ?? -1
                 
                 if layerC3 < 3 && layerC3 > 0 {
+                    arrow()
                     space()
                     reStart()
                     count = 0
@@ -205,11 +292,13 @@ func mazeBluePrint(result: Bool) {
             }
         case 2:
             space()
-            print("Pick one of the route below and enter it in!")
+            print("You entered a room with 2 doors")
+            print("Which door do you want to go into?")
+            print("Pick one of the door below and enter it in!")
+            sleep(1)
             print()
             print("1")
             print("2")
-            print("3")
             print()
             let layerB2 = Int(readLine() ?? "-1") ?? -1
             
@@ -218,6 +307,7 @@ func mazeBluePrint(result: Bool) {
                 commandDoNotExist()
                 count = 0
             } else if layerB2 == 1 {
+                arrow()
                 space()
                 reStart()
                 count = 0
@@ -225,7 +315,10 @@ func mazeBluePrint(result: Bool) {
             switch layerB2 {
             case 2:
                 space()
-                print("Pick one of the route below and enter it in!")
+                print("You entered a room with 2 doors")
+                print("Which door do you want to go into?")
+                print("Pick one of the door below and enter it in!")
+                sleep(1)
                 print()
                 print("1")
                 print("2")
@@ -233,6 +326,7 @@ func mazeBluePrint(result: Bool) {
                 let layerC4 = Int(readLine() ?? "-1") ?? -1
                 
                 if layerC4 < 3 && layerC4 > 0 {
+                    arrow()
                     space()
                     reStart()
                     count = 0
@@ -243,7 +337,10 @@ func mazeBluePrint(result: Bool) {
                 }
             case 3:
                 space()
-                print("Pick one of the route below and enter it in!")
+                print("You entered a room with 2 doors")
+                print("Which door do you want to go into?")
+                print("Pick one of the door below and enter it in!")
+                sleep(1)
                 print()
                 print("1")
                 print("2")
@@ -251,6 +348,7 @@ func mazeBluePrint(result: Bool) {
                 let layerC5 = Int(readLine() ?? "-1") ?? -1
                 
                 if layerC5 < 3 && layerC5 > 0 {
+                    doorIsLocked()
                     space()
                     reStart()
                     count = 0
@@ -264,7 +362,10 @@ func mazeBluePrint(result: Bool) {
             }
         case 3:
             space()
-            print("Pick one of the route below and enter it in!")
+            print("You entered a room with 3 doors")
+            print("Which door do you want to go into?")
+            print("Pick one of the door below and enter it in!")
+            sleep(1)
             print()
             print("1")
             print("2")
@@ -277,6 +378,7 @@ func mazeBluePrint(result: Bool) {
                 commandDoNotExist()
                 count = 0
             } else if layerB3 == 3 {
+                arrow()
                 space()
                 reStart()
                 count = 0
@@ -284,7 +386,10 @@ func mazeBluePrint(result: Bool) {
             switch layerB3 {
             case 1:
                 space()
-                print("Pick one of the route below and enter it in!")
+                print("You entered a room with 2 doors")
+                print("Which door do you want to go into?")
+                print("Pick one of the door below and enter it in!")
+                sleep(1)
                 print()
                 print("1")
                 print("2")
@@ -314,7 +419,10 @@ func mazeBluePrint(result: Bool) {
                 }
             case 2:
                 space()
-                print("Pick one of the route below and enter it in!")
+                print("You entered a room with 2 doors")
+                print("Which door do you want to go into?")
+                print("Pick one of the door below and enter it in!")
+                sleep(1)
                 print()
                 print("1")
                 print("2")
@@ -322,6 +430,7 @@ func mazeBluePrint(result: Bool) {
                 let layerC7 = Int(readLine() ?? "-1") ?? -1
                 
                 if layerC7 < 3 && layerC7 > 0 {
+                    doorIsLocked()
                     space()
                     reStart()
                     count = 0
@@ -335,7 +444,10 @@ func mazeBluePrint(result: Bool) {
             }
         case 4:
             space()
-            print("Pick one of the route below and enter it in!")
+            print("You entered a room with 3 doors")
+            print("Which door do you want to go into?")
+            print("Pick one of the door below and enter it in!")
+            sleep(1)
             print()
             print("1")
             print("2")
@@ -362,7 +474,10 @@ func mazeBluePrint(result: Bool) {
             switch layerB4 {
             case 1:
                 space()
-                print("Pick one of the route below and enter it in!")
+                print("You entered a room with 2 doors")
+                print("Which door do you want to go into?")
+                print("Pick one of the door below and enter it in!")
+                sleep(1)
                 print()
                 print("1")
                 print("2")
@@ -374,6 +489,7 @@ func mazeBluePrint(result: Bool) {
                     reStart()
                     count = 0
                 } else if layerC8 == 2 {
+                    doorIsLocked()
                     space()
                     reStart()
                     count = 0
@@ -384,7 +500,10 @@ func mazeBluePrint(result: Bool) {
                 }
             case 3:
                 space()
-                print("Pick one of the route below and enter it in!")
+                print("You entered a room with 2 doors")
+                print("Which door do you want to go into?")
+                print("Pick one of the door below and enter it in!")
+                sleep(1)
                 print()
                 print("1")
                 print("2")
@@ -415,21 +534,54 @@ func mazeBluePrint(result: Bool) {
 }
 
 space()
-print("Welcome to the Eddie's Maze Beta 0.01!! the rule's are simple, just make it all the way to the goal!")
-print()
-print("if you're ready, type in 'start' and hit enter!")
-print()
-print("if you do not want to play type 'anyother word' and press enter")
-print()
-print("YOU CAN NOT back track on this game so please choose wisely ")
-var startingPoint = readLine() ?? "-1"
+func start() {
+    print("""
+db   d8b   db d88888b db       .o88b.  .d88b.  .88b  d88. d88888b
+88   I8I   88 88'     88      d8P  Y8 .8P  Y8. 88'YbdP`88 88'
+88   I8I   88 88ooooo 88      8P      88    88 88  88  88 88ooooo
+Y8   I8I   88 88~~~~~ 88      8b      88    88 88  88  88 88~~~~~
+`8b d8'8b d8' 88.     88booo. Y8b  d8 `8b  d8' 88  88  88 88.
+ `8b8' `8d8'  Y88888P Y88888P  `Y88P'  `Y88P'  YP  YP  YP Y88888P
+""")
+    sleep(1)
+    print("\nWelcome to the Eddie's Maze Beta 0.01!! the rule's are simple, just make it all the way to the goal!")
+    sleep(1)
+    print("\nYOU CAN NOT back track on this game so please choose wisely ")
+    sleep(1)
+    print("\nif you're ready, type 'start' and hit enter!")
+    sleep(1)
+    print("\nif you do not want to play type 'anyother word' and press enter")
+    sleep(1)
+//let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(fire), userInfo: nil, repeats: true)
+    
+//    var timer = Timer(timeInterval: 2.0, repeats: true) { (thing) in
+//        print("yes")
+//    }
+//    if timer == Timer(timeInterval: 2.0) {
+//        print("I was here")
+//    }
+    
+    print("\nif you want some hint, enter 'hint'")
+}
+start()
+var startingPoint = readLine()?.lowercased() ?? "-1"
 let cheat = (routeToGoal: "3 -> 1 -> 1 -> 3 -> 1 -> 1 -> 3 -> 1 -> 1", message: "YOU CHEATER!!!")
 if startingPoint == "cheat" {
     space()
-    print(cheat.routeToGoal)
-    space()
+    print(cheat.routeToGoal,"\n")
     print(cheat.message)
     print()
+    sleep(1)
+    print("the game will start in 3 seconds")
+    sleep(3)
+    startingPoint = "start"
+} else if startingPoint == "hint" {
+    space()
+    print("Pay attention to the Skull")
+    sleep(1)
+    print("\nthe game will start in 5 seconds")
+    sleep(5)
+    startingPoint = "start"
 } else if startingPoint != "start" {
     print("See you again!")
     count = 0
