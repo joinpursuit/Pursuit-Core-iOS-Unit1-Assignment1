@@ -10,80 +10,91 @@
 1. Paste a link to your Pull Request (not your fork!) on Canvas and submit
 
 ## Lab 
+//
+//  main.swift
+//  Don'tMESSUp
+//
+//  Created by Tiffany Obi on 10/3/19.
+//  Copyright © 2019 Tiffany Obi. All rights reserved.
+//
 
-This lab will build on the skills that you've learned after your first week of programming in Swift!  You will build a command line application that plays a text-based adventure game.  Look [here](https://classicreload.com/zork-i.html) and [here](http://www.bbc.co.uk/programmes/articles/1g84m0sXpnNCv84GpN2PLZG/the-hitchhikers-guide-to-the-galaxy-game-30th-anniversary-edition) for a couple examples of the genre.  Be creative with your app. Apps will be evaluated by the following criteria:   
+import Foundation
 
-## App requirements:
+print("Hello, World!")
 
-<li>Your command line app must build and run with no compiler errors or warnings</li>
-<li>Have at least 10 opportunities for the user to make decisions</li>
-<li>Have at least one opportunity where the user will enter a number (see converting Strings to numbers)</li>
-<li>Use both Switch statements and If/Else Statements</li>
-<li>Use both type annotation and type inference to set variables</li>
-<li>Use at least one tuple in your code</li>
-<li>Use at least range in your code</li>
-<li>Use a for loop in your code</li>
-<li>Use a while loop in your code</li>
- 
- ## Rubric
- 
- ![textBasedAdventureRubric.png](./textBasedAdventureRubric.png)
+print("You are in a dark tunnel. It's Cold and wet. To escape type \"East\" or \"West\".")
 
-## Hints:
+var userInput = readLine()
+var east: String = "east"
+var west: String = "west"
+var open = "open"
+var emptyString = ""
+var climb = "climb"
+var fall: String = "fall"
+var one = "1"
+var two = "2"
+var three = "3"
+var fly = "fly"
 
-Use the following line to get user input
-
-```swift 
-let response = readLine()
-//The type of response is Optional String
-```
-
-Converting String to a number Type
-
-```swift 
-let userEnteredNumAsString = readLine()
-let userEnteredNumAsInt = Int(userEnteredNumAsString ?? "") ?? -1
-```
-
-Sample code with conditional logic:
-
-```swift
-print("Your adventure begins! Choose your direction \"Up\" or \"Down\"") //Use \ to escape characters
-
-let UpOrDown = readLine()
-var weapon = "" //Set variables here and you can change and use their values later
-var eggExploded = false
-switch UpOrDown {
-case "Up":
-    print("You see a basket of eggs.  How many do you take?")
-    let eggNum = readLine()
-    let eggNumAsInt = Int(eggNum ?? "") ?? -1
-    for currentEgg in 1...eggNumAsInt {
-        print("You carefully remove egg number \(currentEgg)")
-        if currentEgg == 4 {
-            print("It was a trap!  The egg explodes")
-                eggExploded = true
+~~~
+while userInput != emptyString {
+    
+    if userInput == east.lowercased() {
+        
+        print("A light appears! As it dims you see a door. Open the door at you're own risk. To open type \"open\"")
+        userInput=readLine()
+    if userInput==open.lowercased() {
+        print("There's a Goblin with 3 boxes. Pick box \"(1) , (2) , or (3)\".")
+        userInput=readLine() }
+        
+    if userInput == one || userInput == two {
+        print("YouLose!")
+        userInput=readLine()
+        
+        }
+        if userInput == three {
+            print("YOU WIN!!!!!!!!!!!")
+        }
+        else
+            if userInput != one || userInput != two || userInput != three {
+            print("Testing")
         }
     }
-    if !eggExploded {
-        print("Congrats!  You made it out with \(eggNumAsInt) eggs!")
+        if userInput==west.lowercased() {
+        print ("The ground begins to Shake and the Earth begins to open! There's a tree to your right! Climb the tree or fall through the cracks. type \"Climb\" or \"Fall\"")
+        userInput = readLine()
+        
+      if userInput==climb.lowercased() {
+            print("Your In the tree! thought you were safe? HA! An eagle Grabs your wig. to get it back type \"fly\"")
+        
+            userInput = readLine()
+      
+            switch userInput {
+        case fly.lowercased() :
+            print("Silly 🦃 ! YOU CANT OUT FLY AN 🦅 GAME OVER")
+        default:
+            print("The wig was ugly anyway") }
+      }
+        else if userInput==fall.lowercased() {
+            print("Youre in a dungeon. theres a treasure chest on the floor. Type the MAGIC NUMBER TO OPEN IT")
+            
+        userInput = readLine()
+        
+        for digit in 0...1000000000 {
+            
+            if digit <= 100 {
+                print("YOU WIN!!!")
+                
+                userInput = readLine()
+                
+            }
+            else if
+            digit >= 100000{
+                print ("Why you gotta be so extra? OFF WITH YOUR HEAD!")}
+                
+            }
+        }
     }
-    //More decisions ahead! Use conditionals and switch statements here
 
-case "Down":
-    print("Down you go!")
-    //Instructions for the "Down" option ahead!
-default:
-    print("You stand your ground. Choose a weapon")
-    weapon = readLine() ?? ""
-    //Fighting conditionals ahead!
 }
-
-if weapon != "" {
-    print("You survived your first ordeal and even have a \(weapon) to take home")
-}
-if eggExploded {
-    print("Bad luck!  Don't take so many eggs")
-}
-```
 
