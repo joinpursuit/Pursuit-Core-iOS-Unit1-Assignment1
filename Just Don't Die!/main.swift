@@ -22,21 +22,6 @@ print("")
 print("Moving on...the objective of the game is exactly what the title says: whatever you do, do NOT die 🚫🚫🚫🚫🚫🚫. Easy, right? I mean, you've made it this far.")
 print("")
 
-//print("What's your name?")
-//var playerName = readLine()
-//
-//print("How old are you?")
-//var age = readLine()
-//var playersAge
-//    if playerAge > 30{
-//        print("oh boy, you might be losing quicker than I though")
-//    }
-//    else {
-//    print("Okay, young and spry!")
-//}
-
-
-//
 var response:String = ""
 repeat {
     print("Are you ready?, yes or no")
@@ -243,7 +228,3 @@ print("""
 ─▓▓▓▓▓▓▓▓▓▓▓▓───────▓▓▓▓▓▓▓▓▓▓
 
 """)
-//if trainTime = 10...15{
-//print("Hurry Slack someone! Who are you going to notify?!")
-//response = readLine()?.lowercased() ?? " "
-//}
