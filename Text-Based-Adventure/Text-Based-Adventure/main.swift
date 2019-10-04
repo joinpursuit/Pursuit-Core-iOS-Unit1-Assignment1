@@ -19,11 +19,6 @@ switch introFeeling {
 case "A": // Happy
     print("These are recommended movies to watch 🎬")
     
-    //while: String("A"){
-    //    print("sleep for 2 seconds.")
-    //    sleep(2) // working
-    //}
-    
     let movies = ["Step B. brothers", "Wedding Crashers", "Hangover", "Stuber"]
     
     for movie in movies {
@@ -32,36 +27,36 @@ case "A": // Happy
     }
 case "B": // Sad
     print("These are recommended movies to watch 🎬")
-    //    while: String("B"){
-    //        print("sleep for 2 seconds.")
-    //        sleep(2) // working
-    //    }
-    print("A. The theory of everything B. The Blind Side C. The Pursuit of Happiness D. Hidden Figures ")
-    
-    
+ let movies = ["The theory of everything", "The Blind Side", "The Pursuit of Happiness", "Hidden Figures"]
+    for movie in movies {
+    print(movie)
+    sleep(2)
+    }
 case "C": //Romantic
     print("These are recommended movies to watch 🎬")
-    //    while: String("C"){
-    //        print("sleep for 2 seconds.")
-    //        sleep(2) // working
-    //    }
-    print("A. Time travelers wife C. 50 first dates D. note book E. P.S. I love You")
+  let movies = ["Time travelers wife", "50 first dates", "The Note Book", "P.S. I love You"]
+    for movie in movies {
+        print(movie)
+        sleep(2)
+    }
     
 case "D": // Angry
     print("These are recommended movies to watch 🎬")
-    //    while: String("D"){
-    //        print("sleep for 2 seconds.")
-    //        sleep(2) // working
-    //    }
-    print("A. School of Rock B. how to lose a guy in 10 days C. inside out D.  A Cinderella Story")
+
+    let movies = ["School of Rock", "How to lose a guy in 10 days", "Inside Out", "Cinderella Story"]
+    for movie in movies {
+         print(movie)
+         sleep(2)
+     }
     
 case "E": // intrigue
     print("These are recommended movies to watch 🎬")
-    //    while: String("E"){
-    //        print("sleep for 2 seconds.")
-    //        sleep(2) // working
-    //    }
-    print("A. What the Health B. How America was Built C. Surviving never land D. Abducted in Plain Sight")
+  
+    let movies = ["What the Health", "How America was Built", "Surviving never land", "Abducted in Plain Sight"]
+       for movie in movies {
+            print(movie)
+            sleep(2)
+        }
     
 default:
     print("I hope you enjoyed the selection 😊")
@@ -101,7 +96,7 @@ case "1":
             print()
         }
     } else if answerChoice == "no" {
-        // code here
+        print("I am sorry I was no help 😔 maybe next time !" )
     } else {
         // code here
     }
