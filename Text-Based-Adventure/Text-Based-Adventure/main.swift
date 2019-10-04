@@ -23,8 +23,13 @@ case "A": // Happy
     //    print("sleep for 2 seconds.")
     //    sleep(2) // working
     //}
-    print("A. Step B. brothers C. Wedding Crashers D. Hangover E. Stuber")
     
+    let movies = ["Step B. brothers", "Wedding Crashers", "Hangover", "Stuber"]
+    
+    for movie in movies {
+        print(movie)
+        sleep(2)
+    }
 case "B": // Sad
     print("These are recommended movies to watch 🎬")
     //    while: String("B"){
@@ -62,17 +67,10 @@ default:
     print("I hope you enjoyed the selection 😊")
 }
 
-
-var satisfactory = readLine()
 print("How satisfied where you with the selected movies according to your mood ")
 print("1...4")
 print("1 really bad it sucked, 2 boring never again, 3 Ehh it was okay could have been better  4 it was great")
-
-var comedy = "A"
-var romance = "B"
-var horror = "C"
-var documentaries = "D"
-var action = "E"
+var satisfactory = readLine()
 
 
 switch satisfactory {
@@ -102,6 +100,10 @@ case "1":
         default:
             print()
         }
+    } else if answerChoice == "no" {
+        // code here
+    } else {
+        // code here
     }
 case "2":
     print("would you like more suggestions?")
