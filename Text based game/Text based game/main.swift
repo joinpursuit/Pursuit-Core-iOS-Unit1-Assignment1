@@ -27,35 +27,29 @@ if 0...4 ~= hoursOfSleep {
     let response = readLine()
     switch response {
     case "early":
-        print("Great job! You must wake up really early than.")
+        print("Great job! You must wake up really early than. What time do you wake up? in millitary time")
     case "late":
-        print("This might be the problem!")
+        print("This might be the problem! What time do go to sleep? in military time")
     default:
         print("enter a valid time of sleep")
     }
-    if response == "late" {
-        print("what time do go to sleep? in military time")
-        let bedTime = Int(readLine() ?? "-1") ?? -1
-        if bedTime <= 21 {
-            print("Good timing, actually.")
-        } else if bedTime > 21 && bedTime < 23 {
+    let responseTime = Int(readLine() ?? "-1") ?? -1
+        
+    switch responseTime {
+    case 0...3:
+        print("That's why you might not be getting enough sleep.")
+    case 4...8:
+        print("Good time to wake up!")
+    case 8...15:
+              print("You should be getting enough sleep.")
+    case 16...20:
+        print("Seems like you going to bed on time.")
+    case 21...23:
             print("It's getting late.")
-        } else {
-            print("Risking not get enough sleep.")
+    default:
+            print("Risking to not get enough sleep.")
         }
-        
-        if response == "early" {
-            print("what time do you wake up? in millitary time")
-            let wakeupTime = Int(readLine() ?? "-1") ?? -1
-            if wakeupTime > 8 {
-                print("You should be getting enough sleep! You must have nightmares..")
-            } else if wakeupTime <= 8 && wakeupTime > 4 {
-                print("Good time to wake up!")
-            } else {
-                print("That's why you are not getting enough sleep.")
-            }
-        }
-        
+    
         if 4...6 ~= hoursOfSleep {
             print("How fast do you fall asleep? in minutes?")
             let fallAsleep = Int(readLine() ?? "-1") ?? -1
@@ -83,7 +77,8 @@ if 0...4 ~= hoursOfSleep {
         }
         
     }
-}
+
+
     
 else if 5...7 ~= hoursOfSleep {
     print("what time do go to sleep? in militarty time")
