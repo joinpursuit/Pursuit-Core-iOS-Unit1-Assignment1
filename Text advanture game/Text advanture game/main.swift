@@ -91,22 +91,7 @@ if choice2 == "run" {
 
 
 
-//print("Welcome to the portal , please enter you age:")
-//
-//print()
-//
-//var userAge = Int(readLine()!)!
-//
-//print()
-//
-//if userAge > 18 {
-//  print("Welcome to the portal")
-//} else if userAge < 17 {
-//  print("Sorry")
-//} else {
-//  print("INVALID AGE")
-//}
-//
+
 
 
 
