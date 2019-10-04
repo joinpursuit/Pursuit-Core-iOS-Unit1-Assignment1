@@ -205,10 +205,36 @@ repeat{
             Congratulations!
             🥳
             """)
+        print("Press return to exit")
         response3Bus = readLine()
         question4 = true
-        // TODO: continue lastloop
-    }else if response3Bus == "7"{
+        print("On a scale of one to ten, how would you rate my game?")
+            let rating = Int(readLine() ?? "-1" ) ?? -1
+            switch rating {
+            case 0..<5 :
+                for _ in 0..<5 {
+                    print("...Oh... Sorry to hear that...")
+                    sleep(3)
+                    print("⭐️")
+                    print("😒")
+                }
+            case 5...9 :
+                for _ in 5...9 {
+                    print("Thanks for playing my humble text adventure game! 😌")
+                    sleep(1)
+                    print("⭐️⭐️⭐️")
+                }
+            case 10..<11 :
+                for _ in 10..<11 {
+                    print("Oh wow! Almost the highest rating! Thank you for playing my humble text adventure 😊")
+                    sleep(1)
+                    print("⭐️⭐️⭐️⭐️⭐️")
+                    print("💖")
+                }
+            default:
+                print("Thanks for playing!")
+            }
+    } else if response3Bus == "7"{
         print()
         print("Oh you want a cab? Do you have enough on you to get home?")
         question4 = true
@@ -285,10 +311,35 @@ repeat {
             But you make it home.
             $25.34 later...
             """)
-        print("To exit type enter")
+        print("Press return to exit")
         response3 = readLine()
             question3 = true
-    } else {
+        print("On a scale of one to ten, how would you rate my game?")
+        let rating = Int(readLine() ?? "-1" ) ?? -1
+        switch rating {
+        case 0..<5 :
+            for _ in 0..<5 {
+                print("...Oh... Sorry to hear that...")
+                sleep(3)
+                print("⭐️")
+                print("😒")
+            }
+        case 5...9 :
+            for _ in 5...9 {
+                print("Thanks for playing my humble text adventure game! 😌")
+                sleep(1)
+                print("⭐️⭐️⭐️")
+            }
+        case 10..<11 :
+            for _ in 10..<11 {
+                print("Oh wow! Almost the highest rating! Thank you for playing my humble text adventure 😊")
+                sleep(1)
+                print("⭐️⭐️⭐️⭐️⭐️")
+                print("💖")
+            }
+        default:
+            print("Thanks for playing!")
+        } } else {
         print("Type a choice to continue...")
         question3 = false
         response3 = readLine()
@@ -314,9 +365,35 @@ repeat{
         You did it.
         You're home. 😌
         """)
-        print("To exit type enter")
+        print("Press return to exit")
         response4 = readLine()
         question5 = true
+        print("On a scale of one to ten, how would you rate my game?")
+        let rating = Int(readLine() ?? "-1" ) ?? -1
+        switch rating {
+        case 0..<5 :
+            for _ in 0..<5 {
+                print("...Oh... Sorry to hear that...")
+                sleep(3)
+                print("⭐️")
+                print("😒")
+            }
+        case 5...9 :
+            for _ in 5...9 {
+                print("Thanks for playing my humble text adventure game! 😌")
+                sleep(1)
+                print("⭐️⭐️⭐️")
+            }
+        case 10..<11 :
+            for _ in 10..<11 {
+                print("Oh wow! Almost the highest rating! Thank you for playing my humble text adventure 😊")
+                sleep(1)
+                print("⭐️⭐️⭐️⭐️⭐️")
+                print("💖")
+            }
+        default:
+            print("Thanks for playing!")
+        }
     } else if response4 == "d"{
         print()
         print("You've decided to \(decide4SqueezeOrWait.b)")
@@ -327,9 +404,35 @@ repeat{
         You did it! You're going home!
         Congratulations! 🥳
         """)
-        print("To exit type enter")
+        print("Press return to exit")
         response4 = readLine()
         question5 = true
+        print("On a scale of one to ten, how would you rate my game?")
+        let rating = Int(readLine() ?? "-1" ) ?? -1
+        switch rating {
+        case 0..<5 :
+            for _ in 0..<5 {
+                print("...Oh... Sorry to hear that...")
+                sleep(3)
+                print("⭐️")
+                print("😒")
+            }
+        case 5...9 :
+            for _ in 5...9 {
+                print("Thanks for playing my humble text adventure game! 😌")
+                sleep(1)
+                print("⭐️⭐️⭐️")
+            }
+        case 10..<11 :
+            for _ in 10..<11 {
+                print("Oh wow! Almost the highest rating! Thank you for playing my humble text adventure 😊")
+                sleep(1)
+                print("⭐️⭐️⭐️⭐️⭐️")
+                print("💖")
+            }
+        default:
+            print("Thanks for playing!")
+        }
     } else if response4 == "e"{
         print()
         print("""
@@ -341,9 +444,35 @@ repeat{
         But you make it home.
         $25.34 later...
         """)
-        print("To exit type enter")
+       print("Press return to exit")
         response4 = readLine()
         question5 = true
+        print("On a scale of one to ten, how would you rate my game?")
+        let rating = Int(readLine() ?? "-1" ) ?? -1
+        switch rating {
+        case 0..<5 :
+            for _ in 0..<5 {
+                print("...Oh... Sorry to hear that...")
+                sleep(3)
+                print("⭐️")
+                print("😒")
+            }
+        case 5...9 :
+            for _ in 5...9 {
+                print("Thanks for playing my humble text adventure game! 😌")
+                sleep(1)
+                print("⭐️⭐️⭐️")
+            }
+        case 10..<11 :
+            for _ in 10..<11 {
+                print("Oh wow! Almost the highest rating! Thank you for playing my humble text adventure 😊")
+                sleep(1)
+                print("⭐️⭐️⭐️⭐️⭐️")
+                print("💖")
+            }
+        default:
+            print("Thanks for playing!")
+        }
     }else if response4 == "9" {
         print()
         print("You've decided to \(decide4SqueezeOrWait.a)")
@@ -356,9 +485,35 @@ repeat{
         You did it.
         You're home. 😌
         """)
-        print("To exit type enter")
+        print("Press return to exit")
         response4 = readLine()
         question5 = true
+        print("On a scale of one to ten, how would you rate my game?")
+        let rating = Int(readLine() ?? "-1" ) ?? -1
+        switch rating {
+        case 0..<5 :
+            for _ in 0..<5 {
+                print("...Oh... Sorry to hear that...")
+                sleep(3)
+                print("⭐️")
+                print("😒")
+            }
+        case 5...9 :
+            for _ in 5...9 {
+                print("Thanks for playing my humble text adventure game! 😌")
+                sleep(1)
+                print("⭐️⭐️⭐️")
+            }
+        case 10..<11 :
+            for _ in 10..<11 {
+                print("Oh wow! Almost the highest rating! Thank you for playing my humble text adventure 😊")
+                sleep(1)
+                print("⭐️⭐️⭐️⭐️⭐️")
+                print("💖")
+            }
+        default:
+            print("Thanks for playing!")
+        }
     } else if response4 == "10" {
         print()
         print("You've decided to \(decide4SqueezeOrWait.b)")
@@ -369,9 +524,35 @@ repeat{
             You did it! You're going home!
             Congratulations! 🥳
             """)
-        print("To exit type enter")
+        print("Press return to exit")
         response4 = readLine()
         question5 = true
+        print("On a scale of one to ten, how would you rate my game?")
+        let rating = Int(readLine() ?? "-1" ) ?? -1
+        switch rating {
+        case 0..<5 :
+            for _ in 0..<5 {
+                print("...Oh... Sorry to hear that...")
+                sleep(3)
+                print("⭐️")
+                print("😒")
+            }
+        case 5...9 :
+            for _ in 5...9 {
+                print("Thanks for playing my humble text adventure game! 😌")
+                sleep(1)
+                print("⭐️⭐️⭐️")
+            }
+        case 10..<11 :
+            for _ in 10..<11 {
+                print("Oh wow! Almost the highest rating! Thank you for playing my humble text adventure 😊")
+                sleep(1)
+                print("⭐️⭐️⭐️⭐️⭐️")
+                print("💖")
+            }
+        default:
+            print("Thanks for playing!")
+        }
     } else if response4 == "11" {
         print()
         print("""
@@ -383,9 +564,35 @@ repeat{
         But you make it home.
         $25.34 later...
         """)
-        print("To exit type enter")
+        print("Press return to exit")
         response4 = readLine()
         question5 = true
+        print("On a scale of one to ten, how would you rate my game?")
+        let rating = Int(readLine() ?? "-1" ) ?? -1
+        switch rating {
+        case 0..<5 :
+            for _ in 0..<5 {
+                print("...Oh... Sorry to hear that...")
+                sleep(3)
+                print("⭐️")
+                print("😒")
+            }
+        case 5...9 :
+            for _ in 5...9 {
+                print("Thanks for playing my humble text adventure game! 😌")
+                sleep(1)
+                print("⭐️⭐️⭐️")
+            }
+        case 10..<11 :
+            for _ in 10..<11 {
+                print("Oh wow! Almost the highest rating! Thank you for playing my humble text adventure 😊")
+                sleep(1)
+                print("⭐️⭐️⭐️⭐️⭐️")
+                print("💖")
+            }
+        default:
+            print("Thanks for playing!")
+        }
     } else {
         print("Type a choice to continue...")
         question5 = false
@@ -410,9 +617,35 @@ repeat{
             You did it.
             You're home. 😌
             """)
-            print("To exit type enter")
+            print("Press return to exit")
             response4Bus = readLine()
             question7 = true
+            print("On a scale of one to ten, how would you rate my game?")
+            let rating = Int(readLine() ?? "-1" ) ?? -1
+            switch rating {
+            case 0..<5 :
+                for _ in 0..<5 {
+                    print("...Oh... Sorry to hear that...")
+                    sleep(3)
+                    print("⭐️")
+                    print("😒")
+                }
+            case 5...9 :
+                for _ in 5...9 {
+                    print("Thanks for playing my humble text adventure game! 😌")
+                    sleep(1)
+                    print("⭐️⭐️⭐️")
+                }
+            case 10..<11 :
+                for _ in 10..<11 {
+                    print("Oh wow! Almost the highest rating! Thank you for playing my humble text adventure 😊")
+                    sleep(1)
+                    print("⭐️⭐️⭐️⭐️⭐️")
+                    print("💖")
+                }
+            default:
+                print("Thanks for playing!")
+            }
         } else if response4Bus == "d" {
         print()
         print("You've decided to \(decide4SqueezeOrWait.b)")
@@ -423,9 +656,35 @@ repeat{
         You did it! You're going home!
         Congratulations! 🥳
         """)
-        print("To exit type enter")
+        print("Press return to exit")
         response4Bus = readLine()
         question7 = true
+            print("On a scale of one to ten, how would you rate my game?")
+            let rating = Int(readLine() ?? "-1" ) ?? -1
+            switch rating {
+            case 0..<5 :
+                for _ in 0..<5 {
+                    print("...Oh... Sorry to hear that...")
+                    sleep(3)
+                    print("⭐️")
+                    print("😒")
+                }
+            case 5...9 :
+                for _ in 5...9 {
+                    print("Thanks for playing my humble text adventure game! 😌")
+                    sleep(1)
+                    print("⭐️⭐️⭐️")
+                }
+            case 10..<11 :
+                for _ in 10..<11 {
+                    print("Oh wow! Almost the highest rating! Thank you for playing my humble text adventure 😊")
+                    sleep(1)
+                    print("⭐️⭐️⭐️⭐️⭐️")
+                    print("💖")
+                }
+            default:
+                print("Thanks for playing!")
+            }
     } else if response4Bus == "e"{
     print()
     print("""
@@ -437,21 +696,69 @@ repeat{
     But you make it home.
     $25.34 later...
     """)
-    print("To exit type enter")
+    print("Press return to exit")
     response4Bus = readLine()
     question7 = true
+            print("On a scale of one to ten, how would you rate my game?")
+            let rating = Int(readLine() ?? "-1" ) ?? -1
+            switch rating {
+            case 0..<5 :
+                for _ in 0..<5 {
+                    print("...Oh... Sorry to hear that...")
+                    sleep(3)
+                    print("⭐️")
+                    print("😒")
+                }
+            case 5...9 :
+                for _ in 5...9 {
+                    print("Thanks for playing my humble text adventure game! 😌")
+                    sleep(1)
+                    print("⭐️⭐️⭐️")
+                }
+            case 10..<11 :
+                for _ in 10..<11 {
+                    print("Oh wow! Almost the highest rating! Thank you for playing my humble text adventure 😊")
+                    sleep(1)
+                    print("⭐️⭐️⭐️⭐️⭐️")
+                    print("💖")
+                }
+            default:
+                print("Thanks for playing!")
+            }
         } else {
             print("Type an option to continue")
             response4Bus = readLine()
             question7 = false
+            
         }
 }
 }while question7 == true
 
-var question6 = false
-var response6 = Int(readLine() ?? "-1" ) ?? -1
-
-//lastloop: for _ in 1...10 where response3Bus == "6" || response3 == "e" || response4 == "c" || response4 == "d" || response4 == "e" || response4 == "9" || response4 == "10" || response4Bus == "11" || response4Bus == "9" || response4Bus == "c" || response4Bus == "d" || response4Bus == "e" {
+//var question6 = false
+//
+//print("On a scale of one to ten, how would you rate my game?")
+//var rating = Int(readLine() ?? "-1" ) ?? -1
+//switch rating {
+//case 0..<5 :
+//    for _ in 0..<5 {
+//        sleep(3)
+//        print("...Oh... Sorry to hear that...")
+//    }
+//case 5...9 :
+//    for _ in 5...9 {
+//        sleep(1)
+//        print("Thanks for playing my humble text adventure 😌")
+//    }
+//case 10..<11 :
+//    for _ in 10..<11 {
+//        sleep(1)
+//        print("Oh wow! Almost the highest rating! Thank you for playing my humble text adventure 😊")
+//    }
+//default:
+//    print("Thanks for playing!")
+//}
+exit(0)
+//for _ in 1...10 where response3Bus == "6" || response3 == "e" || response4 == "c" || response4 == "d" || response4 == "e" || response4 == "9" || response4 == "10" || response4Bus == "11" || response4Bus == "9" || response4Bus == "c" || response4Bus == "d" || response4Bus == "e" {
 //    print("Congratulations! You beat the game! On a scale of 1 to 10, how much did you enjoy the game?")
 //    response6 = Int(readLine() ?? "-1" ) ?? -1
 //    if response6 <= 4 {
