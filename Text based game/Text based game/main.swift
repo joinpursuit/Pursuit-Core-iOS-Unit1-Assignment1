@@ -7,6 +7,8 @@
 //
 
 import Foundation
+print("Start")
+var gameStart = "Start"
 
 print("How many hours do you sleep on average?")
 var hoursOfSleep = Int(readLine() ?? "-1") ?? -1
@@ -33,8 +35,10 @@ if 0...4 ~= hoursOfSleep {
     default:
         print("enter a valid time of sleep")
     }
+    
+    
     let responseTime = Int(readLine() ?? "-1") ?? -1
-        
+
     switch responseTime {
     case 0...3:
         print("That's why you might not be getting enough sleep.")
@@ -48,40 +52,34 @@ if 0...4 ~= hoursOfSleep {
             print("It's getting late.")
     default:
             print("Risking to not get enough sleep.")
-        }
-    
-        if 4...6 ~= hoursOfSleep {
-            print("How fast do you fall asleep? in minutes?")
-            let fallAsleep = Int(readLine() ?? "-1") ?? -1
-            switch fallAsleep {
-            case 0...30:
-                print("Healthy sleep pattern.")
-            case 31...60:
-                print("You must be thinking of something.")
-            default:
-                print("You are having difficulty falling asleep.")
+    }
+
+    if 5...7 ~= hoursOfSleep {
+    print("How fast do you fall asleep? in minutes?")
+    let fallAsleep = Int(readLine() ?? "-1") ?? -1
+    switch fallAsleep {
+    case 0...30:
+    print("Healthy sleep pattern.")
+    case 31...60:
+    print("You must be thinking of something.")
+    default:
+    print("You are having difficulty falling asleep.")
             }
-            if fallAsleep > 60 {
-                print("What day of the week you usually not getting enough sleep? (type days of the week starting witha capital letter")
-                let daysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-                for day in daysOfTheWeek {
+    if fallAsleep > 60 {
+    print("What day of the week you usually not getting enough sleep? (type days of the week starting witha capital letter")
+    let daysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        for day in daysOfTheWeek {
                     if day == "Monday" {
                         print("\(day) is tough... don't blame you!")
                     } else if day == "Sunday" {
                         print("You should be catching on some sleep on \(day)")
                     }
                 }
-                
             }
-            
         }
-        
-    }
 
-
-    
-else if 5...7 ~= hoursOfSleep {
-    print("what time do go to sleep? in militarty time")
+    } else if 5...7 ~= hoursOfSleep {
+    print("what time do go to sleep? in militarty time .......")
     let bedTime = Int(readLine() ?? "-1") ?? -1
     if bedTime <= 21 {
         print("Good timing.")
@@ -91,4 +89,3 @@ else if 5...7 ~= hoursOfSleep {
         print("Risking not get enough sleep.")
     }
 }
-
