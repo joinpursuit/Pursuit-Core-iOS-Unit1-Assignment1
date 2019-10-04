@@ -59,7 +59,7 @@ case "E": // intrigue
         }
     
 default:
-    print("I hope you enjoyed the selection 😊")
+    print("Grab some popcorn 🍿 and enjoy the movie 🎬 ")
 }
 
 print("How satisfied where you with the selected movies according to your mood ")
@@ -69,7 +69,7 @@ var satisfactory = readLine()
 
 
 switch satisfactory {
-case "1":
+case "1": // really bad it sucked
     print("Would you like more suggestions, yes or no? ")
     let answerChoice = readLine() ?? ""
     if answerChoice == "yes" {
@@ -79,34 +79,158 @@ case "1":
         switch genreChoice {
         case "A":
             print("recommend movies are:")
-            print("- step brothers - Wedding Crashers - Hangover - Stuber")
+                let movies = ["Step B. brothers", "Wedding Crashers", "Hangover", "Stuber"]
+            
+            for movie in movies {
+                print(movie)
+                sleep(1)
+            }
         case "B":
             print("recommended movies are:")
-            print("- Time travelers wife - 50 first dates - The Note Book - P.S. I love You")
+            let movies = ["Time travelers wife", "50 first dates", "The Note Book", "P.S. I love You"]
+              for movie in movies {
+                  print(movie)
+                  sleep(1)
+              }
+    
         case "C":
             print("recommended movies are:")
-            print("- The Wrong Turn, - it , - The Nun , - Pet Sematary")
+            let movies = ["The Wrong Turn", "it", "The Nun", "Pet Sematary"]
+            for movie in movies {
+                            print(movie)
+                            sleep(1)
+                        }
         case "D":
             print("recommended movies are:")
-            print(" A. What the Health B. How America was Built C. Surviving never land  D. Abducted in Plain Sight ")
+               let movies = ["What the Health", "How America was Built", "Surviving never land", "Abducted in Plain Sight"]
+               for movie in movies {
+                    print(movie)
+                    sleep(2)
+                }
         case "E":
             print("recommended movies are:")
-            print(" - John Wick, - Rambo, Last Blood - Captain Marvel - Avenger Endgame")
+            let movies = ["John Wick", "Rambo, Last Blood", "Captain Marvel", "Avenger Endgame"]
+            for movie in movies {
+                             print(movie)
+                             sleep(2)
+                         }
         default:
             print()
         }
     } else if answerChoice == "no" {
         print("I am sorry I was no help 😔 maybe next time !" )
-    } else {
-        // code here
     }
-case "2":
-    print("would you like more suggestions?")
-case "3":
-    print("would you like more suggestions?")
-case "4":
-    print("I am glad you enjoyed the movie!!")
-default:
-    print()
-}
+    
+    switch satisfactoryTwo {
+    case "2": // Boring I fell asleep
+        print("Would you like more suggestions, yes or no? ")
+        let answerChoice = readLine() ?? ""
+        if answerChoice == "yes" {
+            print("What are you favorite genera")
+            print("A. Comedy B. romance C. Horror D. Documentaries E. action")
+            let genreChoiceTwo = readLine() ?? ""
+            switch genreChoiceTwo {
+                
+                case "A":
+                        print("recommend movies are:")
+                            let movies = ["Step B. brothers", "Wedding Crashers", "Hangover", "Stuber"]
+                        
+                        for movie in movies {
+                            print(movie)
+                            sleep(1)
+                        }
+                    case "B":
+                        print("recommended movies are:")
+                        let movies = ["Time travelers wife", "50 first dates", "The Note Book", "P.S. I love You"]
+                          for movie in movies {
+                              print(movie)
+                              sleep(1)
+                          }
+                
+                    case "C":
+                        print("recommended movies are:")
+                        let movies = ["The Wrong Turn", "it", "The Nun", "Pet Sematary"]
+                        for movie in movies {
+                                        print(movie)
+                                        sleep(1)
+                                    }
+                    case "D":
+                        print("recommended movies are:")
+                           let movies = ["What the Health", "How America was Built", "Surviving never land", "Abducted in Plain Sight"]
+                           for movie in movies {
+                                print(movie)
+                                sleep(2)
+                            }
+                    case "E":
+                        print("recommended movies are:")
+                        let movies = ["John Wick", "Rambo, Last Blood", "Captain Marvel", "Avenger Endgame"]
+                        for movie in movies {
+                                         print(movie)
+                                         sleep(2)
+                                     }
 
+            default:
+                print()
+            }
+            
+            
+    switch satisfactoryThree {
+            case "3": // Boring I fell asleep
+                print("Would you like more suggestions, yes or no? ")
+                let answerChoice = readLine() ?? ""
+                if answerChoice == "yes" {
+                    print("What are you favorite genera")
+                    print("A. Comedy B. romance C. Horror D. Documentaries E. action")
+                    let genreChoiceThree = readLine() ?? ""
+                    switch genreChoiceThree {
+                        
+                        case "A":
+                                print("recommend movies are:")
+                                    let movies = ["Step B. brothers", "Wedding Crashers", "Hangover", "Stuber"]
+                                
+                                for movie in movies {
+                                    print(movie)
+                                    sleep(1)
+                                }
+                            case "B":
+                                print("recommended movies are:")
+                                let movies = ["Time travelers wife", "50 first dates", "The Note Book", "P.S. I love You"]
+                                  for movie in movies {
+                                      print(movie)
+                                      sleep(1)
+                                  }
+                        
+                            case "C":
+                                print("recommended movies are:")
+                                let movies = ["The Wrong Turn", "it", "The Nun", "Pet Sematary"]
+                                for movie in movies {
+                                                print(movie)
+                                                sleep(1)
+                                            }
+                            case "D":
+                                print("recommended movies are:")
+                                   let movies = ["What the Health", "How America was Built", "Surviving never land", "Abducted in Plain Sight"]
+                                   for movie in movies {
+                                        print(movie)
+                                        sleep(2)
+                                    }
+                            case "E":
+                                print("recommended movies are:")
+                                let movies = ["John Wick", "Rambo, Last Blood", "Captain Marvel", "Avenger Endgame"]
+                                for movie in movies {
+                                                 print(movie)
+                                                 sleep(2)
+                                             }
+
+                    default:
+                        print()
+                    }
+
+            switch satisfactoryFour {
+            case "4": // Amazing Great
+                print("I am glad you enjoyed the movie!! See you soon  ")
+                
+                    
+                    default:
+                        print()
+                    }
