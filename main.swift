@@ -1,15 +1,3 @@
-## Text-Based-Adventure
-
-## Instructions for lab submission 
-
-1. Fork the assignment repo
-1. Clone your Fork to your machine
-1. Complete the lab
-1. Push your changes to your Fork
-1. Submit a Pull Request back to the assignment repo
-1. Paste a link to your Pull Request (not your fork!) on Canvas and submit
-
-## Lab 
 //
 //  main.swift
 //  Don'tMESSUp
@@ -17,7 +5,7 @@
 //  Created by Tiffany Obi on 10/3/19.
 //  Copyright © 2019 Tiffany Obi. All rights reserved.
 //
-```
+
 import Foundation
 
 print("Hello Guest! Are You Readyyyy????")
