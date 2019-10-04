@@ -181,19 +181,19 @@ case 10...15:
         case "genesis":
             print("")
             sleep(1)
-            print("you actually didn't have to slack her. She's standing behind you and stabs you. You. Are. Dead.")
+            print("you actually didn't have to slack her 🙅🏻‍♀️. She's standing behind you and stabs you 🔪 🔪🔪. You. Are. Dead.")
         case "antonio":
             print("")
             sleep(1)
-            print("Antonio is late too, so you get kicked out of Pursuit and die alone. You. Are. Dead.")
+            print("Antonio🤓 is late too, so you get kicked out of Pursuit and die alone. You. Are. Dead.")
         case "jamie":
             print("")
             sleep(1)
-            print("Jamie assures you: You'll be fine!!")
+            print("Jamie 👩🏼‍💼 assures you: You'll be fine!!")
         case "alex":
             print("")
             sleep(1)
-            print("Alex happens to be passing by and tells you to run to Pursuit with him, foolishly you accept, you didn't tie your shoes. You. Are. Dead.")
+            print("Alex 🏃🏿‍♂️ happens to be passing by and tells you to run to Pursuit with him, foolishly you accept 🏃🏿‍♂️🏃🏽‍♂️, you forgot to tie your shoes. You. Are. Dead.")
         default:
             print("you gotta pick one of them!")
         }
