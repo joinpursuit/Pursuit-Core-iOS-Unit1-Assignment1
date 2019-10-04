@@ -33,27 +33,35 @@ repeat {
 
 print("This game is mentally draining. Valid IQ is required in order to enter")
 print("Please enter you IQ below before starting")
+print("Average IQ ~ 90 - 110 🧠")
 
-requiredIQ = 100
+var rightIQ = true
 
-var enteredPlayerIQ = readLine() ?? "90"
-var playerIQ = Int(enteredPlayerIQ) ?? 90       //NEEDS EDITING - infinite loop, undefinied required
-
-repeat {
+loop1: repeat {
+    
+    var enteredPlayerIQ = readLine() ?? "90"
+    var playerIQ = Int(enteredPlayerIQ) ?? 90       //NEEDS EDITING - infinite loop, undefinied required
+    
+    
 switch playerIQ {
 case 0..<90:
     print("Pay attention in class and study harder 👨🏼‍🏫")
-    enteredPlayerIQ = readLine() ?? "90"
-    playerIQ = Int(enteredPlayerIQ)!
-case 150...:
-    print("Please don't lie")
-    enteredPlayerIQ = readLine() ?? "90"
-    playerIQ = Int(enteredPlayerIQ)!
-default:
+//    enteredPlayerIQ = readLine()!
+    rightIQ = true
+case 90..<150:
     print("Proceed to question one!")
+    rightIQ = false
+case 150...:
+    print("Please don't lie 🤨")
+//    enteredPlayerIQ = readLine()!
+//    rightIQ = false
     break
+default:
+    print("Please type in a valid number")
+    enteredPlayerIQ = readLine() ?? "90"
+    rightIQ = true
     }
-} while playerIQ != requiredIQ
+} while rightIQ
 
 
 print(" ")
@@ -194,10 +202,10 @@ var rightAns7 = false
 
 repeat {
     if userResponseQ7 == Question7Ans {
-        print("👨🏻 It's your old man!")
+        print("Congeats! You are now a certified Riddler")
         rightAns7 = true
     } else if userResponseQ7 == "dad" {
-        print("👨🏻 It's your old man!")
+        print("Congeats! You are now a certified Riddler")
         rightAns7 = true
     } else {
         print("Hint: This person is also you grandfather's son, cousin's uncle, and sister's FATHER")
@@ -207,14 +215,16 @@ repeat {
 } while rightAns7 == false
 print(" ")
 
-//QUESTION 8:
+/*QUESTION 8:
 print("You know 2 + 2 comes to the same as 2 x 2. Now find a set of three different whole numbers whose sum is equal to their total when multiplied.")
 print("Please enter the three values without empty spaces")
 
 var userResponseQ8 = readLine() ?? "123"
 var userResponseInputQ8 = Int(userResponseQ8) ?? 123
 var rightAnswer8 = false
+ */
 
+/*
 repeat{
 for num in 0...999 {                        //NEED FIXIN' ...broken
 
@@ -228,6 +238,34 @@ for num in 0...999 {                        //NEED FIXIN' ...broken
     }
 }
 } while rightAnswer8 == false
+*/
 
-var newPlayerIQ = playerIQ + 20
-print("Thank you for playing Riddle Me Not! Your IQ is now \(newPlayerIQ)!")
+print("""
+#####%%##%#%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@######%&@@@@@@@
+##########%###@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&%&@@@@@@@@@@@@
+%@@@@@@@@&%##%%#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&%
+##%@@@@@@@@@@@%%@@@@@@@@@@@@@@@@@@@(#@@@@@@@@@@@@@@@@@@@@@@@@@&(%%&
+#####@@@@@@@@@@@@&%@@@@@@@@@@&&@@@@(((@@@@@&/(@@@@@@@@@@@@@@@@%#@@@@@
+#######@&%@//(@@@@@@@@@@@@@@((&@@%((,(@@@@/((*@@@%(@@@@@@@@@@@@@@@@@@
+######%#,,(**(#@@@@@@@@@@@@((@@@@(***%@((#@@@@@/(&@@@@@@@@@@@@@@@@@
+###,*/##*,***(/@%%@@@@@@@@&(@(&&/(***/@((/#*,%@@%/(&@@@@@@@@@@@@@@@@@
+(#(*,,*#/*((((/,*(%@@@@@#@#%@*(***,,,,//**,**&/#&((&@@@@@@@@@@@@@@@@@
+###((*,*,,/,,,,*(%@@@@@@*&(,,*,,,,,,*,,,,,,,,*,,,,(&%@@@@@@@@@@@@@@@@
+%,,,,*,,,**,*,//(@@@@@@@**/,,,,&/%/,,,,,,*#,,%,,,,/(&@@@@@@@@@@@@@&%%
+&%%(,,,,*,*%&&&&@@@@@@@&*,,,,,%,,,//,,,,,/,,,,/,,*/(#@@@@@@@@@@@%&@@@
+%%###,**#&&&&&&&&@@@@/*@(,,,,*/*,,,%,,,,/*,,,,%,,,/(#((#@@@@@@@@@@@@@
+%(((((#&&&&&&&&&@&@@#/,**,,,,,(*,,,%,*,*,,,,,,*,,,((((((@@@@@@@@@@&&%
+/((((/(&&&&&*,*((/(##**,*,*/***,,,,,,,,*,,,,,,,,,*/(#/((@@@@@@&(///(#
+*******&&/,,,,,/////(((((**,**,*,,,,,*****/##%%%%/((#((&@@(/(%&&////#
+*********,,,,,,*(/(/((((/(,/%%##(((((((((((((((%%((#/(@@@@%*,,,,,*//#
+,,******/*,,,,,,,*//(((((&**%#(((((((((((((((((##(##//*,,,,,,,,///#
+,,,,,,*//*,,,,,,,,,,((((%&&**##(((#(((##(((((((*(%&%&(/*,,,,,,,,,///(
+,,,,*////(,,,,,,,,,,,*(###%&&**/#(((#((##((#*,/#&%%&&/*,,,,,,,,,///%#
+,,**//////(**,,,,,,,,,####%%%%#(#(******,*/#(#/%%%#%&/,,,,,,,,,///%##
+///////////(,,,,,,,,,*#%%%#%%#*/(((((((((((((((%#%%%%*,,,,,,,*///###%
+////////*////**,,,,,,*%#%%#%%#(***(((((((((*,*#######*,,,,,*//(%&&&&&
+//////**////////***,/(%##%#####***(((/*,(##%%#####%/,,,*/((#(//((##
+/////**/////******(((%&%%##%%%%%####**(%%#%#%%%######%**//%%(#(((/((#
+(///////////*/*******&%#%#######%%%%###%%#%%(&@%%####(&&%%%((((#%%&
+""")
+
