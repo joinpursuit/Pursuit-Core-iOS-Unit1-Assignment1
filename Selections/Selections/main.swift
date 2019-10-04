@@ -28,7 +28,6 @@ var timerTomWin = 0
 
 //let Special = readLine()?.lowercased()
 
-if ("start" != nil) {
 print("You've woken up to the taste of mildew, and the feeling of soft dirt below you.")
 
 print("Type \"Enter\" to continue")
@@ -75,7 +74,7 @@ let buttonNum = Int(readLine() ?? "1...3") ?? -1
 
 if buttonNum == 2 {
     
-    print("A bright light forces you to close your eyes, when you open them you see the tree has become a pillar, you also hear giggling above you. Type \"look up\" ")
+    print("A bright light forces you to close your eyes, when you open them you see the tree has become a pillar, you also hear giggling above you. Type \"Enter\" to continue.")
     
     _ = readLine()
     
@@ -102,11 +101,11 @@ if buttonNum == 2 {
         
         print("Type \"Yes\" or \"No\" to decide.")
         
-        let YesOrNo = readLine()?.lowercased()
+        let YesOrNo = readLine()
         
         switch YesOrNo {
             
-        case "yes":
+        case "Yes":
             
             
             print("They toss you the box that they are holding.")
@@ -129,7 +128,7 @@ if buttonNum == 2 {
                 
                 print("\(go), try again!")
             }
-        case "no":
+        case "No":
             
             print("Your younger self disappears. You notice a sphere with a button is in your hands and you press it.")
             
@@ -202,7 +201,7 @@ innerloop: if buttonNum == 1 {
         print("\(go), try again!")
     }
 }
-}
+
 
 
 
@@ -213,14 +212,14 @@ innerloop: if buttonNum == 1 {
 
 //let Special = readLine()?.lowercased()
 
-if ("special" != nil) {
-    print("hey!")
-while timerTom % 2 == timerTomWin  {
-
-    print("Congratulations you win!")
-    timerTom -= 1
-}
-}
+//if ("special" != nil) {
+//    print("hey!")
+//while timerTom % 2 == timerTomWin  {
+//
+//    print("Congratulations you win!")
+//    timerTom -= 1
+//}
+//}
 
 //print("Will you move \"through\" the door or \"stay\" in the room?")
 //let ThroughOrStay = readLine()
