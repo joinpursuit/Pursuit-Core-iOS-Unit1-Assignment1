@@ -176,7 +176,7 @@ func encounter(playerChoice : String) -> String   {
     
     for _ in 1...lineLength {print("🔥", terminator:"")}
     
-    print("\n\n\(pickUpLine )? Interesting approach. What's your name?")
+    print("\n\n\(pickUpLine )? Interesting approach. What's your name?\n")
     let playerName = readLine()
     print("\nWell My name is \(playerChoice).")
     print("\nAnd how old are you?")
@@ -192,25 +192,26 @@ func encounter(playerChoice : String) -> String   {
     
     print("\nOk, coffee good?")
     let dateIdea = readLine()
-    if dateIdea?.lowercased() == "yes" || dateIdea?.lowercased() == "y" || dateIdea?.lowercased() == "yeh" || dateIdea?.lowercased() == "sure" || dateIdea?.lowercased() == "ye"    {
+    if dateIdea?.lowercased() == "yes" || dateIdea?.lowercased() == "y" || dateIdea?.lowercased() == "yeh" || dateIdea?.lowercased() == "sure" || dateIdea?.lowercased() == "ye" || dateIdea?.lowercased() == "ok" || dateIdea?.lowercased() == "yeah" {
         print("\nNice, bright and early!")
     }
         else{
             print("\nLet's start with coffee, \nyou can order other stuff at this spot if that's the issue")
     }
     
-    print("\nI'm free this weekend, Saturday, or Sunday?")
-    let dateResponse = readLine()
+    print("\nI'm free this weekend, Saturday or Sunday?")
+    var dateResponse = readLine()
+    
     if dateResponse?.lowercased() == "saturday" || dateResponse?.lowercased() == "sunday" || dateResponse?.lowercased() == "sun" || dateResponse?.lowercased() == "sat" {
         print("\nGreat, I'll book you in!")
         print("\nOk so coffee this \(dateResponse ?? ""). See you then, \(playerName ?? "")!\n")
     }
     
     else    {
-        print("\nWell what day works for you?")
-        let counterDate = readLine()
-        print("\nOk I guess I can make \(counterDate ?? "") work.")
-        print("\nOk so coffee this \(dateResponse ?? ""). See you then, \(playerName ?? "")!\n")
+        print("\nSorry what was that, which day works for you?")
+        dateResponse = readLine()
+        print("\nOk \(dateResponse ?? "").")
+        print("\nSo coffee this \(dateResponse ?? ""). See you then, \(playerName ?? "")!\n")
     }
     
     return playerName ?? ""
@@ -581,7 +582,19 @@ let name = encounter(playerChoice: playerCharChoice)
 //print(name)
 
 // the date
-print("♥♥♥♥♥♥♥Date Phase♥♥♥♥♥♥♥\n")
+print("""
+
+      ♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥DATE PHASE♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥
+      __________________________________________________________________________________
+                **Warning invalid anwers will be taken as miscommunication**
+                                        (0 points)
+
+      
+                **Each response is worth certain amount of points**.\n**Score less than 3 points means no second date.**
+      ----------------------------------------------------------------------------------
+
+
+      """)
 switch playerCharChoice {
 case romeo:
     
@@ -619,10 +632,10 @@ case romeo:
     pointTracker += (String(romeoQ4(romeoAns: romeoA4 ?? "").0) + " ")
     answerTracker += (romeoQ4(romeoAns: romeoA4 ?? "").1 + " ")
     
-    if lovePoints <= 2  {
+    if lovePoints <= 3  {
         print("""
                 
-              Sorry \(name), I don't see it.
+              Sorry \(name), I don't think it's going to work out.
               Besides, I'm Blu-ray you're VHS.
               """)
     }
@@ -667,16 +680,16 @@ case juliet:
     answerTracker += (julietQ4(julietAns: julietA4 ?? "").1 + " ")
     
     
-    if lovePoints <= 2  {
+    if lovePoints <= 4  {
         print("""
               
-              Sorry \(name), I don't see it.
-              Besides, I'm Blu-ray you're VHS.
+              Sorry \(name), I don't think we're compatible.
+              Friends?.
               """)
     }
     
     else {
-        print("\nI had a really nice time, Netflix and chill next date?")
+        print("\nI had a really nice time, let's do this again some time?")
     }
     
 default:
