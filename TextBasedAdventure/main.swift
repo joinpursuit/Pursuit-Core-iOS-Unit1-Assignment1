@@ -12,13 +12,6 @@ print("Your adventure as an artist begins! Choose your character. Would you like
 
 let nameChoice = readLine()?.lowercased()
 
-//let names = [String]("Ruby", "Tony", "Sage", "Rosemary")
-// tuples below -
-
-//// var programmingLanguages: [String] = [] // <-- here we are using type annotation
-//var programmingLanguages = [String]() // <-- here we are using type inference
-
-
 
 var ruby = (name: "Ruby", hobby: "")
 var tony = (name: "Tony", hobby: "")
@@ -194,11 +187,8 @@ case "sage":
 ,,,,,,......... ,,.....,.,,.,,,,,,,,....,.,,............*,,,,,,,*,,,,
 ,,,.......... . ...........,,,,,,,..,,,,,,,,,........ ..**,,,,,*/**,,
 
-Your name is Sage! You are a teenager that lives with your mom, goes to Saint Anns and identifies as avant-garde. You don’t have to play this game any longer. You win. Game over.
+Your name is Sage! You are a teenager that lives with your mom, goes to Saint Anns and identify as avant-garde. You don’t have to play this game any longer. You win. Game over.
 
-//
-//add exit
-//
 """)
     
 case "rosemary":
@@ -246,17 +236,18 @@ default:
 
 
 var lifeChoices = readLine()?.lowercased()
-
 switch lifeChoices {
     case "lottery":
         var lotteryWin = Int.random(in:1...600)
-    print("Congrats, you won $ \(lotteryWin). Do you want to retire?")
+        print("Congrats, you won $ \(lotteryWin). Do you want to retire?")
+        var retireResponse = readLine()?.lowercased()
+         print("Times is up! Your rent is past due. You lose.")
     case "walk":
     print("You're walking down Flatbush ave and you see something on the sidewalk. Is that a pile of money? Wow! $1000! You win!")
     case "shopping":
     print("You found a Balenciaga bag for $3. How many do you buy?")
     var bagResponse = Int(readLine()!)
-    bagResponse = Int(readLine()!)
+    //bagResponse = Int(readLine()!)
     print("That bag is worth $2,350! You can flip that bag so easily! You win!")
     case "find a gig":
     print("The only gig you can find is photographing a fashion editorial for a European fashion magazine that doesn't pay their freelancers. Sorry. Would you like to do something else?")
