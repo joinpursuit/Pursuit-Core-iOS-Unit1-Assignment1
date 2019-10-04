@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3EAD2D362344348C0017755C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAD2D352344348C0017755C /* main.swift */; };
+		3EAD2D492347F3420017755C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAD2D482347F3420017755C /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		3EAD2D302344348C0017755C /* CopyFiles */ = {
+		3EAD2D432347F3420017755C /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,12 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3EAD2D322344348C0017755C /* Beta_Game */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Beta_Game; sourceTree = BUILT_PRODUCTS_DIR; };
-		3EAD2D352344348C0017755C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		3EAD2D452347F3420017755C /* Beta-Game */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Beta-Game"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EAD2D482347F3420017755C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3EAD2D2F2344348C0017755C /* Frameworks */ = {
+		3EAD2D422347F3420017755C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,66 +38,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3EAD2D292344348C0017755C = {
+		3EAD2D3C2347F3420017755C = {
 			isa = PBXGroup;
 			children = (
-				3EAD2D342344348C0017755C /* Beta_Game */,
-				3EAD2D332344348C0017755C /* Products */,
+				3EAD2D472347F3420017755C /* Beta-Game */,
+				3EAD2D462347F3420017755C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		3EAD2D332344348C0017755C /* Products */ = {
+		3EAD2D462347F3420017755C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3EAD2D322344348C0017755C /* Beta_Game */,
+				3EAD2D452347F3420017755C /* Beta-Game */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3EAD2D342344348C0017755C /* Beta_Game */ = {
+		3EAD2D472347F3420017755C /* Beta-Game */ = {
 			isa = PBXGroup;
 			children = (
-				3EAD2D352344348C0017755C /* main.swift */,
+				3EAD2D482347F3420017755C /* main.swift */,
 			);
-			path = Beta_Game;
+			path = "Beta-Game";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3EAD2D312344348C0017755C /* Beta_Game */ = {
+		3EAD2D442347F3420017755C /* Beta-Game */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3EAD2D392344348C0017755C /* Build configuration list for PBXNativeTarget "Beta_Game" */;
+			buildConfigurationList = 3EAD2D4C2347F3420017755C /* Build configuration list for PBXNativeTarget "Beta-Game" */;
 			buildPhases = (
-				3EAD2D2E2344348C0017755C /* Sources */,
-				3EAD2D2F2344348C0017755C /* Frameworks */,
-				3EAD2D302344348C0017755C /* CopyFiles */,
+				3EAD2D412347F3420017755C /* Sources */,
+				3EAD2D422347F3420017755C /* Frameworks */,
+				3EAD2D432347F3420017755C /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Beta_Game;
-			productName = Beta_Game;
-			productReference = 3EAD2D322344348C0017755C /* Beta_Game */;
+			name = "Beta-Game";
+			productName = "Beta-Game";
+			productReference = 3EAD2D452347F3420017755C /* Beta-Game */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3EAD2D2A2344348C0017755C /* Project object */ = {
+		3EAD2D3D2347F3420017755C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Juan Ceballos";
 				TargetAttributes = {
-					3EAD2D312344348C0017755C = {
+					3EAD2D442347F3420017755C = {
 						CreatedOnToolsVersion = 11.0;
 					};
 				};
 			};
-			buildConfigurationList = 3EAD2D2D2344348C0017755C /* Build configuration list for PBXProject "Beta_Game" */;
+			buildConfigurationList = 3EAD2D402347F3420017755C /* Build configuration list for PBXProject "Beta-Game" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -105,29 +105,29 @@
 				en,
 				Base,
 			);
-			mainGroup = 3EAD2D292344348C0017755C;
-			productRefGroup = 3EAD2D332344348C0017755C /* Products */;
+			mainGroup = 3EAD2D3C2347F3420017755C;
+			productRefGroup = 3EAD2D462347F3420017755C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3EAD2D312344348C0017755C /* Beta_Game */,
+				3EAD2D442347F3420017755C /* Beta-Game */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3EAD2D2E2344348C0017755C /* Sources */ = {
+		3EAD2D412347F3420017755C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EAD2D362344348C0017755C /* main.swift in Sources */,
+				3EAD2D492347F3420017755C /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		3EAD2D372344348C0017755C /* Debug */ = {
+		3EAD2D4A2347F3420017755C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -187,7 +187,7 @@
 			};
 			name = Debug;
 		};
-		3EAD2D382344348C0017755C /* Release */ = {
+		3EAD2D4B2347F3420017755C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -240,7 +240,7 @@
 			};
 			name = Release;
 		};
-		3EAD2D3A2344348C0017755C /* Debug */ = {
+		3EAD2D4D2347F3420017755C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -251,7 +251,7 @@
 			};
 			name = Debug;
 		};
-		3EAD2D3B2344348C0017755C /* Release */ = {
+		3EAD2D4E2347F3420017755C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -265,25 +265,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3EAD2D2D2344348C0017755C /* Build configuration list for PBXProject "Beta_Game" */ = {
+		3EAD2D402347F3420017755C /* Build configuration list for PBXProject "Beta-Game" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3EAD2D372344348C0017755C /* Debug */,
-				3EAD2D382344348C0017755C /* Release */,
+				3EAD2D4A2347F3420017755C /* Debug */,
+				3EAD2D4B2347F3420017755C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3EAD2D392344348C0017755C /* Build configuration list for PBXNativeTarget "Beta_Game" */ = {
+		3EAD2D4C2347F3420017755C /* Build configuration list for PBXNativeTarget "Beta-Game" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3EAD2D3A2344348C0017755C /* Debug */,
-				3EAD2D3B2344348C0017755C /* Release */,
+				3EAD2D4D2347F3420017755C /* Debug */,
+				3EAD2D4E2347F3420017755C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3EAD2D2A2344348C0017755C /* Project object */;
+	rootObject = 3EAD2D3D2347F3420017755C /* Project object */;
 }
