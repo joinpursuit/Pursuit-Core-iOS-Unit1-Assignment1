@@ -61,7 +61,7 @@ var roundsLost = 0
 var roundContinue = true
 
 let difficulties = ["easy", "intermediate", "hard"]
-
+//Each case has a total of 9 possible decisions
 switch userDifficulty {
 case difficulties[0]:
     repeat {
