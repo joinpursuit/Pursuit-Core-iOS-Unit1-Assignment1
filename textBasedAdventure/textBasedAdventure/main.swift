@@ -45,6 +45,7 @@ func doorIsLocked() {
 ███████████████▓▓▓██▓▓╬╬╬╬╬╬▓███████████
 """)
     sleep(2)
+    print()
     print("All the door go locked and there is no way to get out from this room")
     sleep(3)
 }
@@ -421,7 +422,6 @@ func mazeBluePrint(result: Bool) {
                 } else {
                     space()
                     commandDoNotExist()
-                    count = 0
                 }
             case 2:
                 space()
