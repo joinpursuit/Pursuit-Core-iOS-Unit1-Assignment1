@@ -234,7 +234,7 @@ You won a Guggenheim Fellowship last year and you spent all but $200 of the $43,
 
 Unfortunately that’s where your luck comes to a close. You honestly really should be getting real with your relationship status because your husband just spent all your money on an art coach. Yes, an art coach. Out of jealousy from your own very successful art career.  Also, why did you just buy your friends entire personal/artistic collection of hand made flowers?
 
-Anyway, your rent is due tomorrow and you are $800 short. What do you do? You can play the lottery, take a walk, go shopping or find a gig.
+Anyway, your rent is due tomorrow and you are $800 short. What do you do? You can play the "lottery", "walk", "shopping" or "gig".
 """)
     
     
@@ -245,26 +245,22 @@ default:
 
 
 
-var bagResponse = Int(readLine()!)
-
 var lifeChoices = readLine()?.lowercased()
-var lotteryWin = Int.random(in:1...600)
+
 switch lifeChoices {
-case "lottery":
+    case "lottery":
+        var lotteryWin = Int.random(in:1...600)
     print("Congrats, you won $ \(lotteryWin). Do you want to retire?")
-//print if num>500, print statement "wow crazy" and if num<500 print "you only won \(num), would you like to do something else?"
-case "take a walk":
+    case "walk":
     print("You're walking down Flatbush ave and you see something on the sidewalk. Is that a pile of money? Wow! $1000! You win!")
-// now i want it to exit because you won
-case "go shopping":
+    case "shopping":
     print("You found a Balenciaga bag for $3. How many do you buy?")
+    var bagResponse = Int(readLine()!)
     bagResponse = Int(readLine()!)
     print("That bag is worth $2,350! You can flip that bag so easily! You win!")
-    
-case "find a gig":
+    case "find a gig":
     print("The only gig you can find is photographing a fashion editorial for a European fashion magazine that doesn't pay their freelancers. Sorry. Would you like to do something else?")
-//or could print how many hours would you like to look for a gig today --> that leads to the above printed statement
-default:
+    default:
     print("What does that even mean?")
 }
 
