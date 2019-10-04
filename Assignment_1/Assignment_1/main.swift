@@ -28,9 +28,10 @@ case "bow and arrow":
     sleep(1)
     print("You are a hunter! 🏹 During your a hunting expedition you find a wild boar! After successfully killing the beast you and your hunting party capture your game and proceed to venture back to your village. The ground begins to shake and a thundering roar pierces your ear drums as you realize you've hunted someone else's game. A giant cyclops 👁 breaks through the trees and run towards you and your party...")
 default:
-    print(".....")
+
     sleep(3)
-    print("you died")
+    print("\(weapon) was not an option 😡")
+    break
 }
 print()
 
@@ -39,13 +40,14 @@ let fight = readLine()?.lowercased()
 sleep(2)
 print()
 
+
 var randomNumber = Int.random(in: 12...20)
 
 if weapon == "staff" {
     switch fight {
     case "fight":
         sleep(1)
-        print("You reach for your staff and quickly cast a barrier spell to protect yourself and your research party ✨. As the cave troll attempts to break your magical shield with brute force, it begins to exhaust itself. You notice the beast is tired and see an opening and cast firebolt 🔥...") // find a dice method to tell the player their damage.
+        print("You reach for your staff and quickly cast a barrier spell to protect yourself and your research party ✨. As the cave troll attempts to break your magical shield with brute force, it begins to exhaust itself. You notice the beast is tired and see an opening and cast firebolt 🔥...")
     case "run":
         sleep(1)
         print("You successfully ran away and made it out of the mysterious cave alive... coward!")
