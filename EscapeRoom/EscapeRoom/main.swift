@@ -16,7 +16,35 @@ print("You are standing alone in a dimly lit walkway. Behind you is a dark woode
 // If south: "Too bad! The door is chained shut from the outside! Choose another way!"
 
 // If user inputs some other value, print: "You cannot go this way!"
+let response = readLine()?.lowercased()
 
+var directions = response
+
+repeat {
+    if directions == "north" {
+        print("You have decided to venture into the UNKNOWN! Enter \"continue\" to proceed ahead.")
+    } else {
+        print("You cannot go this way!")
+        
+    } while directions != "north"
+//    switch directions {
+//    case "north" :
+//        print("You have decided to venture into the UNKNOWN! Enter \"continue\" to proceed ahead.")
+//    case "south" :
+//        print("Too bad! The door is chained shut from the outside! Choose another way!")
+//    default :
+//        print("You cannot go this way!")
+//    }
+//
+    let responseContinue = readLine()?.lowercased()
+    print("As you ascend toward the end of the hall, you come up to a large door.")
+
+} while directions != "north"
+if directions == "north" {
+    print("You have decided to venture into the UNKNOWN! Enter \"continue\" to proceed ahead.")
+} else {
+    print("You cannot go this way!")
+}
 
 //User ultimately must input "north" or "North" and then "continue"
 
