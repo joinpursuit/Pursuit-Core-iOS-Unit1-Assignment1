@@ -22,8 +22,22 @@ print("")
 print("Moving on...the objective of the game is exactly what the title says: whatever you do, do NOT die. Easy, right? I mean, you've made it this far.")
 print("")
 
+//print("What's your name?")
+//var playerName = readLine()
+//
+//print("How old are you?")
+//var age = readLine()
+//var playersAge
+//    if playerAge > 30{
+//        print("oh boy, you might be losing quicker than I though")
+//    }
+//    else {
+//    print("Okay, young and spry!")
+//}
 
-var response = ""
+
+//
+var response:String = ""
 repeat {
     print("Are you ready?, yes or no")
     response = readLine()?.lowercased() ?? ""
@@ -91,7 +105,7 @@ print("The train is rolling by, it is the morning rush hour and seemingly, all o
     case "yes":
     print("OH NO!!! THE SMELL IS TERRIBLE! YOU TRY TO ESCAPE BUT YOU CAN'T GET OUT FAST ENOUGH. YOU. HAVE. DIED!!!")
     case "no":
-    print("GOOD CALL! you are a certified New Yorker! you know if it's too good to be true, it definetly is and SOMETHING is wrong on that emnpty cart...yerrrrrrr!")
+    print("GOOD CALL! you are a certified New Yorker! you know if it's too good to be true, it definetly is and SOMETHING is wrong on that empty cart...yerrrrrrr!")
     default:
         print("....are ya? 'yes' or 'no' ?")
     }
@@ -149,3 +163,19 @@ sleep(1)
 print("TRY AGAIN!")
 }
 }    while response != "7"
+
+//==============
+//==============
+
+
+let trainTime = Int.random(in: 10...30)
+   switch trainTime {
+   case 10...15:
+       print("It's going to take \(trainTime) minutes for the train to show, you should be fine as long as you let someone know!")
+   case 16...30:
+       print("It took the bus \(trainTime) minutes to arrive. You make it to class with seconds to spare!")
+   default:
+       print("It has taken over an hour (\(trainTime)) for the bus to arrive, and you are late for class. Try again tomorrow.")
+   }
+
+
