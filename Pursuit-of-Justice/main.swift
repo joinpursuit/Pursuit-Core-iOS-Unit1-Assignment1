@@ -30,7 +30,7 @@ print("""
 
 var a = false
 var b = false
-var textBlock1 = "You arrive at the spring, radiant and glowing in the canopy light of the foliage. The sword is said to reveal itself when one pure of heart approaches the spring. With confidence and anticipation, you approach the waters."
+var textBlock1: String = "You arrive at the spring, radiant and glowing in the canopy light of the foliage. The sword is said to reveal itself when one pure of heart approaches the spring. With confidence and anticipation, you approach the waters."
 var textBlock2 = "And yet, that confidence was unfounded! After messing about the spring impatiently for the last few hours, absolutely nothing has happend! You remember grandpas words about the fairies who guard the spring, judging those that may or not be pure of heart. With your actions these last few hours, it's definitely possible you totally blew it. However, you also remember him mentioning that faires are exceedingly forgetful! Maybe you can go back and make things right! Do you go back to the old \"woman\" on the road, or try to find the \"noble\" again?"
 var textBlock3 = "The coding cultist raises his hands, the wisps of code circling around him and condensing in his hands! He's preparing something powerful, but theres not enough time to dodge! Do you \"prepare\" for what's to come, or try to \"attack\" him?"
 var decision1 = ""
@@ -39,6 +39,7 @@ var decision3 = ""
 var decision4 = ""
 var decision5 = ""
 var decision6 = ""
+var decisionEnding = ""
 var decisionForest = ""
 var error = "I don't understand that. Try a different answer!"
 var counter = 0
@@ -132,7 +133,7 @@ func Cool2(){
     sleep(3)
     print(textBlock3)
         Cool3()
-    case decision2 == "laugh" :
+    case decision2 == "dodge" :
         print("You dodge acrobatically, skillfully evading his strike with finesse.")
         sleep(3)
         print(textBlock3)
@@ -177,7 +178,23 @@ func Cool5() {
     
     print("Suddenly, your sword begins to glow! The corruption dissipating from your body, you raise your blade aloft, blue light shining from the Unicode glyphs! You direct that light towards the wizard, and with a unearthly roar you write him out of Swift. You save your sister from her cell, but after fully awakening to your ability to use your sword, you too have the great power to bend reality to your whims!")
     sleep(5)
-    print("What will you do with that power? Will you \"rewrite\" history to make yourself a king? Will you \"destroy\" the sword, so no one else can use its power, and return to your life as a farmhand? Or will you protect these lands as the \"hero\" they need?")
+    print("What will you do with that power? Will you 1. Rewrite history to make yourself a king? Will you 2. Destroy the sword, so no one else can use its power, and return to your life as a farmhand? Or will you 3. Protect these lands as the hero they need?")
+    decisionEnding = readLine() ?? "Error"
+    if decisionEnding == "1" {
+        print("You become king!")
+        
+    } else if decisionEnding == "2" {
+        print("You destroy the sword!")
+    } else if decisionEnding == "3" {
+        print("You become a hero!")
+    } else {
+        print(error)
+        sleep(1)
+        Cool5()
+    }
+    
+    
+    
 
     }
 
