@@ -558,14 +558,6 @@ Y8   I8I   88 88~~~~~ 88      8b      88    88 88  88  88 88~~~~~
     sleep(1)
     print("\nif you do not want to play type 'anyother word' and press enter")
     sleep(1)
-//let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(fire), userInfo: nil, repeats: true)
-    
-//    var timer = Timer(timeInterval: 2.0, repeats: true) { (thing) in
-//        print("yes")
-//    }
-//    if timer == Timer(timeInterval: 2.0) {
-//        print("I was here")
-//    }
     
     print("\nif you want some hint, enter 'hint'")
 }
