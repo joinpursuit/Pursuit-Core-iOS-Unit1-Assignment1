@@ -154,7 +154,7 @@ case "accept" :
     print("The night before the trip you get an email that says, while on the island you can play a game and win a prize! You find out that you are also allowed to excange your ticket for two tickets and bring a friend. You are allowed to compete for the prize alone but if you bring a friend it is MANDATORY that you split the prize. If you'd like to compete for the prize alone, ENTER 1. If you'd like to bring a friend along and split the prize, ENTER 2" )
 
 case "decline" :
-    print("Back to the ol'grind. You get to class the next day and are told that the invitation has been extended to members of your class for one more day. If you want to go about your day as usual ENTER 1. If you want to accept the invitation and on the trip ENTER 2."  )
+    print("Back to the ol'grind. You get to class the next day and are told that the invitation has been extended to members of your class for one more day. If you want to go about your day as usual ENTER 1. If you want to accept the invitation and go on the trip ENTER 2."  )
 default:
     print("Not a valid entry")
 }
@@ -178,7 +178,9 @@ if thirdDecision == "jump" {
     print ("You arrive on the island with the rest of your classmates and as you begin a group tour of the island  you notice a tall dark building with lights on at the top floor only. The building is seperated from your group by a large canyon. The tour guide warns your classmates to stay together at all times but you notice a much smaller canyon that you think you can jump over if you time it juuuuust right. If you want to stay with the group ENTER stay. If you decided to take a leap of faith ENTER jump.")
 } ; if thirdDecision == "2" {
     print("You arrive on the island with the rest of your classmates and as you begin a group tour of the island  you notice a tall dark building with lights on at the top floor only. The building is seperated from your group by a large canyon. The tour guide warns your classmates to stay together at all times but you notice a much smaller canyon that you think you can jump over if you time it juuuuust right. If you want to stay with the group ENTER continue with group. If you decided to take a leap of faith ENTER leap.")
+    
 }
+
 
 var fourthDecision = readLine()!
 
@@ -186,6 +188,7 @@ if fourthDecision == "stay" {
 print("You stay with the group and continue the tour. Once the tour is over you return to class as scheduled. GAME OVER")
 } ; if fourthDecision == "jump" {
 print("You slip off the edge and fall to your doom. GAME OVER")
+
 } ; if fourthDecision == "continue with group" {
 print("You stay with the group and continue the tour. Once the tour is over you return to class as scheduled. GAME OVER")
 } ; if fourthDecision == "leap" {
@@ -221,9 +224,12 @@ print("You've chosen the \(weapon.3)! You and \(userFriend) brace yourselves for
 var userPrize = Int(readLine()! )
 for _ in 0... {
     print("GAME OVER")
+    
 break
 
 }
+ 
+
  
 
 
