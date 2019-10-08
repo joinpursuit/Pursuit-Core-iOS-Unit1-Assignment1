@@ -13,10 +13,10 @@ print("Whats your name ?")
 var name = readLine() ?? "guest"
 print(" Hi \(name) how are you feeling today?")
 print("A. Happy 😃 B. Sad 😞 C. Romantic 🥰 D. Angry 😡 E. intrigue 🧐")
-var introFeeling = readLine()
+var introFeeling = readLine()?.lowercased()
 
 switch introFeeling {
-case "A": // Happy
+case "a": // Happy
     print("These are recommended movies to watch 🎬")
     
     let movies = ["Step B. brothers", "Wedding Crashers", "Hangover", "Stuber"]
@@ -25,14 +25,14 @@ case "A": // Happy
         print(movie)
         sleep(2)
     }
-case "B": // Sad
+case "b": // Sad
     print("These are recommended movies to watch 🎬")
  let movies = ["The theory of everything", "The Blind Side", "The Pursuit of Happiness", "Hidden Figures"]
     for movie in movies {
     print(movie)
     sleep(2)
     }
-case "C": //Romantic
+case "c": //Romantic
     print("These are recommended movies to watch 🎬")
   let movies = ["Time travelers wife", "50 first dates", "The Note Book", "P.S. I love You"]
     for movie in movies {
@@ -40,7 +40,7 @@ case "C": //Romantic
         sleep(2)
     }
     
-case "D": // Angry
+case "d": // Angry
     print("These are recommended movies to watch 🎬")
 
     let movies = ["School of Rock", "How to lose a guy in 10 days", "Inside Out", "Cinderella Story"]
@@ -49,7 +49,7 @@ case "D": // Angry
          sleep(2)
      }
     
-case "E": // intrigue
+case "e": // intrigue
     print("These are recommended movies to watch 🎬")
   
     let movies = ["What the Health", "How America was Built", "Surviving never land", "Abducted in Plain Sight"]
@@ -60,6 +60,7 @@ case "E": // intrigue
     
 default:
     print("Grab some popcorn 🍿 and enjoy the movie 🎬 ")
+    sleep(2)
 }
 
 print("How satisfied where you with the selected movies according to your mood ")
@@ -71,11 +72,11 @@ var satisfactory = readLine()
 switch satisfactory {
 case "1": // really bad it sucked
     print("Would you like more suggestions, yes or no? ")
-    let answerChoice = readLine() ?? ""
+    let answerChoice = readLine() ?? "".lowercased()
     if answerChoice == "yes" {
         print("What are you favorite genera")
         print("A. Comedy B. romance C. Horror D. Documentaries E. action")
-        let genreChoice = readLine() ?? ""
+        let genreChoice = readLine() ?? "".lowercased()
         switch genreChoice {
         case "A":
             print("recommend movies are:")
@@ -119,22 +120,23 @@ case "1": // really bad it sucked
         }
     } else if answerChoice == "no" {
         print("I am sorry I was no help 😔 maybe next time !" )
+        
     }
     
-    switch satisfactoryTwo {
-    case "2": // Boring I fell asleep
+    
+case "2": // Boring I fell asleep
         print("Would you like more suggestions, yes or no? ")
-        let answerChoice = readLine() ?? ""
+        let answerChoice = readLine() ?? "".lowercased()
         if answerChoice == "yes" {
             print("What are you favorite genera")
             print("A. Comedy B. romance C. Horror D. Documentaries E. action")
-            let genreChoiceTwo = readLine() ?? ""
+            let genreChoiceTwo = readLine() ?? "".lowercased()
             switch genreChoiceTwo {
-                
+
                 case "A":
                         print("recommend movies are:")
                             let movies = ["Step B. brothers", "Wedding Crashers", "Hangover", "Stuber"]
-                        
+
                         for movie in movies {
                             print(movie)
                             sleep(1)
@@ -146,7 +148,7 @@ case "1": // really bad it sucked
                               print(movie)
                               sleep(1)
                           }
-                
+
                     case "C":
                         print("recommended movies are:")
                         let movies = ["The Wrong Turn", "it", "The Nun", "Pet Sematary"]
@@ -168,26 +170,27 @@ case "1": // really bad it sucked
                                          print(movie)
                                          sleep(2)
                                      }
-
             default:
                 print()
             }
-            
-            
-    switch satisfactoryThree {
-            case "3": // Boring I fell asleep
+} else if answerChoice == "no" {
+       print("I am sorry I was no help 😔 maybe next time !" )
+       
+   }
+
+case "3": // Boring I fell asleep
                 print("Would you like more suggestions, yes or no? ")
-                let answerChoice = readLine() ?? ""
+                let answerChoice = readLine() ?? "".lowercased()
                 if answerChoice == "yes" {
                     print("What are you favorite genera")
                     print("A. Comedy B. romance C. Horror D. Documentaries E. action")
                     let genreChoiceThree = readLine() ?? ""
                     switch genreChoiceThree {
-                        
+
                         case "A":
                                 print("recommend movies are:")
                                     let movies = ["Step B. brothers", "Wedding Crashers", "Hangover", "Stuber"]
-                                
+
                                 for movie in movies {
                                     print(movie)
                                     sleep(1)
@@ -199,7 +202,7 @@ case "1": // really bad it sucked
                                       print(movie)
                                       sleep(1)
                                   }
-                        
+
                             case "C":
                                 print("recommended movies are:")
                                 let movies = ["The Wrong Turn", "it", "The Nun", "Pet Sematary"]
@@ -225,12 +228,14 @@ case "1": // really bad it sucked
                     default:
                         print()
                     }
+                }  else if answerChoice == "no" {
+                      print("I am sorry I was no help 😔 maybe next time !" )
+                      
+                  }
 
-            switch satisfactoryFour {
-            case "4": // Amazing Great
+case "4": // Amazing Great
                 print("I am glad you enjoyed the movie!! See you soon  ")
-                
-                    
-                    default:
-                        print()
-                    }
+    
+default:
+print("Finsihed")
+}
