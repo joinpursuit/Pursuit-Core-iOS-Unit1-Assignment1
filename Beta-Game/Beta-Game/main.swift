@@ -10,18 +10,19 @@ import Foundation
 
 //  keep track of player score
 var lovePoints = 0, pointTracker = "", answerTracker = "", playerCharChoice = ""
+var bonusLP = 0
+var totalLP = 0
 var badResponse = false
 let romeo = "Romeo", juliet = "Juliet"
 
-//var charSel = ""
 //  initialize bool that will check if user entered valid resonse
-
 
 /*
  *  game's Intro and title
+ *  Alt, where art thou, Coffee?
  */
 print("""
-Welcome to: Cuffing Season!
+Welcome to: Coffee?
 
 Which is exactly what it sounds like.
 You're tired of watching Netflix alone,
@@ -125,13 +126,6 @@ repeat  {
 
 //-------------------------------------------------
 
-//var charSel = prefAnswer()
-
-//var choice = (pref?.lowercased(), charSel?.lowercased())
-
-//let romeo = ("a", "a") ?? : String
-//let juliet = ("b", "a")
-
 repeat  {
     let charSel = prefAnswer()
     let choice = (pref?.lowercased(), charSel?.lowercased())
@@ -148,12 +142,11 @@ repeat  {
         print("\n(Sorry what?)")
         if pref?.lowercased() == "a"  {
             printMaleChars()
-            //charSel = prefAnswer()
-            //print(charSel.lowercased())
-            if charSel?.lowercased() != "a"   {//print("here")
+            
+            if charSel?.lowercased() != "a"   {
                     badResponse = true
                 }
-                //else {choice = ("a", "a")}
+            
         }
     
         else if pref?.lowercased() == "b"   {
@@ -162,7 +155,7 @@ repeat  {
             if charSel?.lowercased() != "a"   {
                 badResponse = true
             }
-            //else {choice = ("b", "a")}
+            
         }
     }
 } while badResponse == true
@@ -173,7 +166,7 @@ func encounter(playerChoice : String) -> String   {
     print("\nSaw \(playerChoice), enter pick up line:")
     pickUpLine = readLine() ?? ""
     let lineLength = pickUpLine.count
-    
+    if lineLength > 7   {bonusLP += 1}
     for _ in 1...lineLength {print("🔥", terminator:"")}
     
     print("\n\n\(pickUpLine )? Interesting approach. What's your name?\n")
@@ -193,6 +186,7 @@ func encounter(playerChoice : String) -> String   {
     print("\nOk, coffee good?")
     let dateIdea = readLine()
     if dateIdea?.lowercased() == "yes" || dateIdea?.lowercased() == "y" || dateIdea?.lowercased() == "yeh" || dateIdea?.lowercased() == "sure" || dateIdea?.lowercased() == "ye" || dateIdea?.lowercased() == "ok" || dateIdea?.lowercased() == "yeah" {
+        bonusLP += 1
         print("\nNice, bright and early!")
     }
         else{
@@ -205,6 +199,7 @@ func encounter(playerChoice : String) -> String   {
     if dateResponse?.lowercased() == "saturday" || dateResponse?.lowercased() == "sunday" || dateResponse?.lowercased() == "sun" || dateResponse?.lowercased() == "sat" {
         print("\nGreat, I'll book you in!")
         print("\nOk so coffee this \(dateResponse ?? ""). See you then, \(playerName ?? "")!\n")
+        bonusLP += 1
     }
     
     else    {
@@ -590,7 +585,9 @@ print("""
                                         (0 points)
 
       
-                **Each response is worth certain amount of points**.\n**Score less than 3 points means no second date.**
+                **Each response is worth certain amount of points**.\n        **Score less than 3 points means no second date.**
+
+        (You've gained \(bonusLP) Bonus Love Points! From the encounter phase, this will be added to your total!
       ----------------------------------------------------------------------------------
 
 
@@ -631,8 +628,11 @@ case romeo:
     lovePoints += romeoQ4(romeoAns: romeoA4 ?? "").0
     pointTracker += (String(romeoQ4(romeoAns: romeoA4 ?? "").0) + " ")
     answerTracker += (romeoQ4(romeoAns: romeoA4 ?? "").1 + " ")
+    totalLP = bonusLP + lovePoints
+
+    print("\nResults Phase:")
     
-    if lovePoints <= 3  {
+    if totalLP <= 4  {
         print("""
                 
               Sorry \(name), I don't think it's going to work out.
@@ -678,9 +678,10 @@ case juliet:
     lovePoints += julietQ4(julietAns: julietA4 ?? "").0
     pointTracker += (String(julietQ4(julietAns: julietA4 ?? "").0) + " ")
     answerTracker += (julietQ4(julietAns: julietA4 ?? "").1 + " ")
+    totalLP = bonusLP + lovePoints
+    print("\nResults Phase:")
     
-    
-    if lovePoints <= 4  {
+    if totalLP <= 5  {
         print("""
               
               Sorry \(name), I don't think we're compatible.
@@ -696,13 +697,9 @@ default:
     print("Game Error!")
 }
 
-//Results
-print("\nResults Phase")
-
-
-//print("\(playerCharChoice): Sorry ")
-
-print("Your total Love points are: \(lovePoints)")
+print("\nYour Total Love Points are: \(totalLP)")
+print("Your Bonus Love Points are: \(bonusLP)")
+print("Your date phase Love points are: \(lovePoints)")
 print("Your responses for each question: \(answerTracker)")
 print("Points received per question:     \(pointTracker)")
 
