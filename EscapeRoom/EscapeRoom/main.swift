@@ -16,35 +16,249 @@ print("You are standing alone in a dimly lit walkway. Behind you is a dark woode
 // If south: "Too bad! The door is chained shut from the outside! Choose another way!"
 
 // If user inputs some other value, print: "You cannot go this way!"
-let response = readLine()?.lowercased()
-
-var directions = response
-
+var responseNorthSouth = readLine()?.lowercased()
+var gameOver: Bool = true
 repeat {
-    if directions == "north" {
-        print("You have decided to venture into the UNKNOWN! Enter \"continue\" to proceed ahead.")
-    } else {
-        print("You cannot go this way!")
-        
-    } while directions != "north"
-//    switch directions {
-//    case "north" :
-//        print("You have decided to venture into the UNKNOWN! Enter \"continue\" to proceed ahead.")
-//    case "south" :
-//        print("Too bad! The door is chained shut from the outside! Choose another way!")
-//    default :
-//        print("You cannot go this way!")
-//    }
-//
+switch responseNorthSouth {
+    case "north" :
+        print("You have decided to venture into the UNKNOWN! Enter \"continue\" to proceed ahead!")
     let responseContinue = readLine()?.lowercased()
-    print("As you ascend toward the end of the hall, you come up to a large door.")
-
-} while directions != "north"
-if directions == "north" {
-    print("You have decided to venture into the UNKNOWN! Enter \"continue\" to proceed ahead.")
-} else {
-    print("You cannot go this way!")
+        if responseContinue == "continue" {
+            print("As you ascend toward the end of the hall, you come up to a large door.")
+            print()
+            print("Do you wish to open the door? yes or no?")
+            let openDoorResponse = readLine()?.lowercased()
+            switch openDoorResponse {
+            case "yes" :
+                print("Boy do you have guts! You enter the room and immeditately notice a podium in the center of the space.")
+                print()
+                print("On it, there is a small black box with gold trim and a golden lock.")
+                print()
+                print("On either side of the box, there lies a key,")
+                print()
+                print("each enclosed inside a glass case.")
+                print("Which key do you choose? Enter key 1 or key 2.")
+                var keyOneOrTwo = readLine()?.lowercased()
+                if keyOneOrTwo == "1" {
+                    print("Looks like this key does not fit! Try the other!")
+                    keyOneOrTwo = readLine()?.lowercased()
+                } else if keyOneOrTwo == "2"{
+                    print("The key fits! Enter \"unlock\" to see inside the box!")
+                    let keyFits = readLine()?.lowercased()
+                    if keyFits == "unlock" {
+                        print("Inside the box there is a note.")
+                        print()
+                        print("Read note?")
+                        var readNote = readLine()?.lowercased()
+                        if readNote == "read" {
+                            print("NOTE: WELCOME TO THE HOUSE OF ANALIZSIA. WE ARE SO HAPPY THAT YOU HAVE ARRIVED THIS DAY! WE HAVE NOT HAD NEW GUESTS FOR MANY MOONS, SO WE ARE PLEASED FOR YOU, WE ARE!! ON THIS REST YOU MAY HAVE NOTICED,YOU HAVE, 2 KEYS. ONE KEY OPENS THIS BOX, IT DOES, AND THE OTHER YOU MUST KEEP! YOU MUST KEEP IT TO OPEN THE DOOR OF YOUR DESTINY. WE HOPE YOU STAY FOREVER INDEED! INDEED STAY FOREVER!")
+                            print()
+                            print("SIGNED, THE WE")
+                            print()
+                            print("Some note!")
+                            print()
+                            print("You take the key and close the box.")
+                            print()
+                            print("Suddenly, before you, there appears 3 doors. You look at the key in your hand that unlocks the \"DOOR TO YOUR DESTINY\". Could one of these be that door? Choose a door.")
+                            let chooseDoor = readLine()?.lowercased()
+                            switch chooseDoor {
+                            case "1" :
+                                print("FLAME AND FIRE! YOU ARE TO BURN HERE FOR ETERNITY!")
+                                print("GAME OVER")
+                                print()
+                                print("Do you wish to play again?")
+                                let playAgain = readLine()?.lowercased()
+                                if playAgain == "yes" {
+                                    gameOver = false
+                                } else {
+                                    print("YOU DID NOT SURVIVE THE ESCAPE ROOM.")
+                                    gameOver = true
+                                }
+                            case "2" :
+                                print("Before you is the garden of reflection and truth. Do you wish to Enter?\"yes\" or \"no\"?")
+                                let enterGarden = readLine()?.lowercased()
+                                if enterGarden == "yes" {
+                                    print("How serene...")
+                                    print()
+                                    print("Up ahead you notice a path heading in either direction; one to the East, and another to the West. Which way would you like to go?")
+                                    var eastWest = readLine()?.lowercased()
+                                    if eastWest == "east"{
+                                        print("Wise choice! You walk along the path and you come upon a large tree blocking your way. What do you do?")
+                            
+                                        print()
+                                        print("(a). go around the tree")
+                                        print()
+                                        print("(b). go back and take the west path")
+                                        print()
+                                        print("(c). choose another door")
+                                        let answerChoice = readLine()?.lowercased()
+                                        switch answerChoice {
+                                        case "a" :
+                                            print("What a brave soul! Enter \"continue\" to move along the path.")
+                                            let continueResponse = readLine()?.lowercased()
+                                            if continueResponse == "continue" {
+                                                print("You continue along and come across an enclosure")
+                                                print()
+                                                print("In the center of the enclosure, there is a single door. Open door?")
+                                                let openDoor = readLine()?.lowercased()
+                                                if openDoor == "open" || openDoor == "open door" {
+                                                    print("DOOR IS LOCKED. YOU NEED A KEY! Enter \"key\".")
+                                                    var enterKey = readLine()?.lowercased()
+                                                    if enterKey == "key" {
+                                                        print("THE DOOR IS UNLOCKED. Type \"enter\" to enter.")
+                                                        var enterResponse = readLine()?.lowercased()
+                                                        if enterResponse == "enter" {
+                                                            print("CONGRATULATIONS YOU'VE ENTERED THE LAIR OF RICHES! YOU WIN THE GAME! Do you wish to play again?")
+                                                               let playAgain2 = readLine()?.lowercased()
+                                                            if playAgain2 == "yes" {
+                                                                gameOver = false
+                                                            } else if playAgain2 == "no" {
+                                                              gameOver = true
+                                                            } else {
+                                                                print("invalid response")
+                                                            }
+                                                        } else {
+                                                            print("invalid response")
+                                                            enterResponse = readLine()?.lowercased()
+                                                        }
+                                                    } else {
+                                                        print("invalid selection")
+                                                        enterKey = readLine()?.lowercased()
+                                                    }
+                                                } else {
+                                                    print("invalid response")
+                                                }
+                                            } else {
+                                                print("invalid response")
+                                            }
+                                        case "b" :
+                                            print("You have chosen a different path.")
+                                            print()
+                                            print("You move along West path and come to a stop at the entrance of a dark cave.")
+                                            print()
+                                            print("Do you wish to enter?")
+                                            let enter = readLine()?.lowercased()
+                                            if enter == "yes" {
+                                                print("Although bravely, you have foolishly entered the lair of a giant Vugula!")
+                                                print()
+                                                print("YOU ARE DEAD. Would you like to try again?")
+                                                let tryAgain = readLine()?.lowercased()
+                                                if tryAgain == "yes" {
+                                                    gameOver = false
+                                                } else {
+                                                    gameOver = true
+                                                }
+                                            
+                                            } else if enter == "no" {
+                                                print("GAME OVER.")
+                                                gameOver = true
+                                            } else {
+                                                print("invalid input")
+                                            }
+                                        case "c" :
+                                            print("OH NO, THE DOOR HAS DISAPPEARED! Choose west!")
+                                            eastWest = readLine()?.lowercased()
+                                            if eastWest == "west" {
+                                                print("You move along West path and come to a stop at the entrance of a dark cave. Do you wish to enter?")
+                                                print("You have chosen a different path.")
+                                                print()
+                                                print("You move along West path and come to a stop at the entrance of a dark cave.")
+                                                print()
+                                                print("Do you wish to enter?")
+                                                let enter = readLine()?.lowercased()
+                                                    if enter == "yes" {
+                                                       print("Although bravely, you have foolishly entered the lair of a giant Vugula!")
+                                                       print()
+                                                       print("YOU ARE DEAD. Would you like to try again?")
+                                                            let tryAgain = readLine()?.lowercased()
+                                                            if tryAgain == "yes" {
+                                                            gameOver = false
+                                                            } else {
+                                                            gameOver = true
+                                                            }
+                                                                                           
+                                                   } else if enter == "no" {
+                                                        print("GAME OVER.")
+                                                        gameOver = true
+                                                   } else {
+                                                        print("invalid input")
+                                                                                           }
+                                            } else {
+                                                print("invalid input")
+                                            }
+                                        default :
+                                            print("Invalid input")
+                                        }
+                                    }
+                                } else if enterGarden == "no" {
+                                    print("Try the next door")
+                                    let nextDoor = readLine()?.lowercased()
+                                        if nextDoor == "3" {
+                                          print("Here lies a portal. Would you like to enter?")
+                                           let enterPortal = readLine()?.lowercased()
+                                            if enterPortal == "yes" {
+                                                print("DOOR 3 IS A VOID!!")
+                                                print()
+                                                print("YOU WILL STAY HERE WITH THE WE FOR ALL ETERNITY! CONGRATULATIONS! GAME OVER. Would you like to play again?")
+                                                let playAgain3 = readLine()?.lowercased()
+                                                if playAgain3 == "yes" {
+                                                    gameOver = false
+                                                } else {
+                                                    gameOver = true
+                                                }
+                                            }
+                                        }
+                                }
+                            case "3" :
+                                print("Here lies a portal. Would you like to enter?")
+                                let enterPortal = readLine()?.lowercased()
+                                if enterPortal == "yes" || enterPortal == "enter"{
+                                    print("DOOR 3 IS A VOID!! YOU WILL STAY HERE WITH THE WE FOR ALL ETERNITY! CONGRATULATIONS! GAME OVER. Would you like to play again?")
+                                    let playAgain4 = readLine()?.lowercased()
+                                    if playAgain4 == "yes" {
+                                         gameOver = false
+                                    } else {
+                                         gameOver = true
+                                    }
+                                
+                                }
+                            default :
+                                print("invalid input")
+                                }
+                        } else {
+                            print("Invalid input.")
+                            readNote = readLine()?.lowercased()
+                        }
+                    } else {
+                        print("Invalid input")
+                    }
+                } else {
+                    print("Invalid input")
+                }
+            case "no" :
+                print("You've been eaten alive. GAME OVER")
+                gameOver = true
+            default :
+                print("You've been eaten alive. GAME OVER")
+                gameOver = true
+            }
+        } else {
+            print("invalid response")
+    }
+case "south" :
+   print("Too bad! The door is chained shut from the outside! Choose another way!")
+    responseNorthSouth = readLine()?.lowercased()
+   if responseNorthSouth == "north" {
+    gameOver = false
+    }
+default:
+    print("invalid input")
+    gameOver = true
 }
+} while gameOver == false
+    
+
+
 
 //User ultimately must input "north" or "North" and then "continue"
 
@@ -131,5 +345,3 @@ if directions == "north" {
 //                         user enters "yes" or "no"
 //If "yes" : "DOOR 3 IS A VOID!! YOU WILL STAY HERE WITH THE WE FOR ALL ETERNITY! CONGRATULATIONS! GAME OVER. Would you like to play again?
 
-
-print("You are standing alone in a dimly lit walkway. Behind you is a dark wooden door, and to the North of you lies the UNKNOWN. Which way would you like to go? Choose direction \"North\" or \"South\"")
