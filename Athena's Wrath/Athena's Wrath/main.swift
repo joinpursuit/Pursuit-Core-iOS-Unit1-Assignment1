@@ -233,6 +233,7 @@ Your Choices are:
  76
  67
  69
+ 65
 
 Please type in a number.
 
@@ -255,7 +256,9 @@ repeat {
         riddleChoice = Int(riddleAnswer!) ?? 76
         riddleChoice = Int(riddleAnswer!) ?? 67
         riddleChoice = Int(riddleAnswer!) ?? 69
-    case 67:
+        riddleChoice = Int(riddleAnswer!) ?? 65
+        rTrue = true
+    case 65:
         print("Congratulations! You chose correctly! You were spared from Medusa's wrath.")
         print("""
 
@@ -264,6 +267,15 @@ MEDUSA: You have bested me. I leave you with a parting gift. I give you my bless
 """)
         print("You have gained: \(medusasBlessing)")
         rTrue = false
+    case 67:
+        print("Not quite, Try again.")
+        riddleAnswer = readLine()
+        
+        riddleChoice = Int(riddleAnswer!) ?? 76
+        riddleChoice = Int(riddleAnswer!) ?? 67
+        riddleChoice = Int(riddleAnswer!) ?? 69
+        riddleChoice = Int(riddleAnswer!) ?? 65
+        rTrue = true
     case 69:
         print("You chose incorrectly, please make another choice.")
         riddleAnswer = readLine()
@@ -271,7 +283,9 @@ MEDUSA: You have bested me. I leave you with a parting gift. I give you my bless
         riddleChoice = Int(riddleAnswer!) ?? 76
         riddleChoice = Int(riddleAnswer!) ?? 67
         riddleChoice = Int(riddleAnswer!) ?? 69
-        rTrue = false
+        riddleChoice = Int(riddleAnswer!) ?? 65
+        
+        rTrue = true
     default:
         print("Please make a choice.")
         riddleAnswer = readLine()
@@ -279,7 +293,9 @@ MEDUSA: You have bested me. I leave you with a parting gift. I give you my bless
         riddleChoice = Int(riddleAnswer!) ?? 76
         riddleChoice = Int(riddleAnswer!) ?? 67
         riddleChoice = Int(riddleAnswer!) ?? 69
-        rTrue = false
+        riddleChoice = Int(riddleAnswer!) ?? 65
+
+        rTrue = true
         }
 } while rTrue == true
     
