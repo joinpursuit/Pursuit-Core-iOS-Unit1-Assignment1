@@ -38,7 +38,6 @@ while run == true {
     }
 }
 
-//use for char in ... loop
 sleep(1)
 
 let choicePrompt = """
@@ -48,8 +47,6 @@ let choicePrompt = """
 3. Run away
 
 """
-
-//multi-line string
 
 print(choicePrompt)
 sleep(1)
@@ -123,17 +120,13 @@ repeat {
 a. Stab at it's neck.
 b. Leave it alone.
 """)
-        //maybe use tuple?
-        //take this out into a new body
-        //use userChoiceZ for
         var decisionA = readLine()
         var userChoiceZ = Character(decisionA ?? "a")
         userChoiceZ = Character(decisionA ?? "b")
         if  userChoiceZ == "a"{
-            //var cerebusDefeat =
             print("Congratulations! You have defeated Cerebus.")
             print("You have recieved: \(Cerebus)")
-            run = false //break
+            run = false
         } else if userChoiceZ == "b" {
             print("Cerebus has ceased his opportunity and has killed you. Try again.")
             decisionA = readLine()
@@ -143,9 +136,8 @@ b. Leave it alone.
             if userChoiceZ == "a"{
                 print("Congratulations! You have defeated Cerebus.")
                 print("You have recieved: \(Cerebus)")
-                run = false //break
+                run = false
             }
-            //won't print if statement for a after choosing b !!!!!
             run = false
         }
     }
@@ -202,7 +194,6 @@ sleep(2)
 print("""
 MEDUSA: "Hello, Athena; We meet again. It wasn't enough that you cursed me to look like this hideous creature, was it? I was a better woman than you then, and I still am. That is why I will give you a chance to flee, but only if you answer my riddle correctly. Are you ready?
 """)
-//enter ascii art medusa
 
 var sRiddle = readLine()?.lowercased()
 if sRiddle == "yes" {
@@ -246,6 +237,7 @@ var medusasBlessing: String = "Medusa's Blessing"
 var riddleChoice = Int(riddleAnswer!) ?? 76
 riddleChoice = Int(riddleAnswer!) ?? 67
 riddleChoice = Int(riddleAnswer!) ?? 69
+riddleChoice = Int(riddleAnswer!) ?? 65
 
 repeat {
     switch riddleChoice {
